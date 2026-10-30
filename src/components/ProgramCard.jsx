@@ -1,9 +1,9 @@
 import { Link } from 'react-router'
 import Badge from './Badge.jsx'
-import { formatRange } from '../lib/format.js'
+import { formatRange, formatPrerequisites, formatUniversity } from '../lib/format.js'
 
 export default function ProgramCard({ program, fromSearch }) {
-  const { id, name, university, degree, field, admissionRange, coop, supplementary, prerequisites } = program
+  const { id, name, degree, field, admissionRange, coop, supplementary, prerequisites } = program
 
   return (
     <Link
@@ -15,11 +15,14 @@ export default function ProgramCard({ program, fromSearch }) {
         <div>
           <h3 className="font-semibold text-slate-900 group-hover:text-brand-700">{name}</h3>
           <p className="text-sm text-slate-500">
-            {university.name} · {degree}
+            {formatUniversity(program)}
+            {degree && ` · ${degree}`}
           </p>
         </div>
         <div className="shrink-0 text-right">
-          <div className="text-lg font-semibold text-slate-900">{formatRange(admissionRange)}</div>
+          <div className={`font-semibold ${admissionRange?.low != null ? 'text-lg text-slate-900' : 'text-sm text-slate-400'}`}>
+            {formatRange(admissionRange)}
+          </div>
           <div className="text-xs text-slate-500">admission avg</div>
         </div>
       </div>
@@ -33,11 +36,7 @@ export default function ProgramCard({ program, fromSearch }) {
       </div>
 
       <div className="mt-4 text-xs text-slate-500">
-        Requires:{' '}
-        <span className="font-mono text-slate-700">
-          {prerequisites.required.join(', ')}
-          {prerequisites.oneOf.map((group) => ` + one of ${group.join('/')}`).join('')}
-        </span>
+        Requires: <span className="font-mono text-slate-700">{formatPrerequisites(prerequisites)}</span>
       </div>
     </Link>
   )

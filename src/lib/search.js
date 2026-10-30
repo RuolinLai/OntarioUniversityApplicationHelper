@@ -13,6 +13,7 @@ function matchesQuery(program, query) {
     program.degree,
     program.university?.name,
     program.university?.shortName,
+    program.campus,
     ...program.field,
   ]
     .filter(Boolean)

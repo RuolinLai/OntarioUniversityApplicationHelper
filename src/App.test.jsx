@@ -41,7 +41,11 @@ describe('program data', () => {
     for (const p of allPrograms) {
       expect(p.university, p.id).toBeDefined()
       expect(Array.isArray(p.prerequisites.required), p.id).toBe(true)
-      expect(Array.isArray(p.prerequisites.oneOf), p.id).toBe(true)
+      expect(Array.isArray(p.prerequisites.choose), p.id).toBe(true)
+      for (const group of p.prerequisites.choose) {
+        expect(group.count, p.id).toBeGreaterThan(0)
+        expect(group.courses.length, p.id).toBeGreaterThan(group.count)
+      }
     }
   })
 

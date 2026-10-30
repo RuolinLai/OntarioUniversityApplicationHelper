@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { searchPrograms } from './search.js'
-import { formatRange } from './format.js'
+import { formatRange, formatPrerequisites } from './format.js'
 
 const uw = { id: 'waterloo', name: 'University of Waterloo', shortName: 'Waterloo' }
 const uoft = { id: 'toronto', name: 'University of Toronto', shortName: 'UofT' }
@@ -46,5 +46,15 @@ describe('formatRange', () => {
     expect(formatRange({ low: 90, high: 96 })).toBe('90–96%')
     expect(formatRange({ low: 90, high: null })).toBe('90%+')
     expect(formatRange(null)).toBe('Not published')
+    expect(formatRange({ low: null, high: null, rawText: '' })).toBe('Not published')
+  })
+})
+
+describe('formatPrerequisites', () => {
+  it('summarises required and choose groups', () => {
+    expect(formatPrerequisites({ required: ['ENG4U', 'MCV4U'], choose: [{ count: 2, courses: ['SBI4U', 'SCH4U', 'SPH4U'] }] })).toBe(
+      'ENG4U, MCV4U + two of SBI4U/SCH4U/SPH4U',
+    )
+    expect(formatPrerequisites({ required: [], choose: [] })).toBe('No specific courses')
   })
 })

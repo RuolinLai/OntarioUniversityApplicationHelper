@@ -86,9 +86,11 @@
   "faculty": "Faculty of Mathematics",
   "field": ["Computer Science / Math"],
   "degree": "BCS / BMath",
+  "campus": "",
   "prerequisites": {
     "required": ["ENG4U", "MHF4U", "MCV4U"],
-    "oneOf": [],
+    "choose": [],
+    "minimums": {},
     "rawText": "Six Grade 12 U and/or M courses including Advanced Functions, Calculus and Vectors, ..."
   },
   "admissionRange": {
@@ -111,8 +113,12 @@
 }
 ```
 
-- `id`：`大学id-program名称` 自动生成，作为网址和收藏的主键
-- `required`：必须全部修过；`oneOf`：二维数组，每组至少修一门，如 `[["SBI4U","SCH4U","SPH4U"]]`
+- `id`：`大学id-program名称` 自动生成（UofT 加校区：`toronto-st-george-computer-science`），作为网址和收藏的主键
+- `campus`：校区（UofT 的 St. George / Mississauga / Scarborough 各算一个 program），其它大学为空
+- `required`：必须全部修过
+- `choose`：多选 N，如 `[{ "count": 2, "courses": ["SBI4U","SCH4U","SPH4U"] }]` 表示三门里修两门
+- `minimums`：单科最低分，如 `{ "MCV4U": 70 }`
+- `admissionRange.low/high` 为 `null` 表示官网没有公布（UofT 不公布录取分数）
 - `rawText`：保留官网原文，详情页同时显示原文和解析结果，解析错了用户也能看到原文
 - `source`：`scraper` / `manual`；`needsReview`：解析不确定时为 true，页面显示提示
 
@@ -153,7 +159,11 @@
 ### 5.1 目标大学（安省 OUAC 101 大学）
 Algoma · Brock · Carleton · Guelph · Lakehead · Laurentian · McMaster · Nipissing · OCAD U · Ontario Tech · Ottawa · Queen's · Toronto Metropolitan (TMU) · Toronto (St. George / Scarborough / Mississauga) · Trent · Waterloo · Western · Wilfrid Laurier · Windsor · York
 
-**分批完成**：先做 Waterloo、UofT、McMaster、Western，跑通整个流程，再逐所添加。还没写爬虫的大学，其 program 不显示（或用少量手动数据）。
+**分批完成**：先做 Waterloo、UofT、Western，跑通整个流程，再逐所添加。还没写爬虫的大学，其 program 不显示（或用少量手动数据）。
+
+> **McMaster**：robots.txt 明确屏蔽 Anthropic / Claude 的爬虫（`ClaudeBot`、`Claude-Web`、`anthropic-ai`），所以开发时不用 Claude 访问其网站。待定：换成其它大学，或由开发者本人编写 McMaster adapter。
+>
+> **UofT**：program 页面不公布录取分数，`admissionRange` 为空，推荐功能中不参与保底/匹配/冲刺分类。
 
 ### 5.2 流程
 ```
@@ -174,8 +184,10 @@ GitHub Actions（每周日凌晨）
 ```
 scraper/universities/waterloo.js
   export const id = "waterloo"
-  export async function listPrograms()    → [url, ...]
-  export function parseProgram(html, url) → { name, faculty, prereqText, admissionText, supplementaryText, coop, dates }
+  export async function listPrograms(fetchPage) → [url, ...]
+  export function parseProgram(html, url)       → [{ id, name, campus, faculty, degree, requirementItems,
+                                                     averageText, supplementarySentences, coop, description, officialUrl }]
+                                                   （UofT 一个页面可能返回多个校区；不是 program 的页面返回 []）
 ```
 所有 adapter 接口相同，添加一所新大学 = 新写一个文件，不改其它代码。
 
@@ -239,7 +251,7 @@ courseAverage = Σ (mark/outOf × weight) / Σ weight × 100
 只计算已录入的 assessment；有 `finalMark` 时优先使用。
 
 ### 7.2 录取平均分（Top 6）—— 针对某个 program
-1. 先放入该 program 的所有 `required` 课程，每个 `oneOf` 组取分最高的一门
+1. 先放入该 program 的所有 `required` 课程，每个 `choose` 组取分最高的 `count` 门
 2. 再从剩余的 4U/4M 课程中按分数从高到低补齐到 6 门
 3. 6 门取平均
 4. 某门课还没有 12 年级成绩 → 用对应的 11 年级课程估算（如 MCV4U ← MCR3U），结果标记为 **Estimated**
@@ -248,7 +260,7 @@ courseAverage = Σ (mark/outOf × weight) / Σ weight × 100
 
 ### 7.3 先修课筛选
 ```
-eligible = required ⊆ userCourses 且 每个 oneOf 组至少命中一门
+eligible = required ⊆ userCourses 且 每个 choose 组命中至少 count 门
 missing  = 未满足的课程
 ```
 显示：✅ Eligible · ⚠️ Missing 1 course（列出缺哪门）· ❌ Not eligible（默认隐藏）
@@ -276,6 +288,7 @@ missing  = 未满足的课程
 | Engineering | MCV4U, MHF4U, SPH4U, SCH4U |
 | Computer Science / Math | MCV4U, MHF4U, MDM4U, ICS4U |
 | Life Sciences / Health | SBI4U, SCH4U, MHF4U |
+| Physical Sciences / Environment | SCH4U, SPH4U, SES4U, MCV4U |
 | Business / Commerce | MHF4U, MCV4U, MDM4U, BBB4M, BAT4M |
 | Social Sciences / Humanities | ENG4U, CHY4U, CGW4U, HSB4U |
 | Arts / Design | AVI4M, AMU4M, ADA4M |
@@ -332,7 +345,7 @@ university_application_project/
 | 阶段 | 内容 | 完成标志 |
 |---|---|---|
 | **1. 基础** | Vite + React + Tailwind；Navbar + 路由；手动写 20 个示例 program；Programs 列表 + 搜索 + 详情页 | 不登录也能搜索、浏览 program |
-| **2. 爬虫 v1** | 爬虫框架；Waterloo、UofT、McMaster、Western 四个 adapter；normalize + validate；测试 | 运行一次就能生成这四所大学的 programs.json |
+| **2. 爬虫 v1** | 爬虫框架；Waterloo、UofT、Western 三个 adapter；normalize + validate；测试 | 运行一次就能生成这三所大学的 programs.json |
 | **3. 账号** | Firebase Auth；登录 / 注册；Onboarding；Profile 的课程 / 11 年级成绩 / assessment / 平均分 | 注册后能录入成绩，刷新后数据还在 |
 | **4. 推荐** | 先修课筛选；Top 6 平均分；保底 / 匹配 / 冲刺；推荐方向；红心收藏 | For You 页给出三栏推荐 |
 | **5. 日历 + 活动** | FullCalendar；自动 + 自定义事件；Extracurricular；Dashboard | 收藏 program 的日期出现在日历上 |
