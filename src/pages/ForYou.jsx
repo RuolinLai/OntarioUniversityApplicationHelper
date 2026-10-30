@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link, useSearchParams } from 'react-router'
+import { Link, useLocation, useSearchParams } from 'react-router'
 import Badge from '../components/Badge.jsx'
 import HeartButton from '../components/HeartButton.jsx'
 import Spinner from '../components/Spinner.jsx'
@@ -8,6 +8,7 @@ import { admissionAverage, formatMark } from '../lib/average.js'
 import { assessProgram, CATEGORY_LABEL, FIELD_KEY_COURSES, MATCH_MARGIN, recommendFields, REACH_GAP } from '../lib/recommend.js'
 import { formatRange, formatUniversity } from '../lib/format.js'
 import { useStudent } from '../hooks/useStudent.js'
+import { fromHere } from '../lib/backLink.js'
 
 const selectClass =
   'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
@@ -221,10 +222,11 @@ function Column({ column, items }) {
 
 function Row({ assessment }) {
   const { program, admission, eligibility } = assessment
+  const location = useLocation()
   return (
     <li className="flex items-start gap-2 px-4 py-3">
       <div className="min-w-0 flex-1">
-        <Link to={`/programs/${program.id}`} className="font-medium text-slate-900 hover:text-brand-700">
+        <Link to={`/programs/${program.id}`} state={fromHere(location)} className="font-medium text-slate-900 hover:text-brand-700">
           {program.name}
         </Link>
         <div className="truncate text-xs text-slate-500">{formatUniversity(program)}</div>

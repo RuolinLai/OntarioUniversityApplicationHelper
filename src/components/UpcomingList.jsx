@@ -1,9 +1,11 @@
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import { countdownLabel, formatDate } from '../lib/calendar.js'
+import { fromHere } from '../lib/backLink.js'
 
 // Upcoming events with a countdown (calendar sidebar and dashboard). Program deadlines link to the
 // program; the student's own events call onSelect, if given.
 export default function UpcomingList({ events, onSelect }) {
+  const location = useLocation()
   if (events.length === 0) {
     return <p className="mt-3 rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-500">Nothing coming up.</p>
   }
@@ -27,7 +29,7 @@ export default function UpcomingList({ events, onSelect }) {
         return (
           <li key={e.id}>
             {e.kind === 'program' ? (
-              <Link to={`/programs/${e.programId}`} className={className}>
+              <Link to={`/programs/${e.programId}`} state={fromHere(location)} className={className}>
                 {body}
               </Link>
             ) : e.kind === 'custom' && onSelect ? (

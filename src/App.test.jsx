@@ -37,6 +37,14 @@ describe('pages render without crashing', () => {
     expect(render(url)).toContain('Accounts aren')
   })
 
+  it('program page links back to where it was opened from', () => {
+    const entry = { pathname: '/programs/waterloo-computer-science', state: { from: '/for-you?field=all' } }
+    const html = render(entry).replaceAll('<!-- -->', '')
+    expect(html).toContain('href="/for-you?field=all"')
+    expect(html).toContain('Back to For You')
+    expect(render('/programs/waterloo-computer-science').replaceAll('<!-- -->', '')).toContain('Back to programs')
+  })
+
   it('unknown program shows not found', () => {
     expect(render('/programs/does-not-exist')).toContain('Page not found')
   })

@@ -10,6 +10,7 @@ import { formatMark } from '../lib/average.js'
 import { useAuth } from '../hooks/useAuth.jsx'
 import { useStudent } from '../hooks/useStudent.js'
 import { firebaseConfigured } from '../firebase.js'
+import { backLink } from '../lib/backLink.js'
 
 function Section({ title, children }) {
   return (
@@ -48,12 +49,12 @@ export default function ProgramDetail() {
 
   const { name, faculty, degree, field, description, admissionRange, prerequisites, supplementary, coop } = program
   const { required, choose, minimums = {} } = prerequisites
-  const backTo = location.state?.fromSearch ? `/programs?${location.state.fromSearch}` : '/programs'
+  const back = backLink(location.state)
 
   return (
     <div>
-      <Link to={backTo} className="text-sm font-medium text-brand-700 hover:underline">
-        ← Back to programs
+      <Link to={back.to} className="text-sm font-medium text-brand-700 hover:underline">
+        ← Back{back.label && ` to ${back.label}`}
       </Link>
 
       <header className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">

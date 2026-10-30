@@ -183,7 +183,7 @@ export default function Programs() {
       {results.length > 0 ? (
         <div className="mt-3 grid gap-4 md:grid-cols-2">
           {results.map((p) => (
-            <ProgramCard key={p.id} program={p} fromSearch={params.toString()} assessment={assessments?.get(p.id)} />
+            <ProgramCard key={p.id} program={p} assessment={assessments?.get(p.id)} />
           ))}
         </div>
       ) : (

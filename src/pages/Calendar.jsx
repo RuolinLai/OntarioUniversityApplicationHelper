@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/react/daygrid'
 import interactionPlugin from '@fullcalendar/react/interaction'
@@ -14,6 +14,7 @@ import { deleteUserItem, saveUserItem } from '../hooks/useUserData.js'
 import { useSaver } from '../hooks/useSaver.js'
 import { CUSTOM_COLORS, formatDate, isDateString, KIND, toDateString, toFullCalendarEvent, upcomingEvents, UPCOMING_DAYS } from '../lib/calendar.js'
 import Modal from '../components/Modal.jsx'
+import { fromHere } from '../lib/backLink.js'
 import UpcomingList from '../components/UpcomingList.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
@@ -22,6 +23,7 @@ export default function Calendar() {
   const { events, loading } = useCalendarEvents()
   const favorites = useFavorites()
   const navigate = useNavigate()
+  const location = useLocation()
   // null = closed, { date } = new event, { event } = editing one of the student's events,
   // { info } = a read-only OUAC date.
   const [dialog, setDialog] = useState(null)
@@ -36,7 +38,7 @@ export default function Calendar() {
     jsEvent.preventDefault()
     const source = event.extendedProps.source
     if (source.kind === 'custom') setDialog({ event: source })
-    else if (source.kind === 'program') navigate(`/programs/${source.programId}`)
+    else if (source.kind === 'program') navigate(`/programs/${source.programId}`, { state: fromHere(location) })
     else setDialog({ info: source })
   }
 

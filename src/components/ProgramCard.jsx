@@ -1,12 +1,14 @@
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import Badge from './Badge.jsx'
 import HeartButton from './HeartButton.jsx'
 import { CategoryBadge, EligibilityBadge } from './MatchBadges.jsx'
 import { formatRange, formatPrerequisites, formatUniversity } from '../lib/format.js'
 import { formatMark } from '../lib/average.js'
+import { fromHere } from '../lib/backLink.js'
 
 // assessment (optional, signed-in only): result of assessProgram() for this student.
-export default function ProgramCard({ program, fromSearch, assessment }) {
+export default function ProgramCard({ program, assessment }) {
+  const location = useLocation()
   const { id, name, degree, field, admissionRange, coop, supplementary, prerequisites } = program
 
   return (
@@ -16,7 +18,7 @@ export default function ProgramCard({ program, fromSearch, assessment }) {
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-semibold text-slate-900 group-hover:text-brand-700">
-            <Link to={`/programs/${id}`} state={{ fromSearch }} className="after:absolute after:inset-0 after:rounded-xl">
+            <Link to={`/programs/${id}`} state={fromHere(location)} className="after:absolute after:inset-0 after:rounded-xl">
               {name}
             </Link>
           </h3>
