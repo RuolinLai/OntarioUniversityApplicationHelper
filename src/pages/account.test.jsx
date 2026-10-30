@@ -6,6 +6,7 @@ import grade11 from '../data/grade11.json'
 import { allPrograms } from '../lib/data.js'
 import { buildMarkTable } from '../lib/average.js'
 import { assessProgram } from '../lib/recommend.js'
+import { addDays, toDateString } from '../lib/calendar.js'
 
 // Pretend Firebase is set up and a student is signed in, with some saved data.
 const state = vi.hoisted(() => ({
@@ -20,6 +21,11 @@ const state = vi.hoisted(() => ({
     { id: 'MCR3U', code: 'MCR3U', mark: 93 },
   ],
   favorites: [{ id: 'waterloo-computer-science', addedAt: null }],
+  events: [],
+  extracurriculars: [
+    { id: 'x1', category: 'Clubs', title: 'Robotics Club', role: 'Captain', description: 'Built a robot', startDate: '2024-09', endDate: null, hoursPerWeek: 4 },
+    { id: 'x2', category: 'Employment', title: 'Library page', role: '', description: '', startDate: null, endDate: null, hoursPerWeek: null },
+  ],
 }))
 
 vi.mock('../firebase.js', () => ({ firebaseConfigured: true, auth: {}, db: {}, googleProvider: {} }))
@@ -36,6 +42,10 @@ vi.mock('../hooks/useUserData.js', () => ({
   useGrade12Courses: () => ({ items: state.grade12, loading: false }),
   useGrade11Marks: () => ({ items: state.grade11, loading: false }),
   useUserCollection: () => ({ items: [], loading: false }),
+  useEvents: () => ({ items: state.events, loading: false }),
+  useExtracurriculars: () => ({ items: state.extracurriculars, loading: false }),
+  saveUserItem: vi.fn(),
+  deleteUserItem: vi.fn(),
   saveGrade12Course: vi.fn(),
   saveGrade12Selection: vi.fn(),
   saveGrade11Marks: vi.fn(),
@@ -151,6 +161,60 @@ describe('signed-in pages', () => {
     state.grade12 = []
     expect(render('/for-you')).toContain('to get recommendations')
     state.grade12 = saved
+  })
+
+  it('home shows the dashboard', () => {
+    const html = render('/')
+    expect(html).toContain('Welcome back, Alex')
+    expect(html).toContain('Top 6 average')
+    expect(html).toContain('89.3%') // MCV4U 90, ENG4U 91, SPH4U ~87
+    expect(html).toContain('includes Grade 11 estimates')
+    expect(html).not.toContain('Plan your Ontario university application')
+  })
+
+  it('dashboard counts down to upcoming events', () => {
+    const today = toDateString(new Date())
+    state.events = [
+      { id: 'e1', title: 'Waterloo open house', date: addDays(today, 3) },
+      { id: 'e2', title: 'Far away', date: addDays(today, 60) },
+    ]
+    const html = render('/')
+    state.events = []
+    expect(html).toContain('Waterloo open house')
+    expect(html).toContain('In 3 days')
+    expect(html).not.toContain('Far away')
+  })
+
+  it('home shows the landing page until onboarding is done', () => {
+    state.profile = { displayName: 'Alex Chen', onboardingDone: false }
+    const html = render('/')
+    state.profile = { displayName: 'Alex Chen', onboardingDone: true }
+    expect(html).toContain('Add your courses')
+    expect(html).not.toContain('Welcome back')
+  })
+
+  it('calendar renders with favourite program dates', () => {
+    const saved = state.favorites
+    state.favorites = [{ id: 'toronto-st-george-civil-engineering', addedAt: null }]
+    const html = render('/calendar')
+    state.favorites = saved
+    expect(html).toContain('Add event')
+    expect(html).toContain('Favourite programs')
+    expect(html).not.toContain('None of your favourite programs list specific deadlines')
+  })
+
+  it('calendar explains when favourites have no dates', () => {
+    // Waterloo CS has no scraped key dates.
+    expect(render('/calendar')).toContain('None of your favourite programs list specific deadlines')
+  })
+
+  it('extracurriculars tab groups activities by category', () => {
+    const html = render('/profile?tab=extracurriculars')
+    expect(html).toContain('Robotics Club')
+    expect(html).toContain('Captain · Sep 2024 – Present')
+    expect(html).toContain('Library page')
+    expect(html).toContain('about 4 hours a week')
+    expect(html.indexOf('Clubs')).toBeLessThan(html.indexOf('Employment'))
   })
 
   it('logged-in users visiting /login are redirected', () => {

@@ -57,6 +57,6 @@ npm run scrape -- --limit 5          # quick test: 5 pages each, nothing written
 - [x] Phase 2 — Scraper for Waterloo, UofT, Western (McMaster pending — see design.md)
 - [ ] Phase 3 — Accounts, onboarding, profile & marks (code done; needs a Firebase project to test)
 - [ ] Phase 4 — Eligibility, top-6 average, safety/match/reach, favourites (code done; needs a Firebase project to test)
-- [ ] Phase 5 — Calendar, extracurriculars, dashboard
+- [ ] Phase 5 — Calendar, extracurriculars, dashboard (code done; needs a Firebase project to test)
 - [ ] Phase 6 — Deploy + weekly auto-scrape
 - [ ] Phase 7 — More universities, tips, polish

@@ -11,7 +11,10 @@ import ProgramCard from '../components/ProgramCard.jsx'
 import Badge from '../components/Badge.jsx'
 import Grade12Picker from '../components/Grade12Picker.jsx'
 import Grade11Editor from '../components/Grade11Editor.jsx'
+import ExtracurricularsTab from '../components/ExtracurricularsTab.jsx'
 import Spinner from '../components/Spinner.jsx'
+import Stat from '../components/Stat.jsx'
+import { useSaver } from '../hooks/useSaver.js'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
 
 const TABS = {
@@ -56,39 +59,10 @@ export default function Profile() {
       <div className="mt-6">
         {tab === 'courses' && <CoursesTab grade12={grade12.items} grade11={grade11.items} />}
         {tab === 'grade11' && <Grade11Tab grade12={grade12.items} grade11={grade11.items} />}
-        {tab === 'extracurriculars' && <Later text="Clubs, sports, jobs, volunteering and awards will go here." />}
+        {tab === 'extracurriculars' && <ExtracurricularsTab />}
         {tab === 'favourites' && <FavouritesTab />}
         {tab === 'account' && <AccountTab />}
       </div>
-    </div>
-  )
-}
-
-function useSaver() {
-  const [saving, setSaving] = useState(false)
-  const [error, setError] = useState('')
-  async function run(action) {
-    setError('')
-    setSaving(true)
-    try {
-      await action()
-      return true
-    } catch {
-      setError('Couldn’t save. Check your connection and try again.')
-      return false
-    } finally {
-      setSaving(false)
-    }
-  }
-  return { saving, error, run }
-}
-
-function Stat({ label, value, hint }) {
-  return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="text-sm text-slate-500">{label}</div>
-      <div className="mt-1 text-2xl font-bold text-slate-900">{value}</div>
-      {hint && <div className="mt-1 text-xs text-slate-500">{hint}</div>}
     </div>
   )
 }
@@ -301,17 +275,6 @@ function AccountTab() {
         <button type="button" className={secondaryButton} onClick={logOut}>
           Log out
         </button>
-      </div>
-    </div>
-  )
-}
-
-function Later({ text }) {
-  return (
-    <div className="rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-sm text-slate-500">
-      {text}
-      <div className="mt-3">
-        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs">Coming soon</span>
       </div>
     </div>
   )

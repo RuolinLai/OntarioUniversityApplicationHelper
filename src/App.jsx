@@ -9,6 +9,7 @@ import Onboarding from './pages/Onboarding.jsx'
 import Profile from './pages/Profile.jsx'
 import CourseDetail from './pages/CourseDetail.jsx'
 import ForYou from './pages/ForYou.jsx'
+import Calendar from './pages/Calendar.jsx'
 import RequireAuth from './components/RequireAuth.jsx'
 import NotFound from './pages/NotFound.jsx'
 
@@ -20,7 +21,7 @@ export default function App() {
         <Route path="programs" element={<Programs />} />
         <Route path="programs/:id" element={<ProgramDetail />} />
         <Route path="for-you" element={<RequireAuth><ForYou /></RequireAuth>} />
-        <Route path="calendar" element={<ComingSoon title="Calendar" description="Deadlines for your favourite programs, plus your own events." />} />
+        <Route path="calendar" element={<RequireAuth><Calendar /></RequireAuth>} />
         <Route path="tips" element={<ComingSoon title="Tips" description="Interview, AIF and application advice collected from Reddit." />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Login mode="signup" />} />

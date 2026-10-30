@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { collection, deleteDoc, doc, onSnapshot, setDoc, writeBatch } from 'firebase/firestore'
+import { addDoc, collection, deleteDoc, doc, onSnapshot, setDoc, writeBatch } from 'firebase/firestore'
 import { db } from '../firebase.js'
 import { useAuth } from './useAuth.jsx'
 
@@ -72,4 +72,22 @@ export function saveGrade11Marks(uid, existing, marks) {
 // merge: works even if users/{uid} was never created (e.g. a failed first sign-in).
 export function updateUserProfile(uid, data) {
   return setDoc(doc(db, 'users', uid), data, { merge: true })
+}
+
+export function useEvents() {
+  return useUserCollection('events')
+}
+
+export function useExtracurriculars() {
+  return useUserCollection('extracurriculars')
+}
+
+// Add (no id) or update a document in a collection with generated ids, e.g. events.
+export function saveUserItem(uid, name, id, data) {
+  if (id) return setDoc(doc(db, 'users', uid, name, id), data)
+  return addDoc(collection(db, 'users', uid, name), data)
+}
+
+export function deleteUserItem(uid, name, id) {
+  return deleteDoc(doc(db, 'users', uid, name, id))
 }

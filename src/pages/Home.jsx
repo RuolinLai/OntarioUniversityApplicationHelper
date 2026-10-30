@@ -1,6 +1,9 @@
 import { Link, useNavigate } from 'react-router'
 import { useState } from 'react'
 import { allPrograms, allUniversities } from '../lib/data.js'
+import { useAuth } from '../hooks/useAuth.jsx'
+import Dashboard from './Dashboard.jsx'
+import Spinner from '../components/Spinner.jsx'
 
 const features = [
   { title: 'Find programs you qualify for', text: 'Enter your Grade 12 courses and see which programs match their prerequisites.' },
@@ -9,7 +12,15 @@ const features = [
   { title: 'Never miss a deadline', text: 'Heart a program and its key dates show up in your calendar.' },
 ]
 
+// Signed-in students who finished onboarding get their dashboard; everyone else the landing page.
 export default function Home() {
+  const { user, profile, loading } = useAuth()
+  if (loading) return <Spinner />
+  if (user && profile?.onboardingDone) return <Dashboard />
+  return <Landing needsOnboarding={Boolean(user)} />
+}
+
+function Landing({ needsOnboarding }) {
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
 
@@ -20,6 +31,15 @@ export default function Home() {
 
   return (
     <div>
+      {needsOnboarding && (
+        <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+          You&apos;re almost set up.{' '}
+          <Link to="/onboarding" className="font-medium underline">
+            Add your courses
+          </Link>{' '}
+          to see your dashboard.
+        </p>
+      )}
       <section className="rounded-2xl bg-gradient-to-br from-brand-700 to-brand-800 px-6 py-14 text-white sm:px-12">
         <h1 className="max-w-2xl text-3xl font-bold sm:text-4xl">Plan your Ontario university application in one place.</h1>
         <p className="mt-3 max-w-2xl text-brand-100">
