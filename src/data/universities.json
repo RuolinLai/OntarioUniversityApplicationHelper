@@ -1,0 +1,6 @@
+[
+  { "id": "waterloo", "name": "University of Waterloo", "shortName": "Waterloo", "city": "Waterloo", "url": "https://uwaterloo.ca/future-students/" },
+  { "id": "toronto", "name": "University of Toronto", "shortName": "UofT", "city": "Toronto", "url": "https://future.utoronto.ca/" },
+  { "id": "mcmaster", "name": "McMaster University", "shortName": "McMaster", "city": "Hamilton", "url": "https://future.mcmaster.ca/" },
+  { "id": "western", "name": "Western University", "shortName": "Western", "city": "London", "url": "https://welcome.uwo.ca/" }
+]
