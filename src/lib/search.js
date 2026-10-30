@@ -4,24 +4,25 @@ export const SORT_OPTIONS = {
   avgLow: 'Admission average (low → high)',
 }
 
+// Common short forms students type.
+const ABBREVIATIONS = { cs: 'computer science' }
+
+const words = (text) => text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
+
 function matchesQuery(program, query) {
-  const q = query.trim().toLowerCase()
-  if (!q) return true
-  const haystack = [
-    program.name,
-    program.faculty,
-    program.degree,
-    program.university?.name,
-    program.university?.shortName,
-    program.campus,
-    ...program.field,
-  ]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase()
-  // Every word in the query must appear somewhere, so "waterloo cs" style
-  // searches work across fields: "data science waterloo".
-  return q.split(/\s+/).every((word) => haystack.includes(word))
+  const queryWords = words(query).flatMap((w) => words(ABBREVIATIONS[w] ?? w))
+  if (queryWords.length === 0) return true
+  // Field labels like "Computer Science / Math" are left out on purpose: they are
+  // broad groups, so "computer science" would match Actuarial Science. The Field
+  // dropdown covers that kind of search.
+  const programWords = words(
+    [program.name, program.faculty, program.degree, program.university?.name, program.university?.shortName, program.campus]
+      .filter(Boolean)
+      .join(' '),
+  )
+  // Every query word must be the start of some word, so "data science waterloo"
+  // works across fields and "cs" doesn't match "physics".
+  return queryWords.every((q) => programWords.some((w) => w.startsWith(q)))
 }
 
 function compare(sort) {

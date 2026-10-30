@@ -28,6 +28,15 @@ describe('searchPrograms', () => {
     expect(ids(searchPrograms(programs, { query: 'uoft engineering' }))).toEqual(['c'])
   })
 
+  it('does not match broad field labels or the middle of words', () => {
+    const actuarial = { ...programs[1], id: 'd', name: 'Actuarial Science', faculty: 'Mathematics' }
+    const physics = { ...programs[1], id: 'e', name: 'Physics', faculty: 'Arts & Science' }
+    const list = [...programs, actuarial, physics]
+    expect(ids(searchPrograms(list, { query: 'computer science' }))).toEqual(['a'])
+    expect(ids(searchPrograms(list, { query: 'cs' }))).toEqual(['a'])
+    expect(ids(searchPrograms(list, { query: 'comp sci' }))).toEqual(['a'])
+  })
+
   it('filters by university, field, co-op and supplementary', () => {
     expect(ids(searchPrograms(programs, { university: 'toronto' }))).toEqual(['b', 'c'])
     expect(ids(searchPrograms(programs, { field: 'Engineering' }))).toEqual(['c'])
