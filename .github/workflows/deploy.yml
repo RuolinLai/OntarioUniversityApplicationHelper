@@ -1,0 +1,59 @@
+# Builds the site and publishes it to Firebase Hosting.
+# Runs on every push to main, by hand (Actions tab → Deploy → Run workflow), and from scrape.yml after new data is committed.
+#
+# Needs (repo Settings → Secrets and variables → Actions):
+#   secret   FIREBASE_SERVICE_ACCOUNT   JSON key of a service account that can deploy to Hosting
+#   variables VITE_FIREBASE_*            same values as .env.local
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Called from scrape.yml, github.sha is the commit *before* the new data, so take the latest main instead.
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'push' && github.sha || 'main' }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm test
+
+      - name: Build
+        env:
+          VITE_FIREBASE_API_KEY: ${{ vars.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ vars.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ vars.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ vars.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ vars.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ vars.VITE_FIREBASE_APP_ID }}
+        run: |
+          # Without these the site would go live with accounts switched off.
+          if [ -z "$VITE_FIREBASE_API_KEY" ] || [ -z "$VITE_FIREBASE_PROJECT_ID" ]; then
+            echo "::error::Repository variables VITE_FIREBASE_* are missing (see README → Deploy)."
+            exit 1
+          fi
+          npm run build
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: onuniversityapplicationhelper
+          channelId: live

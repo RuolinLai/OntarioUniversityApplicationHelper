@@ -1,0 +1,67 @@
+# Weekly: scrape university websites, commit the new programs.json, then redeploy.
+# Can also be started by hand (Actions tab → Scrape → Run workflow).
+
+name: Scrape
+
+on:
+  schedule:
+    - cron: '0 7 * * 0' # Sundays 07:00 UTC = 2–3 a.m. Toronto time
+  workflow_dispatch:
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # run.js exits with 1 when a university's results looked broken. Its old data is kept and the
+      # others are still updated, so commit what we have and fail the job at the end (GitHub emails the owner).
+      - name: Scrape
+        id: scrape
+        run: npm run scrape || echo "failed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit new data
+        id: commit
+        run: |
+          if git diff --quiet src/data/programs.json; then
+            echo "No program changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/programs.json scraper/last-report.md
+          git commit -m "Weekly scrape $(date -u +%F)"
+          git pull --rebase
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Fail if a university was skipped
+        if: steps.scrape.outputs.failed == 'true'
+        run: |
+          echo "::error::At least one university kept last week's data. See the job summary for why."
+          exit 1
+
+  # Pushes made with GITHUB_TOKEN don't trigger other workflows, so start the deploy here.
+  deploy:
+    needs: scrape
+    if: ${{ !cancelled() && needs.scrape.outputs.changed == 'true' }}
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit
