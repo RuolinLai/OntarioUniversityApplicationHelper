@@ -3,6 +3,13 @@ import Badge from '../components/Badge.jsx'
 import NotFound from './NotFound.jsx'
 import { getProgram, courseName } from '../lib/data.js'
 import { formatRange, formatUniversity, countWord } from '../lib/format.js'
+import HeartButton from '../components/HeartButton.jsx'
+import { CategoryBadge, EligibilityBadge } from '../components/MatchBadges.jsx'
+import { assessProgram, CATEGORY_LABEL } from '../lib/recommend.js'
+import { formatMark } from '../lib/average.js'
+import { useAuth } from '../hooks/useAuth.jsx'
+import { useStudent } from '../hooks/useStudent.js'
+import { firebaseConfigured } from '../firebase.js'
 
 function Section({ title, children }) {
   return (
@@ -62,14 +69,17 @@ export default function ProgramDetail() {
             {supplementary.required && <Badge tone="amber">Supplementary required</Badge>}
           </div>
         </div>
-        <a
-          href={program.officialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="shrink-0 rounded-lg bg-brand-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-800"
-        >
-          Official website ↗
-        </a>
+        <div className="flex shrink-0 items-center gap-2">
+          <HeartButton programId={program.id} className="border border-slate-200 bg-white p-2" />
+          <a
+            href={program.officialUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg bg-brand-700 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-800"
+          >
+            Official website ↗
+          </a>
+        </div>
       </header>
 
       {program.needsReview && (
@@ -80,6 +90,8 @@ export default function ProgramDetail() {
       )}
 
       {description && <p className="mt-6 max-w-3xl text-slate-700">{description}</p>}
+
+      <YourMatch program={program} />
 
       <div className="mt-6 grid gap-4 lg:grid-cols-3">
         <Section title="Admission average">
@@ -143,5 +155,108 @@ export default function ProgramDetail() {
         .
       </p>
     </div>
+  )
+}
+
+const CATEGORY_HINT = {
+  safety: 'Your average is more than 1% above the top of the usual range.',
+  match: 'Your average is within 1% of the top of the usual range.',
+  reach: 'Your average is below the top of the usual range.',
+}
+
+function describeMissing(item) {
+  if (item.code) return `${item.code} ${courseName(item.code)}`
+  return `${countWord(item.count)} more of ${item.courses.join(' / ')}`
+}
+
+// "How do I compare?" box: eligibility, the student's top-6 average for this program and a
+// safety/match/reach label. Logged-out visitors get a prompt to log in instead.
+function YourMatch({ program }) {
+  const { user } = useAuth()
+  const student = useStudent()
+  if (!firebaseConfigured) return null
+
+  if (!user) {
+    return (
+      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-600 shadow-sm">
+        <Link to="/login" state={{ from: `/programs/${program.id}` }} className="font-medium text-brand-700 hover:underline">
+          Log in
+        </Link>{' '}
+        to see whether you meet the prerequisites and how your average compares.
+      </div>
+    )
+  }
+  if (student.loading) return null
+
+  const { eligibility, admission, category } = assessProgram(program, student.codes, student.markTable)
+  const hasRange = program.admissionRange?.low != null
+
+  return (
+    <section className="mt-6 rounded-xl border border-brand-100 bg-brand-50/40 p-5 shadow-sm">
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Your match</h2>
+      <div className="mt-3 grid gap-5 sm:grid-cols-2">
+        {student.codes.length === 0 ? (
+          <p className="text-sm text-slate-600">
+            <Link to="/profile" className="font-medium text-brand-700 hover:underline">
+              Add your Grade 12 courses
+            </Link>{' '}
+            to check prerequisites.
+          </p>
+        ) : (
+          <div>
+            <EligibilityBadge status={eligibility.status} />
+            {eligibility.status === 'unknown' && (
+              <p className="mt-2 text-sm text-slate-600">The requirements couldn&apos;t be read reliably — check the official site.</p>
+            )}
+            {eligibility.status === 'eligible' && <p className="mt-2 text-sm text-slate-600">You take every required course.</p>}
+            {eligibility.missing.length > 0 && eligibility.status !== 'unknown' && (
+              <div className="mt-2 text-sm text-slate-700">
+                You&apos;re missing:
+                <ul className="mt-1 list-inside list-disc">
+                  {eligibility.missing.map((m, i) => (
+                    <li key={i}>{describeMissing(m)}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {eligibility.belowMinimum.map((b) => (
+              <p key={b.code} className="mt-2 text-sm text-amber-800">
+                Your {b.code} mark ({formatMark(b.mark)}) is below the {b.minimum}% minimum.
+              </p>
+            ))}
+          </div>
+        )}
+
+        <div>
+          {admission ? (
+            <>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-slate-900">{formatMark(admission.average)}</span>
+                <CategoryBadge category={category} />
+              </div>
+              <p className="mt-1 text-sm text-slate-600">
+                Your top {admission.courses.length} average for this program
+                {admission.estimated && ' (estimated — some marks come from Grade 11)'}.
+                {!admission.complete && ' Fewer than 6 courses have marks yet.'}
+              </p>
+              <p className="mt-1 font-mono text-xs text-slate-500">
+                {admission.courses.map((c) => `${c.code} ${Math.round(c.mark)}${c.estimated ? '*' : ''}`).join(' · ')}
+              </p>
+              <p className="mt-2 text-sm text-slate-600">
+                {!hasRange
+                  ? 'No published admission range, so this program can’t be labelled safety, match or reach.'
+                  : category
+                    ? `${CATEGORY_LABEL[category]}: ${CATEGORY_HINT[category]}${
+                        program.supplementary?.required ? ' Programs with a supplementary application are never marked Safety.' : ''
+                      }`
+                    : 'Your average is more than 5% below the bottom of the usual range.'}
+              </p>
+            </>
+          ) : (
+            <p className="text-sm text-slate-600">Add marks to your courses to compare your average.</p>
+          )}
+        </div>
+      </div>
+    </section>
   )
 }

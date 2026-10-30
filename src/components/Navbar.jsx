@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router'
+import { logOut, useAuth } from '../hooks/useAuth.jsx'
 
 const links = [
   { to: '/', label: 'Dashboard', end: true },
@@ -16,8 +17,68 @@ function linkClass({ isActive }) {
   }`
 }
 
+function UserMenu({ name, email }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  // Close when clicking anywhere outside the menu.
+  useEffect(() => {
+    if (!open) return
+    const close = (e) => ref.current && !ref.current.contains(e.target) && setOpen(false)
+    document.addEventListener('mousedown', close)
+    return () => document.removeEventListener('mousedown', close)
+  }, [open])
+
+  const initials = (name || email || '?')
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+
+  return (
+    <div ref={ref} className="relative ml-auto hidden md:block">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        aria-label="Account menu"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-sm font-semibold text-white hover:bg-brand-800"
+      >
+        {initials}
+      </button>
+      {open && (
+        <div className="absolute right-0 mt-2 w-56 rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
+          <div className="border-b border-slate-100 px-4 py-2">
+            <div className="truncate text-sm font-medium text-slate-900">{name || 'Student'}</div>
+            <div className="truncate text-xs text-slate-500">{email}</div>
+          </div>
+          <Link to="/profile" onClick={() => setOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+            Profile
+          </Link>
+          <Link to="/profile?tab=account" onClick={() => setOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+            Account settings
+          </Link>
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(false)
+              logOut()
+            }}
+            className="block w-full px-4 py-2 text-left text-sm text-slate-700 hover:bg-slate-50"
+          >
+            Log out
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { user, profile } = useAuth()
+  const name = profile?.displayName || user?.displayName
 
   return (
     <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur">
@@ -35,12 +96,16 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link
-          to="/login"
-          className="ml-auto hidden rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800 md:block"
-        >
-          Log in
-        </Link>
+        {user ? (
+          <UserMenu name={name} email={user.email} />
+        ) : (
+          <Link
+            to="/login"
+            className="ml-auto hidden rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800 md:block"
+          >
+            Log in
+          </Link>
+        )}
 
         <button
           type="button"
@@ -62,9 +127,22 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
-          <NavLink to="/login" className={linkClass} onClick={() => setOpen(false)}>
-            Log in
-          </NavLink>
+          {user ? (
+            <button
+              type="button"
+              className={`${linkClass({ isActive: false })} text-left`}
+              onClick={() => {
+                setOpen(false)
+                logOut()
+              }}
+            >
+              Log out{name ? ` (${name})` : ''}
+            </button>
+          ) : (
+            <NavLink to="/login" className={linkClass} onClick={() => setOpen(false)}>
+              Log in
+            </NavLink>
+          )}
         </div>
       )}
     </header>

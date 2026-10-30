@@ -6,7 +6,7 @@ A website that helps Ontario high school students plan their university applicat
 
 ```bash
 npm install      # first time only
-npm run dev      # open http://localhost:5173
+npm run dev      # open http://127.0.0.1:5173
 ```
 
 ## Other commands
@@ -16,6 +16,23 @@ npm test         # run unit tests
 npm run build    # production build into dist/
 npm run scrape   # update src/data/programs.json from university websites (~10 min)
 ```
+
+## Accounts (Firebase)
+
+Browsing programs works without this. Logging in, onboarding and the profile need a Firebase project. Menu names in the Firebase console change
+over time — if you can't find something, type its name (e.g. "Authentication") into the console's search bar.
+
+1. Go to [console.firebase.google.com](https://console.firebase.google.com) → **Add project** (Google Analytics not needed).
+2. **Authentication → Get started**, then enable **Email/Password** and **Google**.
+3. **Authentication → Settings → Authorized domains → Add domain**: `127.0.0.1` (only `localhost` is there by default).
+4. **Firestore Database → Create database** → production mode → location `northamerica-northeast2 (Toronto)`.
+5. **Firestore → Rules**: replace everything with the contents of [firestore.rules](firestore.rules) and click **Publish**.
+6. **Project settings (⚙) → General → Your apps → Web (</>)** → register the app, then copy the `firebaseConfig` values
+   into a new file `.env.local`, using [.env.example](.env.example) as the template.
+7. Restart `npm run dev`.
+
+`.env.local` is git-ignored. The values in it aren't secret (they end up in the website's JavaScript anyway); the
+Firestore rules are what stop people reading each other's data.
 
 ## Scraper
 
@@ -38,8 +55,8 @@ npm run scrape -- --limit 5          # quick test: 5 pages each, nothing written
 
 - [x] Phase 1 — Navbar, routing, Programs search, program detail pages
 - [x] Phase 2 — Scraper for Waterloo, UofT, Western (McMaster pending — see design.md)
-- [ ] Phase 3 — Accounts, onboarding, profile & marks
-- [ ] Phase 4 — Eligibility, safety/match/reach, favourites
+- [ ] Phase 3 — Accounts, onboarding, profile & marks (code done; needs a Firebase project to test)
+- [ ] Phase 4 — Eligibility, top-6 average, safety/match/reach, favourites (code done; needs a Firebase project to test)
 - [ ] Phase 5 — Calendar, extracurriculars, dashboard
 - [ ] Phase 6 — Deploy + weekly auto-scrape
 - [ ] Phase 7 — More universities, tips, polish

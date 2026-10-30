@@ -279,9 +279,9 @@ missing  = 未满足的课程
 
 | 分类 | 条件 |
 |---|---|
-| **Safety 保底** | `avg ≥ high + 2` |
-| **Match 匹配** | `low ≤ avg < high + 2` |
-| **Reach 冲刺** | `low − 5 ≤ avg < low` |
+| **Safety 保底** | `avg > high + 1` |
+| **Match 匹配** | `high − 1 ≤ avg ≤ high + 1`（录取分数段最高分的上下 1% 以内） |
+| **Reach 冲刺** | `low − 5 ≤ avg < high − 1` |
 | 不推荐 | `avg < low − 5` |
 
 - 需要面试 / 补充材料的 program 最高只算 **Match**

@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { renderToString } from 'react-dom/server'
 import { MemoryRouter } from 'react-router'
 import App from './App.jsx'
-import { allPrograms } from './lib/data.js'
+import { allPrograms, grade12Courses, groupBySubject } from './lib/data.js'
+import { firebaseConfigured } from './firebase.js'
 
 function render(url) {
   return renderToString(
@@ -13,7 +14,7 @@ function render(url) {
 }
 
 describe('pages render without crashing', () => {
-  it.each(['/', '/programs', '/for-you', '/calendar', '/tips', '/profile', '/login'])('%s', (url) => {
+  it.each(['/', '/programs', '/for-you', '/calendar', '/tips', '/profile', '/profile/courses/MCV4U', '/onboarding', '/login', '/signup'])('%s', (url) => {
     expect(render(url)).toContain('OntarioU Helper')
   })
 
@@ -29,6 +30,11 @@ describe('pages render without crashing', () => {
       expect(html).toContain(p.university.name)
       expect(html).toContain(p.officialUrl)
     }
+  }, 30_000) // renders every program (~460 pages)
+
+  // Tests run without .env.local, so account pages should explain that instead of crashing.
+  it.skipIf(firebaseConfigured).each(['/login', '/signup', '/profile', '/onboarding'])('%s explains missing Firebase config', (url) => {
+    expect(render(url)).toContain('Accounts aren')
   })
 
   it('unknown program shows not found', () => {
@@ -52,5 +58,13 @@ describe('program data', () => {
   it('program ids are unique', () => {
     const ids = allPrograms.map((p) => p.id)
     expect(new Set(ids).size).toBe(ids.length)
+  })
+})
+
+describe('course data', () => {
+  it('every Grade 12 course is in a subject group', () => {
+    const groups = groupBySubject(grade12Courses)
+    expect(groups.some(([subject]) => subject === 'Other')).toBe(false)
+    expect(groups.flatMap(([, list]) => list).length).toBe(grade12Courses.length)
   })
 })

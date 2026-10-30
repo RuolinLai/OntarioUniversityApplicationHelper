@@ -3,6 +3,16 @@ import { useSearchParams } from 'react-router'
 import ProgramCard from '../components/ProgramCard.jsx'
 import { allPrograms, allUniversities, allFields } from '../lib/data.js'
 import { searchPrograms, SORT_OPTIONS } from '../lib/search.js'
+import { assessProgram } from '../lib/recommend.js'
+import { useAuth } from '../hooks/useAuth.jsx'
+import { useStudent } from '../hooks/useStudent.js'
+
+// Eligibility filter for signed-in students (design.md 7.3: not-eligible programs hidden by default).
+const ELIGIBILITY_FILTERS = {
+  hide: 'Hide not eligible',
+  eligible: 'Eligible only',
+  all: 'All programs',
+}
 
 const selectClass =
   'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
@@ -16,13 +26,34 @@ export default function Programs() {
   const coop = params.get('coop') === '1'
   const supplementary = params.get('supp') ?? 'any'
   const sort = params.get('sort') ?? 'name'
+  const eligibilityFilter = ELIGIBILITY_FILTERS[params.get('elig')] ? params.get('elig') : 'hide'
+
+  const { user } = useAuth()
+  const student = useStudent()
+  // Only once the student has entered courses — otherwise everything would be "not eligible".
+  const showEligibility = Boolean(user) && !student.loading && student.codes.length > 0
 
   const deferredQuery = useDeferredValue(query)
 
-  const results = useMemo(
+  const searched = useMemo(
     () => searchPrograms(allPrograms, { query: deferredQuery, university, field, coop, supplementary, sort }),
     [deferredQuery, university, field, coop, supplementary, sort],
   )
+
+  const assessments = useMemo(
+    () => (showEligibility ? new Map(allPrograms.map((p) => [p.id, assessProgram(p, student.codes, student.markTable)])) : null),
+    [showEligibility, student.codes, student.markTable],
+  )
+
+  const results = useMemo(() => {
+    if (!assessments || eligibilityFilter === 'all') return searched
+    return searched.filter((p) => {
+      const { status } = assessments.get(p.id).eligibility
+      if (eligibilityFilter === 'eligible') return status === 'eligible'
+      return status !== 'notEligible'
+    })
+  }, [searched, assessments, eligibilityFilter])
+  const hiddenCount = searched.length - results.length
 
   function update(key, value, defaultValue = '') {
     setParams(
@@ -107,6 +138,21 @@ export default function Programs() {
             Co-op only
           </label>
 
+          {showEligibility && (
+            <select
+              className={selectClass}
+              value={eligibilityFilter}
+              onChange={(e) => update('elig', e.target.value, 'hide')}
+              aria-label="Eligibility"
+            >
+              {Object.entries(ELIGIBILITY_FILTERS).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          )}
+
           <select
             className={`${selectClass} sm:ml-auto`}
             value={sort}
@@ -125,6 +171,7 @@ export default function Programs() {
       <div className="mt-6 flex items-center justify-between text-sm text-slate-600">
         <span>
           {results.length} {results.length === 1 ? 'program' : 'programs'}
+          {hiddenCount > 0 && ` · ${hiddenCount} hidden based on your courses`}
         </span>
         {hasFilters && (
           <button type="button" className="font-medium text-brand-700 hover:underline" onClick={() => setParams({}, { replace: true })}>
@@ -136,7 +183,7 @@ export default function Programs() {
       {results.length > 0 ? (
         <div className="mt-3 grid gap-4 md:grid-cols-2">
           {results.map((p) => (
-            <ProgramCard key={p.id} program={p} fromSearch={params.toString()} />
+            <ProgramCard key={p.id} program={p} fromSearch={params.toString()} assessment={assessments?.get(p.id)} />
           ))}
         </div>
       ) : (

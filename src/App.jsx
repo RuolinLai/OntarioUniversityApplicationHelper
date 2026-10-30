@@ -4,6 +4,12 @@ import Home from './pages/Home.jsx'
 import Programs from './pages/Programs.jsx'
 import ProgramDetail from './pages/ProgramDetail.jsx'
 import ComingSoon from './pages/ComingSoon.jsx'
+import Login from './pages/Login.jsx'
+import Onboarding from './pages/Onboarding.jsx'
+import Profile from './pages/Profile.jsx'
+import CourseDetail from './pages/CourseDetail.jsx'
+import ForYou from './pages/ForYou.jsx'
+import RequireAuth from './components/RequireAuth.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -13,11 +19,14 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="programs" element={<Programs />} />
         <Route path="programs/:id" element={<ProgramDetail />} />
-        <Route path="for-you" element={<ComingSoon title="For You" description="Safety, match and reach programs based on your grades." />} />
+        <Route path="for-you" element={<RequireAuth><ForYou /></RequireAuth>} />
         <Route path="calendar" element={<ComingSoon title="Calendar" description="Deadlines for your favourite programs, plus your own events." />} />
         <Route path="tips" element={<ComingSoon title="Tips" description="Interview, AIF and application advice collected from Reddit." />} />
-        <Route path="profile" element={<ComingSoon title="Profile" description="Your courses, marks and extracurriculars." />} />
-        <Route path="login" element={<ComingSoon title="Log in" description="Accounts are coming soon." />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Login mode="signup" />} />
+        <Route path="onboarding" element={<RequireAuth><Onboarding /></RequireAuth>} />
+        <Route path="profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path="profile/courses/:courseId" element={<RequireAuth><CourseDetail /></RequireAuth>} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
