@@ -42,16 +42,29 @@ async function scrapeUniversity(adapter, opts, today, log) {
   const programs = []
   const failures = []
   const blocked = []
+  // Some adapters read a shared page first (e.g. UofT Engineering's FAQ with grade ranges).
+  const context = (await adapter.prepare?.(get)) ?? {}
+
+  const detailFailures = []
   for (const [i, url] of urls.entries()) {
     try {
-      const raws = adapter.parseProgram(await get(url), url)
+      const raws = adapter.parseProgram(await get(url), url, context)
+      // Some adapters (UofT) follow a link to a second page for extra details like averages.
+      for (const raw of raws) {
+        if (!raw.detailUrl || !adapter.wantsDetail?.(raw.detailUrl)) continue
+        try {
+          Object.assign(raw, adapter.parseDetail(await get(raw.detailUrl), raw.detailUrl))
+        } catch (err) {
+          detailFailures.push({ url: raw.detailUrl, error: err.message })
+        }
+      }
       programs.push(...raws.map((raw) => buildProgram(raw, adapter.id, today)))
     } catch (err) {
       ;(err instanceof BlockedError ? blocked : failures).push({ url, error: err.message })
     }
     if ((i + 1) % 25 === 0) log(`  ...${i + 1}/${urls.length}`)
   }
-  return { urls, programs, failures, blocked }
+  return { urls, programs, failures, blocked, detailFailures }
 }
 
 const PREREQ_KEYS = ['admissionRange', 'prerequisites', 'supplementary']
@@ -93,13 +106,14 @@ async function main() {
     const previous = oldPrograms.filter((p) => p.universityId === adapter.id)
     report.push(`## ${adapter.id}`, '')
     try {
-      const { urls, programs, failures, blocked } = await scrapeUniversity(adapter, opts, today, log)
+      const { urls, programs, failures, blocked, detailFailures } = await scrapeUniversity(adapter, opts, today, log)
       const { valid, invalid } = validatePrograms(programs)
       const check = checkUniversity({ programs: valid, previous, pagesTried: urls.length, pagesFailed: failures.length + blocked.length })
 
       report.push(`- Pages checked: ${urls.length}, programs found: ${valid.length}`)
       if (blocked.length) report.push(`- Blocked (robots.txt or refused, skipped): ${blocked.length}`)
       for (const f of failures) report.push(`- ⚠️ Failed: ${f.url} — ${f.error}`)
+      for (const f of detailFailures) report.push(`- ⚠️ Detail page failed (program kept without it): ${f.url} — ${f.error}`)
       for (const i of invalid) report.push(`- ⚠️ Invalid: ${i.id} — ${i.reason}`)
       const review = valid.filter((p) => p.needsReview)
       if (review.length) {

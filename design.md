@@ -163,7 +163,15 @@ Algoma · Brock · Carleton · Guelph · Lakehead · Laurentian · McMaster · N
 
 > **McMaster**：robots.txt 明确屏蔽 Anthropic / Claude 的爬虫（`ClaudeBot`、`Claude-Web`、`anthropic-ai`），所以开发时不用 Claude 访问其网站。待定：换成其它大学，或由开发者本人编写 McMaster adapter。
 >
-> **UofT**：program 页面不公布录取分数，`admissionRange` 为空，推荐功能中不参与保底/匹配/冲刺分类。
+> **UofT**：总览页（future.utoronto.ca）没有录取分数，爬虫会进入各校区详情页补充：
+> - Scarborough（utsc.utoronto.ca）："Approximate grade requirements"，含单科最低分 ✅
+> - Mississauga（utm.utoronto.ca）："Competitive Average" ✅
+> - St. George Arts & Science（artsci.utoronto.ca）：有 JavaScript 反爬验证，不破解 ❌
+> - St. George Engineering：program 页面没有分数，但 [Engineering FAQ](https://discover.engineering.utoronto.ca/faqs/) 有分数段表格，以及 Engineering Supplemental Application 的日期（12 月 1 日提前考虑、1 月 15 日截止）。爬虫开始前先读 FAQ（adapter 的 `prepare()`），再按专业名称匹配 ✅
+>
+> 没有分数的 program，`admissionRange` 为空，推荐功能中不参与保底/匹配/冲刺分类。
+>
+> **robots.txt 处理**：按 RFC 9309，robots.txt 返回 4xx 视为无限制，5xx 视为全部禁止。遇到 JavaScript 验证页面（bot challenge）直接停止，不尝试破解。
 
 ### 5.2 流程
 ```

@@ -49,13 +49,12 @@ async function rawFetch(url) {
 async function robotsFor(url) {
   const { origin } = new URL(url)
   if (!robotsByHost.has(origin)) {
+    // Following RFC 9309: a 4xx response means there are no rules (crawling allowed);
+    // a 5xx response means the site is unavailable, so assume everything is disallowed.
     const res = await rawFetch(`${origin}/robots.txt`)
-    if (res.status === 401 || res.status === 403) {
-      // The site refuses even robots.txt: treat the whole site as off-limits.
-      robotsByHost.set(origin, parseRobots('User-agent: *\nDisallow: /'))
-    } else {
-      robotsByHost.set(origin, parseRobots(res.ok ? await res.text() : ''))
-    }
+    if (res.ok) robotsByHost.set(origin, parseRobots(await res.text()))
+    else if (res.status >= 500) robotsByHost.set(origin, parseRobots('User-agent: *\nDisallow: /'))
+    else robotsByHost.set(origin, parseRobots(''))
   }
   return robotsByHost.get(origin)
 }
@@ -72,6 +71,10 @@ async function readCache(url) {
   } catch {
     return null
   }
+}
+
+export function isBotChallenge(html) {
+  return html.length < 20_000 && /document\.cookie\s*=/.test(html) && /location\.reload/.test(html)
 }
 
 /**
@@ -96,6 +99,9 @@ export async function fetchPage(url, { useCache = true } = {}) {
   if (!res.ok) throw new Error(`${res.status} from ${url}`)
 
   const html = await res.text()
+  // Some sites answer bots with a JavaScript challenge page instead of the real content.
+  // That's the site saying "no automated access", so we stop rather than try to solve it.
+  if (isBotChallenge(html)) throw new BlockedError(`bot challenge page from ${url}`)
   if (useCache) {
     await mkdir(CACHE_DIR, { recursive: true })
     await writeFile(cachePath(url), html)

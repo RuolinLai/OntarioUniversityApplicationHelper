@@ -98,7 +98,15 @@ export function buildPrerequisites(items) {
   return { required, choose, minimums, rawText: items.join('; '), warnings }
 }
 
-const QUALIFIER_BOUNDS = { low: [0, 3], mid: [4, 6], high: [7, 9] }
+/** "Minimum 70% English" -> { courses: ['ENG4U'], minimum: 70 } */
+export function parseMinimumNote(text) {
+  const m = text.match(/^minimum\s+(?:of\s+)?(\d{2})\s*%\s*(?:in\s+)?(.+)$/i)
+  if (!m) return null
+  const courses = findCourses(m[2])
+  return courses.length ? { courses, minimum: Number(m[1]) } : null
+}
+
+const QUALIFIER_BOUNDS ={ low: [0, 3], mid: [4, 6], high: [7, 9] }
 
 function bound(qualifier, decade, which) {
   const base = decade * 10
@@ -143,7 +151,7 @@ export function detectSupplementary(sentences) {
   const relevant = sentences.filter(
     (s) =>
       SUPPLEMENTARY_TYPES.some(([re]) => re.test(s)) &&
-      /\b(required|must|invited)\b/i.test(s) &&
+      /\b(required|must|invited|deadline)\b/i.test(s) &&
       !/\bnot required\b.*\b(form|application|interview|portfolio)/i.test(s) &&
       // "For Western Integrated Science (WISc), ... supplemental application" applies to a sub-program only.
       !/^for\s/i.test(s.trim()),
@@ -185,6 +193,23 @@ export function classifyFields(name, faculty = '') {
   return [fromFaculty ? fromFaculty[0] : SOCIAL]
 }
 
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+
+/**
+ * "January 15" -> the next January 15 on or after `today` as "YYYY-MM-DD".
+ * Deadlines repeat every year, so the next one is the one that matters.
+ */
+export function nextDate(monthDay, today) {
+  const m = monthDay.match(/^(\w+)\s+(\d{1,2})$/)
+  const month = m ? MONTHS.indexOf(m[1].toLowerCase()) : -1
+  if (month < 0) return null
+  const day = Number(m[2])
+  const now = /^\d{4}-\d{2}-\d{2}$/.test(today) ? new Date(`${today}T00:00:00Z`) : new Date()
+  let year = now.getUTCFullYear()
+  if (Date.UTC(year, month, day) < Date.UTC(year, now.getUTCMonth(), now.getUTCDate())) year++
+  return `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+}
+
 export function slugify(text) {
   return text
     .toLowerCase()
@@ -202,7 +227,7 @@ export function cleanText(text) {
 /**
  * Turns what an adapter scraped into a program in the website's format.
  * @param {object} raw  { id, name, campus, faculty, degree, requirementItems, averageText,
- *                        supplementarySentences, coop, description, officialUrl }
+ *                        minimumNotes, supplementarySentences, coop, description, officialUrl }
  */
 export function buildProgram(raw, universityId, today) {
   const prerequisites = buildPrerequisites(raw.requirementItems ?? [])
@@ -211,6 +236,11 @@ export function buildProgram(raw, universityId, today) {
   if (raw.averageText && !range) warnings.push(`Could not parse admission average: "${raw.averageText}"`)
   if (prerequisites.required.length === 0 && prerequisites.choose.length === 0) warnings.push('No required courses found')
   delete prerequisites.warnings
+  for (const note of raw.minimumNotes ?? []) {
+    const parsed = parseMinimumNote(note)
+    if (parsed) for (const c of parsed.courses) prerequisites.minimums[c] = parsed.minimum
+    else warnings.push(`Could not parse minimum grade: "${note}"`)
+  }
 
   return {
     id: raw.id,
@@ -223,7 +253,10 @@ export function buildProgram(raw, universityId, today) {
     prerequisites,
     admissionRange: { low: range?.low ?? null, high: range?.high ?? null, rawText: raw.averageText ?? '' },
     supplementary: detectSupplementary(raw.supplementarySentences ?? []),
-    keyDates: [],
+    keyDates: (raw.keyDates ?? [])
+      .map(({ label, on }) => ({ label, date: nextDate(on, today) }))
+      .filter((d) => d.date)
+      .sort((a, b) => a.date.localeCompare(b.date)),
     coop: Boolean(raw.coop),
     officialUrl: raw.officialUrl,
     description: raw.description ?? '',

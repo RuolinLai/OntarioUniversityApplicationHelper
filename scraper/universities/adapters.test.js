@@ -107,6 +107,87 @@ describe('toronto', () => {
   })
 })
 
+describe('toronto engineering FAQ', () => {
+  const faq = `<html><body>
+    <p>On that page, you will also find the deadlines.</p>
+    <p>Applicants are encouraged to submit their Engineering Supplemental Application and supporting documents by December 1 for early consideration.</p>
+    <p>The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15.</p>
+    <table><tbody>
+      <tr><td><strong>GRADE RANGE</strong></td><td><strong>PROGRAMS</strong></td></tr>
+      <tr><td>Low to Mid 90's</td><td>Computer Engineering, Electrical Engineering, Engineering Science</td></tr>
+      <tr><td>High 80's to Low 90's</td><td>Chemical Engineering, Mechanical Engineering</td></tr>
+    </tbody></table></body></html>`
+
+  it('reads grade ranges, the supplemental application and deadlines', () => {
+    const e = toronto.parseEngineeringFaq(faq)
+    expect(e.ranges).toEqual([
+      { averageText: "Low to Mid 90's", names: ['Computer Engineering', 'Electrical Engineering', 'Engineering Science'] },
+      { averageText: "High 80's to Low 90's", names: ['Chemical Engineering', 'Mechanical Engineering'] },
+    ])
+    expect(e.keyDates.map((d) => d.on)).toEqual(['December 1', 'January 15'])
+    expect(e.supplementarySentence).toMatch(/deadline .* January 15/)
+  })
+
+  it('applies them to St. George engineering programs, tolerating typos in the name', () => {
+    const context = { engineering: toronto.parseEngineeringFaq(faq) }
+    const page = (name) => `<h1>${name}</h1>
+      <div class="o-campus" id="campus-utsg"><h2>St. George campus</h2>
+        <div class="o-campus__subtitle">Faculty of Applied Science &amp; Engineering</div>
+        <div class="o-campus__requirements"><div class="a-table-wrapper"><table><tbody>
+          <tr><td>Calculus &amp; Vectors</td><td>MCV4U</td></tr></tbody></table></div></div></div>`
+
+    const [electrical] = build({ ...toronto, parseProgram: (h, u) => toronto.parseProgram(h, u, context) }, page('Electical Engineering'))
+    expect(electrical.admissionRange).toMatchObject({ low: 90, high: 96 })
+    expect(electrical.supplementary.required).toBe(true)
+    expect(electrical.keyDates.map((d) => d.label)).toEqual([
+      'Engineering Supplemental Application — early consideration',
+      'Engineering Supplemental Application deadline',
+    ])
+
+    const [mech] = build({ ...toronto, parseProgram: (h, u) => toronto.parseProgram(h, u, context) }, page('Mechanical Engineering'))
+    expect(mech.admissionRange).toMatchObject({ low: 87, high: 93 })
+
+    // Without the FAQ (e.g. it failed to download) nothing breaks.
+    const [plain] = build(toronto, page('Mechanical Engineering'))
+    expect(plain.admissionRange.low).toBeNull()
+    expect(plain.keyDates).toEqual([])
+  })
+})
+
+describe('toronto campus detail pages', () => {
+  it('only follows links to campus sites it can read', () => {
+    expect(toronto.wantsDetail('https://www.utsc.utoronto.ca/admissions/programs/astronomy-astrophysics')).toBe(true)
+    expect(toronto.wantsDetail('https://utsc.utoronto.ca/admissions/programs/anthropology')).toBe(true)
+    expect(toronto.wantsDetail('https://www.utm.utoronto.ca/future-students/programs/accounting')).toBe(true)
+    expect(toronto.wantsDetail('https://www.artsci.utoronto.ca/future/ready-apply/admission-categories/x')).toBe(false)
+    expect(toronto.wantsDetail('')).toBe(false)
+  })
+
+  it('reads Scarborough approximate grade requirements', () => {
+    const html = `<div class="mb-4"><strong>Approximate grade requirements</strong><br>
+      <ul><li>Minimum 70% English</li><li><div><p>Mid-70s overall</p></div></li></ul></div>
+      <div class="mb-4"><strong>Approximate grade requirements</strong><br><ul><li>Canadian: something else</li></ul></div>`
+    const detail = toronto.parseDetail(html, 'https://www.utsc.utoronto.ca/admissions/programs/astronomy-astrophysics')
+    expect(detail).toEqual({ averageText: 'Mid-70s overall', minimumNotes: ['Minimum 70% English'] })
+
+    const [p] = [{ id: 't', name: 'Astronomy', requirementItems: ['English => ENG4U / EAE4U'], officialUrl: 'x', ...detail }].map((raw) =>
+      buildProgram(raw, 'toronto', 'today'),
+    )
+    expect(p.admissionRange).toMatchObject({ low: 74, high: 76 })
+    expect(p.prerequisites.minimums).toEqual({ ENG4U: 70 })
+  })
+
+  it('reads the Mississauga competitive average', () => {
+    const html = `<div class="admissions-box"><div class="field field-name-field-approximate-grade-requirem">
+      <div class="field-label">Competitive Average <a title="guideline"></a></div><p> Mid 80s </p></div></div>`
+    expect(toronto.parseDetail(html, 'https://www.utm.utoronto.ca/future-students/programs/accounting')).toEqual({ averageText: 'Mid 80s' })
+  })
+
+  it('returns nothing when the page has no averages', () => {
+    expect(toronto.parseDetail('<p>No grades here</p>', 'https://www.utm.utoronto.ca/x')).toEqual({})
+  })
+})
+
 describe('western', () => {
   const page = `<html><head><meta name="description" content="Science at Western"></head><body>
     <h1>Science</h1>

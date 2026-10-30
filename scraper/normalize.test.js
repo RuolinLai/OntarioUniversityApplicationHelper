@@ -4,8 +4,10 @@ import {
   parseRequirementItem,
   buildPrerequisites,
   parseAdmissionRange,
+  parseMinimumNote,
   detectSupplementary,
   classifyFields,
+  nextDate,
   slugify,
 } from './normalize.js'
 
@@ -139,6 +141,14 @@ describe('parseAdmissionRange', () => {
   })
 })
 
+describe('parseMinimumNote', () => {
+  it('reads "Minimum 70% English"', () => {
+    expect(parseMinimumNote('Minimum 70% English')).toEqual({ courses: ['ENG4U'], minimum: 70 })
+    expect(parseMinimumNote('Minimum 65% in Calculus and Vectors')).toEqual({ courses: ['MCV4U'], minimum: 65 })
+    expect(parseMinimumNote('Mid-70s overall')).toBeNull()
+  })
+})
+
 describe('detectSupplementary', () => {
   it('finds the AIF', () => {
     expect(detectSupplementary(['The Admission Information Form is required for admission.'])).toMatchObject({
@@ -183,6 +193,16 @@ describe('classifyFields', () => {
     ['Architecture', ['Arts / Design']],
   ])('%s', (name, fields) => {
     expect(classifyFields(name)).toEqual(fields)
+  })
+})
+
+describe('nextDate', () => {
+  it('returns the next occurrence of a yearly date', () => {
+    expect(nextDate('December 1', '2026-10-30')).toBe('2026-12-01')
+    expect(nextDate('January 15', '2026-10-30')).toBe('2027-01-15')
+    expect(nextDate('January 15', '2027-01-15')).toBe('2027-01-15')
+    expect(nextDate('January 15', '2027-01-16')).toBe('2028-01-15')
+    expect(nextDate('Smarch 3', '2026-10-30')).toBeNull()
   })
 })
 

@@ -219,9 +219,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -253,13 +253,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -332,9 +334,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -401,13 +403,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -473,13 +477,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -588,9 +594,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -620,13 +626,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -696,9 +704,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -728,13 +736,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -803,13 +813,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -842,13 +854,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -997,9 +1011,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
     },
     "supplementary": {
       "required": false,
@@ -1031,13 +1045,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 89,
+      "rawText": "High 80s overall"
     },
     "supplementary": {
       "required": false,
@@ -1144,9 +1160,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -1181,9 +1197,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -1251,13 +1267,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -1288,13 +1306,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -1324,13 +1344,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -1402,9 +1424,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -1440,9 +1462,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -1475,13 +1497,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -1590,13 +1614,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -1666,13 +1692,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -1786,9 +1814,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -1906,9 +1934,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -1948,13 +1976,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -2030,9 +2060,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -2068,9 +2098,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -2149,9 +2179,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -2188,9 +2218,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -2297,9 +2327,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -2333,9 +2363,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -2521,16 +2551,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/chemical-engineering#campus-utsg",
     "description": "",
@@ -2597,9 +2636,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -2632,13 +2671,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -2710,9 +2751,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -2818,9 +2859,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -2886,13 +2927,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -2930,16 +2973,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/civil-engineering#campus-utsg",
     "description": "",
@@ -2966,9 +3018,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -3034,13 +3086,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -3106,13 +3160,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -3257,9 +3313,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -3293,9 +3349,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -3332,9 +3388,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -3373,16 +3429,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 96,
+      "rawText": "Low to Mid 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/computer-engineering#campus-utsg",
     "description": "",
@@ -3411,9 +3476,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to High 80s"
     },
     "supplementary": {
       "required": false,
@@ -3445,13 +3510,15 @@
         "MHF4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 97,
+      "high": 99,
+      "rawText": "High 90s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -3528,13 +3595,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -3642,9 +3711,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -3674,13 +3743,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -3786,9 +3857,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -3854,13 +3925,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -3926,13 +3999,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -4003,9 +4078,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4075,9 +4150,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4183,9 +4258,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4260,9 +4335,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4335,9 +4410,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -4412,9 +4487,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4524,9 +4599,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4559,13 +4634,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": false,
@@ -4598,13 +4675,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": false,
@@ -4674,9 +4753,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4693,7 +4772,7 @@
   },
   {
     "id": "toronto-st-george-electical-engineering",
-    "name": "Electical Engineering",
+    "name": "Electrical Engineering",
     "universityId": "toronto",
     "campus": "St. George",
     "faculty": "Faculty of Applied Science & Engineering",
@@ -4714,16 +4793,25 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Advanced Functions => MHF4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 96,
+      "rawText": "Low to Mid 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/electical-engineering#campus-utsg",
     "description": "",
@@ -4754,16 +4842,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 96,
+      "rawText": "Low to Mid 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/engineering-science#campus-utsg",
     "description": "",
@@ -4790,9 +4887,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4822,13 +4919,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -4898,9 +4997,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -4930,13 +5029,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -5201,13 +5302,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -5394,9 +5497,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5430,13 +5533,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -5509,9 +5614,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5546,9 +5651,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5581,13 +5686,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -5631,9 +5738,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry / Physics => "
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5666,13 +5773,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -5741,13 +5850,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -5817,9 +5928,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5961,9 +6072,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -5993,13 +6104,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -6035,9 +6148,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -6069,13 +6182,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -6146,13 +6261,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 89,
+      "rawText": "High 80s overall"
     },
     "supplementary": {
       "required": true,
@@ -6188,9 +6305,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6258,13 +6375,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -6300,9 +6419,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6339,9 +6458,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6378,9 +6497,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6416,9 +6535,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6455,9 +6574,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6566,9 +6685,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6599,13 +6718,15 @@
         "FSF4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; French => FSF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -6675,9 +6796,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6711,9 +6832,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6819,13 +6940,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -6895,9 +7018,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -6948,9 +7071,9 @@
       "rawText": "English => ENG4U / EAE4U; One Math (Calculus & Vectors / Advanced Functions) => MCV4U / MHF4U; One Science (Biology / Chemistry / Physics) => SBI4U / SCH4U / SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7099,9 +7222,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7167,13 +7290,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -7206,13 +7331,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -7285,9 +7412,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7317,13 +7444,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": false,
@@ -7429,13 +7558,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -7465,13 +7596,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -7506,9 +7639,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7542,9 +7675,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7574,13 +7707,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -7686,9 +7821,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -7728,13 +7863,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -7803,13 +7940,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -7877,13 +8016,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -7996,16 +8137,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "Supplemental Application: Required"
+      "rawText": "Supplemental Application: Required The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/industrial-engineering#campus-utsg",
     "description": "",
@@ -8107,9 +8257,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -8141,13 +8291,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -8179,13 +8331,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -8220,9 +8374,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8254,13 +8408,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 89,
+      "rawText": "Mid- to high 80s overall"
     },
     "supplementary": {
       "required": true,
@@ -8290,13 +8446,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": true,
@@ -8328,13 +8486,15 @@
         "SBI4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -8544,13 +8704,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -8637,9 +8799,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8673,9 +8835,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8709,9 +8871,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8781,9 +8943,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8853,9 +9015,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -8885,13 +9047,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -8997,9 +9161,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid 70s"
     },
     "supplementary": {
       "required": false,
@@ -9034,9 +9198,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -9068,13 +9232,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -9146,9 +9312,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -9184,9 +9350,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Advanced Functions => MHF4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -9218,13 +9384,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -9299,16 +9467,25 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Advanced Functions => MHF4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
-      "required": false,
-      "type": "",
-      "rawText": ""
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/materials-engineering#campus-utsg",
     "description": "",
@@ -9416,9 +9593,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
     },
     "supplementary": {
       "required": false,
@@ -9450,13 +9627,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 89,
+      "rawText": "High 80s overall"
     },
     "supplementary": {
       "required": false,
@@ -9720,16 +9899,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
-      "required": false,
-      "type": "",
-      "rawText": ""
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/mechanical-engineering#campus-utsg",
     "description": "",
@@ -9752,13 +9940,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -9788,13 +9978,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -9829,13 +10021,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -9901,13 +10095,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -9945,16 +10141,25 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80's to Low 90's"
     },
     "supplementary": {
-      "required": false,
-      "type": "",
-      "rawText": ""
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "The deadline for students to complete their Engineering Supplemental Application and submit all supporting documents is January 15."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "Engineering Supplemental Application — early consideration",
+        "date": "2026-12-01"
+      },
+      {
+        "label": "Engineering Supplemental Application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
     "officialUrl": "https://future.utoronto.ca/program/mineral-engineering#campus-utsg",
     "description": "",
@@ -9984,9 +10189,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -10018,13 +10223,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -10064,13 +10271,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -10139,13 +10348,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -10284,13 +10495,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": true,
@@ -10395,13 +10608,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -10474,9 +10689,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -10516,13 +10731,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -10637,9 +10854,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to Mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -10679,13 +10896,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall"
     },
     "supplementary": {
       "required": true,
@@ -10913,9 +11132,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -10945,13 +11164,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -11021,9 +11242,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -11053,13 +11274,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11092,13 +11315,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11131,13 +11356,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11174,9 +11401,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -11247,13 +11474,15 @@
         "SPH4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11410,13 +11639,15 @@
           ]
         }
       ],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; One Math (Calculus & Vectors / Advanced Functions / Mathematics of Data Management) => MCV4U / MHF4U / MDM4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11450,9 +11681,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -11482,13 +11713,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11554,13 +11787,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -11630,9 +11865,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -11662,13 +11897,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -11704,9 +11941,9 @@
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -11736,13 +11973,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -11884,13 +12123,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -11920,13 +12161,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,
@@ -12252,9 +12495,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -12284,13 +12527,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -12360,9 +12605,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -12503,13 +12748,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 87,
+      "high": 89,
+      "rawText": "High 80s overall"
     },
     "supplementary": {
       "required": false,
@@ -12578,13 +12825,15 @@
         "MCV4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U; Advanced Functions => MHF4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s overall"
     },
     "supplementary": {
       "required": true,
@@ -12614,13 +12863,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -12654,9 +12905,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -12728,9 +12979,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -12764,9 +13015,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
     },
     "supplementary": {
       "required": false,
@@ -12796,13 +13047,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -12832,13 +13085,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 76,
+      "rawText": "Mid-70s overall"
     },
     "supplementary": {
       "required": false,
@@ -12908,9 +13163,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -12944,9 +13199,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -13016,9 +13271,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 74,
+      "high": 79,
+      "rawText": "Mid to High 70s"
     },
     "supplementary": {
       "required": false,
@@ -13048,13 +13303,15 @@
         "ENG4U"
       ],
       "choose": [],
-      "minimums": {},
+      "minimums": {
+        "ENG4U": 70
+      },
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 77,
+      "high": 79,
+      "rawText": "High 70s overall (co-op)"
     },
     "supplementary": {
       "required": false,

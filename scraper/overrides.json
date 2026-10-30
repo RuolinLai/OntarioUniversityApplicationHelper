@@ -1,3 +1,4 @@
 {
-  "_comment": "Manual fixes applied after scraping. Key = program id, value = fields to replace, e.g. { \"admissionRange\": { \"low\": 88, \"high\": 92, \"rawText\": \"...\" } }. Use { \"hidden\": true } to remove a program."
+  "_comment": "Manual fixes applied after scraping. Key = program id, value = fields to replace, e.g. { \"admissionRange\": { \"low\": 88, \"high\": 92, \"rawText\": \"...\" } }. Use { \"hidden\": true } to remove a program.",
+  "toronto-st-george-electical-engineering": { "name": "Electrical Engineering" }
 }
