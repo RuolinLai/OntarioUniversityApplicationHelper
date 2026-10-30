@@ -47,7 +47,7 @@ One-time setup:
 
 1. **Service account.** Open [Google Cloud → IAM → Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?project=onuniversityapplicationhelper)
    → **Create service account** (name it `github-deploy`) and give it these roles: **Firebase Hosting Admin**, **API Keys Viewer**,
-   **Firebase Authentication Admin**, **Cloud Run Viewer**. Then open it → **Keys → Add key → Create new key → JSON**. A file downloads.
+   **Firebase Authentication Admin**, **Cloud Run Viewer**, **Service Usage Consumer**. Then open it → **Keys → Add key → Create new key → JSON**. A file downloads.
 2. **GitHub secret.** In the GitHub repo: **Settings → Secrets and variables → Actions → Secrets → New repository secret**.
    Name `FIREBASE_SERVICE_ACCOUNT`, value: the whole contents of the JSON file. Then delete the file from your computer.
 3. **GitHub variables.** Same page, **Variables** tab: add the six `VITE_FIREBASE_...` entries with the same values as `.env.local`.
