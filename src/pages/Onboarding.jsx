@@ -6,10 +6,12 @@ import Grade12Picker from '../components/Grade12Picker.jsx'
 import Grade11Editor from '../components/Grade11Editor.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { primaryButton } from '../components/form.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 const STEPS = ['Grade 12 courses', 'Grade 11 marks', 'Done']
 
 export default function Onboarding() {
+  usePageTitle('Get started')
   const { user, profile } = useAuth()
   const grade12 = useGrade12Courses()
   const grade11 = useGrade11Marks()

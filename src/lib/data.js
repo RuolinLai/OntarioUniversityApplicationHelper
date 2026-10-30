@@ -12,7 +12,10 @@ export const allPrograms = programs.map((p) => ({
   university: universityById.get(p.universityId),
 }))
 
+// universities.json lists every Ontario university; only show the ones we have programs for.
 export const allUniversities = universities
+  .filter((u) => programs.some((p) => p.universityId === u.id))
+  .sort((a, b) => a.name.localeCompare(b.name))
 
 export const allFields = [...new Set(programs.flatMap((p) => p.field))].sort()
 

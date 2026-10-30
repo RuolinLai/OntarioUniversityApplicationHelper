@@ -6,8 +6,10 @@ import { courseAverage, estimateFromGrade11, formatMark } from '../lib/average.j
 import { COURSE_STATUS, courseName } from '../lib/data.js'
 import Spinner from '../components/Spinner.jsx'
 import { inputClass, parseMark, primaryButton, secondaryButton } from '../components/form.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 export default function CourseDetail() {
+  usePageTitle('Course marks')
   const { courseId } = useParams()
   const grade12 = useGrade12Courses()
   const grade11 = useGrade11Marks()

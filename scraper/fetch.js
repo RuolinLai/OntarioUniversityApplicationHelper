@@ -32,12 +32,12 @@ async function waitTurn(host) {
   if (wait > 0) await sleep(wait)
 }
 
-async function rawFetch(url) {
+async function rawFetch(url, headers = {}) {
   const host = new URL(url).host
   for (let attempt = 1; ; attempt++) {
     await waitTurn(host)
     const res = await fetch(url, {
-      headers: { 'User-Agent': USER_AGENT, Accept: 'text/html,application/xml;q=0.9,*/*;q=0.8' },
+      headers: { 'User-Agent': USER_AGENT, Accept: 'text/html,application/xml;q=0.9,*/*;q=0.8', ...headers },
       redirect: 'follow',
       signal: AbortSignal.timeout(30_000),
     })
@@ -59,13 +59,13 @@ async function robotsFor(url) {
   return robotsByHost.get(origin)
 }
 
-function cachePath(url) {
-  return join(CACHE_DIR, createHash('sha1').update(url).digest('hex') + '.html')
+function cachePath(url, headers) {
+  const key = Object.keys(headers).length ? url + JSON.stringify(headers) : url
+  return join(CACHE_DIR, createHash('sha1').update(key).digest('hex') + '.html')
 }
 
-async function readCache(url) {
+async function readCache(path) {
   try {
-    const path = cachePath(url)
     if (Date.now() - (await stat(path)).mtimeMs > CACHE_MAX_AGE_MS) return null
     return await readFile(path, 'utf8')
   } catch {
@@ -80,10 +80,13 @@ export function isBotChallenge(html) {
 /**
  * Fetches a page's HTML. Throws BlockedError if robots.txt forbids it or the
  * site refuses us (we never try to get around that), and Error for other failures.
+ * `headers` is for pages that show different content depending on a choice the
+ * visitor made, e.g. Carleton remembers the selected program in a cookie.
  */
-export async function fetchPage(url, { useCache = true } = {}) {
+export async function fetchPage(url, { useCache = true, headers = {} } = {}) {
+  const path = cachePath(url, headers)
   if (useCache) {
-    const cached = await readCache(url)
+    const cached = await readCache(path)
     if (cached != null) return cached
   }
 
@@ -92,7 +95,7 @@ export async function fetchPage(url, { useCache = true } = {}) {
     throw new BlockedError(`robots.txt disallows ${url}`)
   }
 
-  const res = await rawFetch(url)
+  const res = await rawFetch(url, headers)
   if (res.status === 401 || res.status === 403 || res.status === 429) {
     throw new BlockedError(`${res.status} from ${url}`)
   }
@@ -104,7 +107,7 @@ export async function fetchPage(url, { useCache = true } = {}) {
   if (isBotChallenge(html)) throw new BlockedError(`bot challenge page from ${url}`)
   if (useCache) {
     await mkdir(CACHE_DIR, { recursive: true })
-    await writeFile(cachePath(url), html)
+    await writeFile(path, html)
   }
   return html
 }

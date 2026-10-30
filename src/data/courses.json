@@ -10,6 +10,7 @@
   { "code": "SCH4U", "name": "Chemistry", "type": "U", "aliases": [] },
   { "code": "SPH4U", "name": "Physics", "type": "U", "aliases": [] },
   { "code": "SES4U", "name": "Earth and Space Science", "type": "U", "aliases": ["Earth and Space Sciences", "Earth & Space Science"] },
+  { "code": "PSK4U", "name": "Exercise Science", "type": "U", "aliases": ["Kinesiology"] },
   { "code": "ICS4U", "name": "Computer Science", "type": "U", "aliases": ["Computer and Information Science"] },
   { "code": "TEJ4M", "name": "Computer Engineering Technology", "type": "M", "aliases": [] },
   { "code": "CHY4U", "name": "World History since the Fifteenth Century", "type": "U", "aliases": [] },

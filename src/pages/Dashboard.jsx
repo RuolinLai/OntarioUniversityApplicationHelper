@@ -9,6 +9,7 @@ import { countdownLabel, daysBetween, toDateString, upcomingEvents, UPCOMING_DAY
 import Stat from '../components/Stat.jsx'
 import Spinner from '../components/Spinner.jsx'
 import UpcomingList from '../components/UpcomingList.jsx'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 const shortcuts = [
   { to: '/for-you', title: 'For You', text: 'Safety, match and reach programs' },
@@ -20,6 +21,7 @@ const shortcuts = [
 ]
 
 export default function Dashboard() {
+  usePageTitle('Dashboard')
   const { user, profile } = useAuth()
   const student = useStudent()
   const favorites = useFavorites()

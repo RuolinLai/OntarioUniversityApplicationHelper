@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { searchPrograms } from './search.js'
+import { searchPrograms, similarPrograms } from './search.js'
 import { formatRange, formatPrerequisites } from './format.js'
 
 const uw = { id: 'waterloo', name: 'University of Waterloo', shortName: 'Waterloo' }
@@ -65,5 +65,26 @@ describe('formatPrerequisites', () => {
       'ENG4U, MCV4U + two of SBI4U/SCH4U/SPH4U',
     )
     expect(formatPrerequisites({ required: [], choose: [] })).toBe('No specific courses')
+  })
+
+  it('summarises long choice lists', () => {
+    const courses = ['HFA4M', 'HHS4M', 'CIA4U', 'CGW4U', 'CHY4U', 'SBI4U']
+    expect(formatPrerequisites({ required: ['ENG4U'], choose: [{ count: 1, courses }] })).toBe('ENG4U + one of 6 courses')
+  })
+})
+
+describe('similarPrograms', () => {
+  const mk = (id, name, universityId, low = null) => ({ id, name, universityId, admissionRange: { low } })
+  const all = [
+    mk('uw-cs', 'Computer Science', 'waterloo', 90),
+    mk('york-cs-ba', 'Computer Science', 'york', 80),
+    mk('york-cs-bsc', 'Computer Science', 'york', 80),
+    mk('ott-cs', 'Honours BSc Computer Science', 'ottawa', 85),
+    mk('uw-ce', 'Computer Engineering', 'waterloo', 95),
+    mk('tmu-cs', 'Computer Science (Co-op)', 'tmu'),
+  ]
+
+  it('finds the same subject at other universities, one each, highest range first', () => {
+    expect(similarPrograms(all[0], all).map((p) => p.id)).toEqual(['ott-cs', 'york-cs-ba', 'tmu-cs'])
   })
 })

@@ -9,6 +9,7 @@ import {
   classifyFields,
   nextDate,
   slugify,
+  splitRequirementText,
 } from './normalize.js'
 
 // The example strings below are copied from real program pages.
@@ -117,6 +118,7 @@ describe('buildPrerequisites', () => {
 
   it('treats "ENG4U / EAE4U" as plain English', () => {
     expect(buildPrerequisites(['English => ENG4U / EAE4U'])).toMatchObject({ required: ['ENG4U'], choose: [] })
+    expect(buildPrerequisites(['English 4U (ENG4U) or Français 4U (FRA4U)'])).toMatchObject({ required: ['ENG4U'], choose: [] })
   })
 })
 
@@ -131,6 +133,9 @@ describe('parseAdmissionRange', () => {
     ['Admission averages: low 80s', 80, 83],
     ['Minimum 75% to be considered', 75, null],
     ['Low 80', 80, 83],
+    ['80-85%', 80, 85],
+    ['Cut off Range: 75 to 80%', 75, 80],
+    ['80%', 80, null],
   ])('%s', (text, low, high) => {
     expect(parseAdmissionRange(text)).toEqual({ low, high })
   })
@@ -209,5 +214,35 @@ describe('nextDate', () => {
 describe('slugify', () => {
   it('makes URL-safe ids', () => {
     expect(slugify('Arts & Science (St. George)')).toBe('arts-and-science-st-george')
+  })
+})
+
+describe('splitRequirementText', () => {
+  it('keeps "two of A, B, or C" together', () => {
+    expect(splitRequirementText('English 4U, Calculus and Vectors 4U, plus two of Biology 4U, Chemistry 4U, or Physics 4U. Additional two required courses may be 4U or 4M.')).toEqual([
+      'English 4U',
+      'Calculus and Vectors 4U',
+      'two of Biology 4U, Chemistry 4U, or Physics 4U',
+      'Additional two required courses may be 4U or 4M',
+    ])
+  })
+
+  it('applies a shared minimum grade to every course in the sentence', () => {
+    expect(splitRequirementText('English 4U, Calculus and Vectors 4U, with minimum grades of 80% in these prerequisite courses.')).toEqual([
+      'English 4U (minimum grade of 80%)',
+      'Calculus and Vectors 4U (minimum grade of 80%)',
+    ])
+  })
+
+  it('works with buildPrerequisites', () => {
+    const items = splitRequirementText(
+      'English 4U, Calculus and Vectors 4U, and one additional 4U Mathematics course. No more than two 4M courses from the same discipline.',
+    )
+    expect(buildPrerequisites(items)).toMatchObject({
+      required: ['ENG4U', 'MCV4U'],
+      // Calculus can't count as the "additional" math course.
+      choose: [{ count: 1, courses: ['MHF4U', 'MDM4U'] }],
+      warnings: [],
+    })
   })
 })

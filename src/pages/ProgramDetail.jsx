@@ -1,7 +1,8 @@
 import { Link, useLocation, useParams } from 'react-router'
 import Badge from '../components/Badge.jsx'
 import NotFound from './NotFound.jsx'
-import { getProgram, courseName } from '../lib/data.js'
+import { getProgram, courseName, allPrograms } from '../lib/data.js'
+import { similarPrograms } from '../lib/search.js'
 import { formatRange, formatUniversity, countWord } from '../lib/format.js'
 import HeartButton from '../components/HeartButton.jsx'
 import { CategoryBadge, EligibilityBadge } from '../components/MatchBadges.jsx'
@@ -10,7 +11,8 @@ import { formatMark } from '../lib/average.js'
 import { useAuth } from '../hooks/useAuth.jsx'
 import { useStudent } from '../hooks/useStudent.js'
 import { firebaseConfigured } from '../firebase.js'
-import { backLink } from '../lib/backLink.js'
+import { backLink, fromHere } from '../lib/backLink.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 function Section({ title, children }) {
   return (
@@ -44,6 +46,7 @@ export default function ProgramDetail() {
   const { id } = useParams()
   const location = useLocation()
   const program = getProgram(id)
+  usePageTitle(program ? `${program.name} · ${program.university.shortName}` : 'Program not found')
 
   if (!program) return <NotFound />
 
@@ -147,6 +150,8 @@ export default function ProgramDetail() {
         </div>
       </div>
 
+      <Compare program={program} />
+
       <p className="mt-6 text-xs text-slate-500">
         {program.source === 'scraper' ? 'Last synced from official site' : 'Sample data, not yet verified'}: {program.lastSynced}.
         Always confirm on the{' '}
@@ -156,6 +161,40 @@ export default function ProgramDetail() {
         .
       </p>
     </div>
+  )
+}
+
+// The same subject at other universities, so students can compare ranges and requirements.
+function Compare({ program }) {
+  const location = useLocation()
+  const others = similarPrograms(program, allPrograms)
+  if (others.length === 0) return null
+  return (
+    <section className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Compare at other universities</h2>
+      <ul className="mt-3 divide-y divide-slate-100">
+        {others.map((p) => (
+          <li key={p.id}>
+            <Link
+              to={`/programs/${p.id}`}
+              state={fromHere(location)}
+              className="-mx-2 flex items-center gap-3 rounded-lg px-2 py-2.5 hover:bg-slate-50"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-sm font-medium text-slate-900">{p.university.name}</span>
+                <span className="block truncate text-xs text-slate-500">
+                  {[p.name, p.degree, p.campus].filter(Boolean).join(' · ')}
+                  {p.supplementary?.required && ' · supplementary required'}
+                </span>
+              </span>
+              <span className={`shrink-0 text-sm font-semibold ${p.admissionRange?.low != null ? 'text-slate-900' : 'text-slate-400'}`}>
+                {formatRange(p.admissionRange)}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 

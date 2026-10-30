@@ -34,7 +34,7 @@ function parseArgs(argv) {
 }
 
 async function scrapeUniversity(adapter, opts, today, log) {
-  const get = (url) => fetchPage(url, { useCache: opts.useCache })
+  const get = (url, options = {}) => fetchPage(url, { useCache: opts.useCache, ...options })
   let urls = await adapter.listPrograms(get)
   if (opts.limit) urls = urls.slice(0, opts.limit)
   log(`  ${urls.length} pages to check`)
@@ -48,7 +48,9 @@ async function scrapeUniversity(adapter, opts, today, log) {
   const detailFailures = []
   for (const [i, url] of urls.entries()) {
     try {
-      const raws = adapter.parseProgram(await get(url), url, context)
+      // Most adapters just download the URL; some need to ask for it in a special way.
+      const html = adapter.fetchProgram ? await adapter.fetchProgram(url, get) : await get(url)
+      const raws = adapter.parseProgram(html, url, context)
       // Some adapters (UofT) follow a link to a second page for extra details like averages.
       for (const raw of raws) {
         if (!raw.detailUrl || !adapter.wantsDetail?.(raw.detailUrl)) continue

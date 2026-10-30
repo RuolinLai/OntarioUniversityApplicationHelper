@@ -146,6 +146,8 @@
 分类：`Interview` · `AIF / Supplementary` · `General Application` · `Grades & Averages` · `Offers & Decisions`
 来源：r/OntarioGrade12s、r/uwaterloo、r/UofT、r/McMaster 等。写自己的摘要并附原帖链接，不整段复制。
 
+> 目前的 35 条 tips 是根据常见的申请问题写的通用建议，`sourceUrl` 指向相关 subreddit（页面上显示为 "Discuss on r/…"），不是某个具体帖子。以后整理到具体的好帖子时，把 `sourceUrl` 换成原帖链接即可。
+
 ### 4.4 `courses.json`
 安省 12 年级 U/M 课程代码表，并附带常见名称别名（供爬虫把课程名转换成代码）：
 ```json
@@ -172,6 +174,16 @@ Algoma · Brock · Carleton · Guelph · Lakehead · Laurentian · McMaster · N
 > 没有分数的 program，`admissionRange` 为空，推荐功能中不参与保底/匹配/冲刺分类。
 >
 > **robots.txt 处理**：按 RFC 9309，robots.txt 返回 4xx 视为无限制，5xx 视为全部禁止。遇到 JavaScript 验证页面（bot challenge）直接停止，不尝试破解。
+>
+> **第七阶段新增**（数据来源各不相同，每个 adapter 文件开头有说明）：
+> - Carleton：按学位（BCS、BEng…）公布要求；选择 program 后网站把选择存在 cookie 里，爬虫发送同样的 cookie ✅
+> - uOttawa：先修课查询页背后有公开的 JSON API（`/api/uottawa_art_api`）✅
+> - York：program 页面包含所有省份的要求，取 `data-shortcode="on"`（安省），每个学位一条 ✅
+> - Queen's：一个页面列出所有 program 的先修课（文字句子），录取分数在另一页的表格里，用 OUAC 代码对应 ✅
+> - TMU：program-status 页列出所有 program；"Grades-Plus" 表示需要补充材料 ✅
+> - Wilfrid Laurier：sitemap 找 program 页，同一页可能有 BA / BSc 两套要求 ✅
+> - Brock、Nipissing：robots.txt 返回 403（疑似反爬保护），暂不爬
+> - 尚未完成：Guelph、Ontario Tech、Windsor、Trent、Lakehead、Laurentian、Algoma、OCAD U（robots.txt 均允许）
 
 ### 5.2 流程
 ```

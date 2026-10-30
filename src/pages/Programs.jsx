@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo } from 'react'
+import { useDeferredValue, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import ProgramCard from '../components/ProgramCard.jsx'
 import { allPrograms, allUniversities, allFields } from '../lib/data.js'
@@ -6,6 +6,7 @@ import { searchPrograms, SORT_OPTIONS } from '../lib/search.js'
 import { assessProgram } from '../lib/recommend.js'
 import { useAuth } from '../hooks/useAuth.jsx'
 import { useStudent } from '../hooks/useStudent.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 // Eligibility filter for signed-in students (design.md 7.3: not-eligible programs hidden by default).
 const ELIGIBILITY_FILTERS = {
@@ -14,10 +15,14 @@ const ELIGIBILITY_FILTERS = {
   all: 'All programs',
 }
 
+// Rendering ~1000 cards at once is slow on phones, so show them a page at a time.
+const PAGE_SIZE = 60
+
 const selectClass =
   'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
 
 export default function Programs() {
+  usePageTitle('Programs')
   // Search state lives in the URL so results survive refresh, back button and sharing.
   const [params, setParams] = useSearchParams()
   const query = params.get('q') ?? ''
@@ -54,6 +59,12 @@ export default function Programs() {
     })
   }, [searched, assessments, eligibilityFilter])
   const hiddenCount = searched.length - results.length
+
+  // Start from the first page again whenever the search or filters change.
+  const [shown, setShown] = useState({ key: '', count: PAGE_SIZE })
+  const pageKey = params.toString()
+  const shownCount = shown.key === pageKey ? shown.count : PAGE_SIZE
+  const visible = results.slice(0, shownCount)
 
   function update(key, value, defaultValue = '') {
     setParams(
@@ -181,11 +192,24 @@ export default function Programs() {
       </div>
 
       {results.length > 0 ? (
-        <div className="mt-3 grid gap-4 md:grid-cols-2">
-          {results.map((p) => (
-            <ProgramCard key={p.id} program={p} assessment={assessments?.get(p.id)} />
-          ))}
-        </div>
+        <>
+          <div className="mt-3 grid gap-4 md:grid-cols-2">
+            {visible.map((p) => (
+              <ProgramCard key={p.id} program={p} assessment={assessments?.get(p.id)} />
+            ))}
+          </div>
+          {visible.length < results.length && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={() => setShown({ key: pageKey, count: shownCount + PAGE_SIZE })}
+                className="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              >
+                Show more ({results.length - visible.length} left)
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         <div className="mt-3 rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
           No programs match your search. Try fewer words or clear the filters.

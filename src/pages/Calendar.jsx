@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/react/daygrid'
 import interactionPlugin from '@fullcalendar/react/interaction'
+import listPlugin from '@fullcalendar/react/list'
 import classicThemePlugin from '@fullcalendar/react/themes/classic'
 import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/react/themes/classic/theme.css'
@@ -18,8 +19,13 @@ import { fromHere } from '../lib/backLink.js'
 import UpcomingList from '../components/UpcomingList.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
+
+// A month grid is too cramped on a phone, so small screens start with a list of the month's events.
+const isSmallScreen = () => typeof window !== 'undefined' && window.matchMedia?.('(max-width: 639px)').matches
 
 export default function Calendar() {
+  usePageTitle('Calendar')
   const { events, loading } = useCalendarEvents()
   const favorites = useFavorites()
   const navigate = useNavigate()
@@ -82,9 +88,12 @@ export default function Calendar() {
       <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_18rem]">
         <div className="calendar rounded-xl border border-slate-200 bg-white p-3 shadow-sm sm:p-4">
           <FullCalendar
-            plugins={[dayGridPlugin, interactionPlugin, classicThemePlugin]}
-            initialView="dayGridMonth"
-            headerToolbar={{ start: 'title', end: 'today prev,next' }}
+            plugins={[dayGridPlugin, listPlugin, interactionPlugin, classicThemePlugin]}
+            initialView={isSmallScreen() ? 'listMonth' : 'dayGridMonth'}
+            headerToolbar={{ start: 'title', end: 'dayGridMonth,listMonth prev,next' }}
+            footerToolbar={{ center: 'today' }}
+            buttonText={{ dayGridMonth: 'Month', listMonth: 'List', today: 'Today' }}
+            noEventsText="No events this month"
             height="auto"
             dayMaxEvents={3}
             events={events.map(toFullCalendarEvent)}

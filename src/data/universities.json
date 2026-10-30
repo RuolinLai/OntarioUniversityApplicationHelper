@@ -1,6 +1,22 @@
 [
-  { "id": "waterloo", "name": "University of Waterloo", "shortName": "Waterloo", "city": "Waterloo", "url": "https://uwaterloo.ca/future-students/" },
-  { "id": "toronto", "name": "University of Toronto", "shortName": "UofT", "city": "Toronto", "url": "https://future.utoronto.ca/" },
+  { "id": "algoma", "name": "Algoma University", "shortName": "Algoma", "city": "Sault Ste. Marie", "url": "https://algomau.ca/" },
+  { "id": "brock", "name": "Brock University", "shortName": "Brock", "city": "St. Catharines", "url": "https://brocku.ca/" },
+  { "id": "carleton", "name": "Carleton University", "shortName": "Carleton", "city": "Ottawa", "url": "https://admissions.carleton.ca/" },
+  { "id": "guelph", "name": "University of Guelph", "shortName": "Guelph", "city": "Guelph", "url": "https://admission.uoguelph.ca/" },
+  { "id": "lakehead", "name": "Lakehead University", "shortName": "Lakehead", "city": "Thunder Bay", "url": "https://www.lakeheadu.ca/" },
+  { "id": "laurentian", "name": "Laurentian University", "shortName": "Laurentian", "city": "Sudbury", "url": "https://laurentian.ca/" },
+  { "id": "laurier", "name": "Wilfrid Laurier University", "shortName": "Laurier", "city": "Waterloo", "url": "https://www.wlu.ca/" },
   { "id": "mcmaster", "name": "McMaster University", "shortName": "McMaster", "city": "Hamilton", "url": "https://future.mcmaster.ca/" },
-  { "id": "western", "name": "Western University", "shortName": "Western", "city": "London", "url": "https://welcome.uwo.ca/" }
+  { "id": "nipissing", "name": "Nipissing University", "shortName": "Nipissing", "city": "North Bay", "url": "https://www.nipissingu.ca/" },
+  { "id": "ocad", "name": "OCAD University", "shortName": "OCAD U", "city": "Toronto", "url": "https://www.ocadu.ca/" },
+  { "id": "ontariotech", "name": "Ontario Tech University", "shortName": "Ontario Tech", "city": "Oshawa", "url": "https://ontariotechu.ca/" },
+  { "id": "ottawa", "name": "University of Ottawa", "shortName": "uOttawa", "city": "Ottawa", "url": "https://www.uottawa.ca/study/" },
+  { "id": "queens", "name": "Queen's University", "shortName": "Queen's", "city": "Kingston", "url": "https://www.queensu.ca/admission/" },
+  { "id": "tmu", "name": "Toronto Metropolitan University", "shortName": "TMU", "city": "Toronto", "url": "https://www.torontomu.ca/admissions/" },
+  { "id": "toronto", "name": "University of Toronto", "shortName": "UofT", "city": "Toronto", "url": "https://future.utoronto.ca/" },
+  { "id": "trent", "name": "Trent University", "shortName": "Trent", "city": "Peterborough", "url": "https://www.trentu.ca/" },
+  { "id": "waterloo", "name": "University of Waterloo", "shortName": "Waterloo", "city": "Waterloo", "url": "https://uwaterloo.ca/future-students/" },
+  { "id": "western", "name": "Western University", "shortName": "Western", "city": "London", "url": "https://welcome.uwo.ca/" },
+  { "id": "windsor", "name": "University of Windsor", "shortName": "Windsor", "city": "Windsor", "url": "https://www.uwindsor.ca/" },
+  { "id": "york", "name": "York University", "shortName": "York", "city": "Toronto", "url": "https://futurestudents.yorku.ca/" }
 ]

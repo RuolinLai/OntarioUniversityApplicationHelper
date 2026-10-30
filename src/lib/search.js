@@ -61,3 +61,30 @@ export function searchPrograms(programs, options = {}) {
     })
     .sort(compare(sort))
 }
+
+// "Honours BSc Computer Science (Co-op)" -> "computer science", so the same subject matches across universities.
+function baseName(name) {
+  return name
+    .toLowerCase()
+    .replace(/\(.*?\)/g, ' ')
+    .replace(/\b(honours|joint|specialization|major|bachelor of \w+|b[a-z]{1,4})\b/g, ' ')
+    .replace(/[^a-z]+/g, ' ')
+    .trim()
+}
+
+/**
+ * Programs with the same name at other universities (one per university, the first found),
+ * for comparing ranges on a program page.
+ */
+export function similarPrograms(program, programs, limit = 8) {
+  const name = baseName(program.name)
+  if (!name) return []
+  const seen = new Set([program.universityId])
+  const matches = []
+  for (const p of programs) {
+    if (seen.has(p.universityId) || baseName(p.name) !== name) continue
+    seen.add(p.universityId)
+    matches.push(p)
+  }
+  return matches.sort((a, b) => (b.admissionRange?.low ?? -1) - (a.admissionRange?.low ?? -1)).slice(0, limit)
+}

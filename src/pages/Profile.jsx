@@ -16,6 +16,7 @@ import Spinner from '../components/Spinner.jsx'
 import Stat from '../components/Stat.jsx'
 import { useSaver } from '../hooks/useSaver.js'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 const TABS = {
   courses: 'Courses',
@@ -28,6 +29,7 @@ const TABS = {
 const statusTone = { completed: 'green', in_progress: 'blue', next_semester: 'slate' }
 
 export default function Profile() {
+  usePageTitle('Profile')
   const [params, setParams] = useSearchParams()
   const tab = TABS[params.get('tab')] ? params.get('tab') : 'courses'
   const grade12 = useGrade12Courses()

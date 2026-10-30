@@ -9,6 +9,7 @@ import { assessProgram, CATEGORY_LABEL, FIELD_KEY_COURSES, MATCH_MARGIN, recomme
 import { formatRange, formatUniversity } from '../lib/format.js'
 import { useStudent } from '../hooks/useStudent.js'
 import { fromHere } from '../lib/backLink.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 const selectClass =
   'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
@@ -34,6 +35,7 @@ const SORT = {
 const PAGE = 8
 
 export default function ForYou() {
+  usePageTitle('For You')
   const student = useStudent()
   const [params, setParams] = useSearchParams()
   const fieldParam = params.get('field') ?? ''

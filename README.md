@@ -14,7 +14,7 @@ npm run dev      # open http://127.0.0.1:5173
 ```bash
 npm test         # run unit tests
 npm run build    # production build into dist/
-npm run scrape   # update src/data/programs.json from university websites (~10 min)
+npm run scrape   # update src/data/programs.json from university websites (~30 min)
 ```
 
 ## Accounts (Firebase)
@@ -76,6 +76,7 @@ npm run scrape -- --limit 5          # quick test: 5 pages each, nothing written
 - If a university's results look broken (e.g. far fewer programs than last time), its old data is kept.
 - Each run writes `scraper/last-report.md` listing changes and programs that need review.
 - Manual fixes go in `scraper/overrides.json`.
+- Supported so far: Waterloo, UofT, Western, Carleton, uOttawa, York, Queen's, TMU, Laurier. See design.md 5.1 for the rest.
 - To add a university, copy an adapter in `scraper/universities/`, adjust the selectors, and add it to `index.js`.
   `node scraper/tools/inspect.js page.html` prints a page's headings to help find the right selectors.
 
@@ -87,4 +88,4 @@ npm run scrape -- --limit 5          # quick test: 5 pages each, nothing written
 - [ ] Phase 4 — Eligibility, top-6 average, safety/match/reach, favourites (code done; needs a Firebase project to test)
 - [ ] Phase 5 — Calendar, extracurriculars, dashboard (code done; needs a Firebase project to test)
 - [ ] Phase 6 — Deploy + weekly auto-scrape (workflows written; needs the one-time setup above)
-- [ ] Phase 7 — More universities, tips, polish
+- [ ] Phase 7 — More universities (9 of 20 so far), 35 tips, mobile polish — in progress

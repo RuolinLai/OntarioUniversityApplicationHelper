@@ -47,7 +47,7 @@ export default function ProgramCard({ program, assessment }) {
       </div>
 
       <div className="mt-4 text-xs text-slate-500">
-        Requires: <span className="font-mono text-slate-700">{formatPrerequisites(prerequisites)}</span>
+        Requires: <span className="font-mono text-slate-700 [overflow-wrap:anywhere]">{formatPrerequisites(prerequisites)}</span>
       </div>
 
       {assessment && (

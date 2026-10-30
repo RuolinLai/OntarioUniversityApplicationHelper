@@ -1,14 +1,12 @@
 # Scraper report — 2026-10-30
 
-## toronto
+## laurier
 
-- Pages checked: 279, programs found: 349
-- Needs review: 1
-  - toronto-st-george-european-studies: No required courses found
+- Pages checked: 76, programs found: 99
 - ✅ Updated
 
 ## Changes
 
-- Added: 0
+- Added: 99
 - Removed: 0
 - Changed requirements: 0

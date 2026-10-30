@@ -5,9 +5,11 @@ import { firebaseConfigured } from '../firebase.js'
 import FirebaseMissing from '../components/FirebaseMissing.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 // One page for /login and /signup; `mode` picks which form is shown.
 export default function Login({ mode = 'login' }) {
+  usePageTitle(mode === 'signup' ? 'Sign up' : 'Log in')
   const isSignup = mode === 'signup'
   const { user, loading } = useAuth()
   const location = useLocation()

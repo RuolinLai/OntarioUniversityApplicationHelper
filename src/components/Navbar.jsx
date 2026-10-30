@@ -37,7 +37,7 @@ function UserMenu({ name, email }) {
     .toUpperCase()
 
   return (
-    <div ref={ref} className="relative ml-auto hidden md:block">
+    <div ref={ref} className="relative ml-auto hidden lg:block">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <span>OntarioU Helper</span>
         </Link>
 
-        <div className="ml-6 hidden flex-1 items-center gap-1 md:flex">
+        <div className="ml-6 hidden flex-1 items-center gap-1 lg:flex">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.end} className={linkClass}>
               {l.label}
@@ -101,7 +101,7 @@ export default function Navbar() {
         ) : (
           <Link
             to="/login"
-            className="ml-auto hidden rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800 md:block"
+            className="ml-auto hidden rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800 lg:block"
           >
             Log in
           </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="ml-auto rounded-md p-2 text-slate-600 hover:bg-slate-100 md:hidden"
+          className="ml-auto rounded-md p-2 text-slate-600 hover:bg-slate-100 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
@@ -121,7 +121,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="flex flex-col gap-1 border-t border-slate-200 px-4 py-3 md:hidden">
+        <div className="flex flex-col gap-1 border-t border-slate-200 px-4 py-3 lg:hidden">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.end} className={linkClass} onClick={() => setOpen(false)}>
               {l.label}

@@ -6,7 +6,8 @@ import courses from '../src/data/courses.json' with { type: 'json' }
 
 const COURSE_CODE = /\b[A-Z]{3}4[UM]\b/g
 const MATH_COURSES = ['MHF4U', 'MCV4U', 'MDM4U']
-const ENGLISH_EQUIVALENTS = ['ENG4U', 'EAE4U']
+// Universities accept these in place of ENG4U (uOttawa also accepts Français 4U).
+const ENGLISH_EQUIVALENTS = ['ENG4U', 'EAE4U', 'FRA4U']
 
 // Course names as they appear on university websites -> course code.
 // Built from courses.json (name + aliases), longest first so that
@@ -19,7 +20,7 @@ const NAME_PATTERNS = courses
     regex: new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+')}\\b`, 'i'),
   }))
 
-const COUNT_WORDS = { one: 1, two: 2, three: 3, four: 4 }
+const COUNT_WORDS = { one: 1, two: 2, three: 3, four: 4, 1: 1, 2: 2, 3: 3, 4: 4 }
 
 /** Finds course codes and course names in a piece of text, in order of appearance. */
 export function findCourses(text) {
@@ -50,14 +51,14 @@ export function parseRequirementItem(text) {
   const minMatch = text.match(/minimum (?:final )?grade of (?:at least )?(\d{2})\s*%/i)
   const minimum = minMatch ? Number(minMatch[1]) : null
 
-  let found = /\b(?:any|one) (?:grade 12 u |4u )?math(?:ematics)?\b/i.test(text) ? MATH_COURSES : findCourses(text)
+  let found = /\b(?:any|one) (?:(?:additional|other) )?(?:grade 12 u |4u )?math(?:ematics)?\b/i.test(text) ? MATH_COURSES : findCourses(text)
   if (found.length === 0) {
     // Grade 11 requirements like "Functions (MCF3M or MCR3U)" are out of scope for a Grade 12 planner.
     const grade11 = /\b[A-Z]{3}3[UMCE]\b/.test(text)
     return { kind: 'ignored', courses: [], count: 0, minimum, grade11 }
   }
 
-  const countMatch = text.match(/\b(one|two|three|four)\b(?:\s+\w+)?\s+of\b/i) || text.match(/\bone math\b/i)
+  const countMatch = text.match(/\b(one|two|three|four|[1-4])\b(?:\s+\w+)?\s+of\b/i) || text.match(/\bone math\b/i)
   let count = null
   if (countMatch) count = COUNT_WORDS[(countMatch[1] ?? 'one').toLowerCase()]
   else if (found.length > 1 && /\bor\b|\//i.test(text)) count = 1
@@ -67,18 +68,27 @@ export function parseRequirementItem(text) {
   return { kind: 'required', courses: [...found], count: found.length, minimum }
 }
 
+// "No specific prerequisites" is a real answer, not something we failed to parse.
+const NO_PREREQUISITES = /\bno (specific |required )?(prerequisite|course)s?\b/i
+
 /** Combines several requirement lines into the prerequisites object used by the website. */
 export function buildPrerequisites(items) {
   const required = []
   const choose = []
   const minimums = {}
   const warnings = []
+  const additional = [] // choice groups like "one additional 4U math course"
 
   for (const text of items) {
     const parsed = parseRequirementItem(text)
     if (parsed.kind === 'ignored') {
       // "One other 4U course" is fine to ignore; anything else might be a course we don't recognise.
-      if (!parsed.grade11 && !/\b(other|additional|any)\b.*\b(4U|U\/M|course)/i.test(text)) warnings.push(`Unrecognised requirement: "${text}"`)
+      const harmless =
+        parsed.grade11 ||
+        NO_PREREQUISITES.test(text) ||
+        /\bno more than\b/i.test(text) ||
+        /\b(other|additional|any)\b.*\b(4U|U\/M|course)/i.test(text)
+      if (!harmless) warnings.push(`Unrecognised requirement: "${text}"`)
       continue
     }
     // EAE4U is an alternative Grade 12 English credit that universities accept in place of
@@ -90,12 +100,48 @@ export function buildPrerequisites(items) {
     if (parsed.kind === 'required') {
       for (const c of parsed.courses) if (!required.includes(c)) required.push(c)
     } else {
-      choose.push({ count: parsed.count, courses: parsed.courses })
+      const group = { count: parsed.count, courses: parsed.courses }
+      choose.push(group)
+      if (/\b(additional|other)\b/i.test(text)) additional.push(group)
     }
     if (parsed.minimum) for (const c of parsed.courses) minimums[c] = parsed.minimum
   }
+  // "Calculus and Vectors, and one additional math" can't be satisfied by Calculus itself.
+  for (const group of additional) group.courses = group.courses.filter((c) => !required.includes(c))
 
   return { required, choose, minimums, rawText: items.join('; '), warnings }
+}
+
+const CHOICE_GROUP = /^(.*?)(?:,\s*|\s+)(?:(?:and|plus)\s+)?((?:any\s+)?(?:one|two|three|four)\s+(?:\w+\s+)?of\b.*)$/i
+const SHARED_MINIMUM = /^(?:and\s+)?with (?:a )?minimum (?:final )?grades? of (\d{2})\s*%/i
+
+/**
+ * Splits a requirement sentence into items for buildPrerequisites, for sites that write prose:
+ *   "English 4U, Calculus and Vectors 4U, plus two of Biology 4U, Chemistry 4U, or Physics 4U."
+ *     -> ["English 4U", "Calculus and Vectors 4U", "two of Biology 4U, Chemistry 4U, or Physics 4U"]
+ *   "English 4U, Calculus and Vectors 4U, with minimum grades of 80% in these prerequisite courses."
+ *     -> ["English 4U (minimum grade of 80%)", "Calculus and Vectors 4U (minimum grade of 80%)"]
+ * "A or B" stays together so it becomes a choice. Sentences are split on periods.
+ */
+export function splitRequirementText(text) {
+  const items = []
+  for (const sentence of cleanText(text).split(/(?<=\.)\s+/)) {
+    let rest = sentence.replace(/\.$/, '').trim()
+    if (!rest) continue
+    let group = null
+    const m = rest.match(CHOICE_GROUP)
+    if (m) [rest, group] = [m[1], m[2]]
+    const pieces = rest
+      .split(/,\s*(?:plus\s+)?|\s+plus\s+/)
+      .map((p) => p.replace(/^and\s+/i, '').trim())
+      .filter(Boolean)
+    const minimum = pieces.find((p) => SHARED_MINIMUM.test(p))
+    const courses = pieces.filter((p) => p !== minimum)
+    const suffix = minimum ? ` (minimum grade of ${minimum.match(SHARED_MINIMUM)[1]}%)` : ''
+    items.push(...courses.map((p) => p + suffix))
+    if (group) items.push(group)
+  }
+  return items
 }
 
 /** "Minimum 70% English" -> { courses: ['ENG4U'], minimum: 70 } */
@@ -118,6 +164,7 @@ function bound(qualifier, decade, which) {
  * "Individual selection from the low to mid-90s" -> { low: 90, high: 96 }
  * "High 80s to low 90s" -> { low: 87, high: 93 }
  * "Mid 80s (regular) and High 80s (co-op)" -> { low: 84, high: 86 }  (first range wins)
+ * "80-85%" -> { low: 80, high: 85 }
  * "Minimum 75%" -> { low: 75, high: null }
  */
 export function parseAdmissionRange(text) {
@@ -133,6 +180,8 @@ export function parseAdmissionRange(text) {
     const high = d2 ? bound(q3, Number(d2), 'high') : bound(q2 ?? q1, Number(d1), 'high')
     return { low, high }
   }
+  const span = text.match(/\b([5-9]\d)\s*%?\s*(?:-|–|to)\s*([5-9]\d|100)\s*%/)
+  if (span && Number(span[1]) <= Number(span[2])) return { low: Number(span[1]), high: Number(span[2]) }
   const pct = text.match(/\b([5-9]\d)\s*%/)
   if (pct) return { low: Number(pct[1]), high: null }
   return null
@@ -143,15 +192,20 @@ const SUPPLEMENTARY_TYPES = [
   [/interview/i, 'Interview'],
   [/portfolio/i, 'Portfolio'],
   [/video/i, 'Video'],
+  [/audition/i, 'Audition'],
+  [/admission test/i, 'Admission test'],
   [/supplement(?:al|ary)|profile/i, 'Supplementary application'],
 ]
+
+// Requirement lists sometimes include non-course items like "Auditions" or "Portfolio".
+const SUPPLEMENTARY_ITEM = /^(an? |personal )?(auditions?|references?|portfolio|interview|admission test|supplementary (application|form))\b/i
 
 /** Looks for supplementary application requirements in a list of sentences. */
 export function detectSupplementary(sentences) {
   const relevant = sentences.filter(
     (s) =>
       SUPPLEMENTARY_TYPES.some(([re]) => re.test(s)) &&
-      /\b(required|must|invited|deadline)\b/i.test(s) &&
+      /\b(required|requires?|mandatory|must|invited|deadline|submit)\b/i.test(s) &&
       !/\bnot required\b.*\b(form|application|interview|portfolio)/i.test(s) &&
       // "For Western Integrated Science (WISc), ... supplemental application" applies to a sub-program only.
       !/^for\s/i.test(s.trim()),
@@ -230,11 +284,15 @@ export function cleanText(text) {
  *                        minimumNotes, supplementarySentences, coop, description, officialUrl }
  */
 export function buildProgram(raw, universityId, today) {
-  const prerequisites = buildPrerequisites(raw.requirementItems ?? [])
+  const items = raw.requirementItems ?? []
+  const supplementaryItems = items.filter((text) => SUPPLEMENTARY_ITEM.test(text)).map((text) => `${text} (required)`)
+  const prerequisites = buildPrerequisites(items.filter((text) => !SUPPLEMENTARY_ITEM.test(text)))
   const range = parseAdmissionRange(raw.averageText)
   const warnings = [...prerequisites.warnings]
-  if (raw.averageText && !range) warnings.push(`Could not parse admission average: "${raw.averageText}"`)
-  if (prerequisites.required.length === 0 && prerequisites.choose.length === 0) warnings.push('No required courses found')
+  // "Varies by program" means no single range is published, which isn't a parsing problem.
+  if (raw.averageText && !range && !/\bvar(y|ies)\b/i.test(raw.averageText)) warnings.push(`Could not parse admission average: "${raw.averageText}"`)
+  const noCourses = prerequisites.required.length === 0 && prerequisites.choose.length === 0
+  if (noCourses && !NO_PREREQUISITES.test(prerequisites.rawText)) warnings.push('No required courses found')
   delete prerequisites.warnings
   for (const note of raw.minimumNotes ?? []) {
     const parsed = parseMinimumNote(note)
@@ -252,7 +310,7 @@ export function buildProgram(raw, universityId, today) {
     degree: raw.degree ?? '',
     prerequisites,
     admissionRange: { low: range?.low ?? null, high: range?.high ?? null, rawText: raw.averageText ?? '' },
-    supplementary: detectSupplementary(raw.supplementarySentences ?? []),
+    supplementary: detectSupplementary([...supplementaryItems, ...(raw.supplementarySentences ?? [])]),
     keyDates: (raw.keyDates ?? [])
       .map(({ label, on }) => ({ label, date: nextDate(on, today) }))
       .filter((d) => d.date)

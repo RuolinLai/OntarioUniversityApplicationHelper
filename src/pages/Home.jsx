@@ -4,6 +4,7 @@ import { allPrograms, allUniversities } from '../lib/data.js'
 import { useAuth } from '../hooks/useAuth.jsx'
 import Dashboard from './Dashboard.jsx'
 import Spinner from '../components/Spinner.jsx'
+import { usePageTitle } from '../hooks/usePageTitle.js'
 
 const features = [
   { title: 'Find programs you qualify for', text: 'Enter your Grade 12 courses and see which programs match their prerequisites.' },
@@ -11,6 +12,9 @@ const features = [
   { title: 'Track your marks', text: 'Log every assessment and get your course and top-6 averages calculated automatically.' },
   { title: 'Never miss a deadline', text: 'Heart a program and its key dates show up in your calendar.' },
 ]
+
+// How many programs each university has, for the "Universities covered" list.
+const programCounts = allPrograms.reduce((counts, p) => counts.set(p.universityId, (counts.get(p.universityId) ?? 0) + 1), new Map())
 
 // Signed-in students who finished onboarding get their dashboard; everyone else the landing page.
 export default function Home() {
@@ -21,6 +25,7 @@ export default function Home() {
 }
 
 function Landing({ needsOnboarding }) {
+  usePageTitle('')
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
 
@@ -40,13 +45,13 @@ function Landing({ needsOnboarding }) {
           to see your dashboard.
         </p>
       )}
-      <section className="rounded-2xl bg-gradient-to-br from-brand-700 to-brand-800 px-6 py-14 text-white sm:px-12">
+      <section className="rounded-2xl bg-gradient-to-br from-brand-700 to-brand-800 px-5 py-10 text-white sm:px-12 sm:py-14">
         <h1 className="max-w-2xl text-3xl font-bold sm:text-4xl">Plan your Ontario university application in one place.</h1>
         <p className="mt-3 max-w-2xl text-brand-100">
           Browse {allPrograms.length} programs from {allUniversities.length} universities, check prerequisites, and track your
           grades and deadlines.
         </p>
-        <form onSubmit={onSubmit} className="mt-8 flex max-w-xl gap-2">
+        <form onSubmit={onSubmit} className="mt-8 flex max-w-xl flex-col gap-2 sm:flex-row">
           <input
             type="search"
             value={query}
@@ -69,11 +74,41 @@ function Landing({ needsOnboarding }) {
         ))}
       </section>
 
-      <div className="mt-10 text-center">
-        <Link to="/programs" className="font-medium text-brand-700 hover:underline">
-          Browse all programs →
+      <section className="mt-12">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-lg font-semibold text-slate-900">Universities covered</h2>
+          <Link to="/programs" className="text-sm font-medium text-brand-700 hover:underline">
+            Browse all programs →
+          </Link>
+        </div>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {allUniversities.map((u) => (
+            <li key={u.id}>
+              <Link
+                to={`/programs?uni=${u.id}`}
+                className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 hover:border-slate-300 hover:bg-slate-50"
+              >
+                <span className="min-w-0">
+                  <span className="block truncate text-sm font-medium text-slate-900">{u.name}</span>
+                  <span className="block text-xs text-slate-500">{u.city}</span>
+                </span>
+                <span className="shrink-0 text-sm text-slate-500">{programCounts.get(u.id)} programs</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-xs text-slate-500">More Ontario universities are being added. Data is updated from official websites every week.</p>
+      </section>
+
+      <section className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="font-semibold text-slate-900">Not sure where to start?</h2>
+          <p className="mt-1 text-sm text-slate-600">Read short tips on interviews, supplementary applications, averages and offers.</p>
+        </div>
+        <Link to="/tips" className="shrink-0 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+          Read the tips
         </Link>
-      </div>
+      </section>
     </div>
   )
 }

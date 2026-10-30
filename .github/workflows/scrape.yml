@@ -18,7 +18,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120 # ~1000 pages at 1.5 s each, one university after another
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:

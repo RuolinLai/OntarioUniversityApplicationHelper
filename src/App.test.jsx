@@ -24,13 +24,20 @@ describe('pages render without crashing', () => {
     expect(html).not.toContain('Mechanical Engineering')
   })
 
+  it('tips filter by category from the URL', () => {
+    const html = render('/tips?cat=Interview')
+    expect(html).toContain('Practise timed video answers out loud')
+    expect(html).not.toContain('Waterloo AIF: show, don')
+  })
+
   it('every program has a working detail page', () => {
     for (const p of allPrograms) {
       const html = render(`/programs/${p.id}`)
-      expect(html).toContain(p.university.name)
-      expect(html).toContain(p.officialUrl)
+      // React escapes ' as &#x27; (Queen's University).
+      expect(html).toContain(p.university.name.replaceAll("'", '&#x27;'))
+      expect(html).toContain(p.officialUrl.replaceAll('&', '&amp;'))
     }
-  }, 30_000) // renders every program (~460 pages)
+  }, 60_000) // renders every program (~860 pages)
 
   // Tests run without .env.local, so account pages should explain that instead of crashing.
   it.skipIf(firebaseConfigured).each(['/login', '/signup', '/profile', '/onboarding'])('%s explains missing Firebase config', (url) => {
