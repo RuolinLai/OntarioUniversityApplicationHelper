@@ -1,6 +1,9 @@
 // Shared Tailwind classes for form controls on the account pages.
-export const inputClass =
-  'w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
+// fieldClass has no width, for inputs that set their own (w-full would win over w-20).
+export const fieldClass =
+  'rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20'
+
+export const inputClass = `w-full ${fieldClass}`
 
 export const primaryButton =
   'rounded-lg bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-50'

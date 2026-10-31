@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ArrowRight, Plus, X } from 'lucide-react'
 import { grade11Courses, courseName } from '../lib/data.js'
 import { averageOf, formatMark, grade11PrerequisitesOf } from '../lib/average.js'
-import { inputClass, parseMark, primaryButton, secondaryButton } from './form.js'
+import { fieldClass, inputClass, parseMark, primaryButton, secondaryButton } from './form.js'
 
 const leadsTo = new Map(grade11Courses.map((c) => [c.code, c.leadsTo]))
 
@@ -82,7 +82,7 @@ export default function Grade11Editor({ grade12Codes, existing, hidden = [], onS
             placeholder="—"
             value={marks[code] ?? ''}
             onChange={(e) => setMarks((prev) => ({ ...prev, [code]: e.target.value }))}
-            className={`${inputClass} w-20 text-center text-xl font-bold tabular-nums ${bad ? 'border-brand-600' : ''}`}
+            className={`${fieldClass} w-20 text-center text-xl font-bold tabular-nums ${bad ? 'border-brand-600' : ''}`}
             aria-label={`${code} mark`}
             aria-invalid={bad}
           />

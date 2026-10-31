@@ -11,8 +11,10 @@ const ENGLISH_EQUIVALENTS = ['ENG4U', 'EAE4U', 'FRA4U']
 
 // Course names as they appear on university websites -> course code.
 // Built from courses.json (name + aliases), longest first so that
-// "Calculus and Vectors" wins over "Calculus".
+// "Calculus and Vectors" wins over "Calculus". Courses with matchName: false have names
+// too generic to search for ("Science" would match "Political Science"); only their codes count.
 const NAME_PATTERNS = courses
+  .filter((c) => c.matchName !== false)
   .flatMap((c) => [c.name, ...c.aliases].map((name) => ({ name, code: c.code })))
   .sort((a, b) => b.name.length - a.name.length)
   .map(({ name, code }) => ({

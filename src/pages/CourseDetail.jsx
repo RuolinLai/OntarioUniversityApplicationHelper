@@ -6,7 +6,7 @@ import { saveGrade12Course, useGrade11Marks, useGrade12Courses } from '../hooks/
 import { courseAverage, estimateFromGrade11, estimateMode, estimateSource, formatMark } from '../lib/average.js'
 import { COURSE_STATUS, courseName } from '../lib/data.js'
 import Spinner from '../components/Spinner.jsx'
-import { inputClass, parseMark, primaryButton, secondaryButton } from '../components/form.js'
+import { fieldClass, parseMark, primaryButton, secondaryButton } from '../components/form.js'
 import { usePageTitle } from '../hooks/usePageTitle.js'
 import { BackButton } from '../components/LinkButton.jsx'
 import MarkBar, { MARK_COLOR } from '../components/charts/MarkBar.jsx'
@@ -226,7 +226,7 @@ function CourseEditor({ course, grade11 }) {
                         step="any"
                         value={goal}
                         onChange={(e) => setGoal(e.target.value)}
-                        className={`${inputClass} w-20 py-1 text-center font-semibold`}
+                        className={`${fieldClass} w-20 py-1 text-center font-semibold`}
                         aria-label="Goal mark"
                       />
                       %
@@ -259,7 +259,7 @@ function CourseEditor({ course, grade11 }) {
                 placeholder="—"
                 value={draft.finalMark}
                 onChange={(e) => setDraft((d) => ({ ...d, finalMark: e.target.value }))}
-                className={`${inputClass} w-24 text-center text-xl font-bold ${Number.isNaN(finalMark) ? 'border-brand-600' : ''}`}
+                className={`${fieldClass} w-24 text-center text-xl font-bold ${Number.isNaN(finalMark) ? 'border-brand-600' : ''}`}
               />
               <span className="font-medium text-slate-500">%</span>
             </span>
@@ -321,7 +321,7 @@ function CourseEditor({ course, grade11 }) {
                       value={a.name}
                       onChange={(e) => updateRow(a.id, 'name', e.target.value)}
                       placeholder="e.g. Unit 1 Test"
-                      className={`${inputClass} min-w-44 font-medium`}
+                      className={`${fieldClass} min-w-44 font-medium`}
                       aria-label="Assessment name"
                     />
                     {rowErrors[i] && <div className="mt-1 text-xs text-red-700">{rowErrors[i]}</div>}
@@ -336,7 +336,7 @@ function CourseEditor({ course, grade11 }) {
                         value={a[field]}
                         onChange={(e) => updateRow(a.id, field, e.target.value)}
                         placeholder={field === 'mark' ? 'Not marked' : field === 'weight' ? 'Optional' : ''}
-                        className={`${inputClass} w-24 tabular-nums`}
+                        className={`${fieldClass} w-24 tabular-nums`}
                         aria-label={field === 'outOf' ? 'Out of' : field[0].toUpperCase() + field.slice(1)}
                       />
                     </td>

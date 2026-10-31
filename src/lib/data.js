@@ -41,6 +41,7 @@ const SUBJECTS = [
   ['E', 'English'],
   ['M', 'Math'],
   ['S', 'Science'],
+  ['ID', 'Interdisciplinary Studies'],
   ['I', 'Computer Studies & Technology'],
   ['T', 'Computer Studies & Technology'],
   ['C', 'Canadian & World Studies'],
@@ -49,6 +50,8 @@ const SUBJECTS = [
   ['B', 'Business'],
   ['A', 'Arts'],
   ['F', 'French'],
+  ['L', 'International Languages'],
+  ['N', 'First Nations, Métis & Inuit Studies'],
 ]
 
 export function groupBySubject(list) {

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { COURSE_STATUS, grade12Courses, groupBySubject } from '../lib/data.js'
-import { inputClass, primaryButton, secondaryButton } from './form.js'
+import { fieldClass, primaryButton, secondaryButton } from './form.js'
 
 const groups = groupBySubject(grade12Courses)
 
@@ -50,7 +50,7 @@ export default function Grade12Picker({ existing, onSave, saveLabel = 'Save', sa
                       <select
                         value={selection[c.code]}
                         onChange={(e) => setSelection((prev) => ({ ...prev, [c.code]: e.target.value }))}
-                        className={`${inputClass} w-auto py-1 text-xs`}
+                        className={`${fieldClass} w-auto py-1 text-xs`}
                         aria-label={`${c.code} status`}
                       >
                         {Object.entries(COURSE_STATUS).map(([value, label]) => (

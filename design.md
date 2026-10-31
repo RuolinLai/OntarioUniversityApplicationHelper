@@ -156,6 +156,7 @@
 ```json
 { "code": "MCV4U", "name": "Calculus and Vectors", "type": "U", "aliases": ["Calculus & Vectors", "Calculus"] }
 ```
+名称太笼统的课程（如 SNC4M "Science"、ATC4M "Dance"）标 `"matchName": false`：爬虫只认它们的课程代码，不按名称匹配，以免 "Political Science" 被当成 SNC4M。
 
 ---
 
