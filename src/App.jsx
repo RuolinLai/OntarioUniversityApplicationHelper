@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx'
 import Programs from './pages/Programs.jsx'
 import ProgramDetail from './pages/ProgramDetail.jsx'
 import Tips from './pages/Tips.jsx'
+import Guide from './pages/Guide.jsx'
 import Login from './pages/Login.jsx'
 import Onboarding from './pages/Onboarding.jsx'
 import Profile from './pages/Profile.jsx'
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="for-you" element={<RequireAuth><ForYou /></RequireAuth>} />
         <Route path="calendar" element={<RequireAuth><Calendar /></RequireAuth>} />
         <Route path="tips" element={<Tips />} />
+        <Route path="guide" element={<Guide />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Login mode="signup" />} />
         <Route path="onboarding" element={<RequireAuth><Onboarding /></RequireAuth>} />

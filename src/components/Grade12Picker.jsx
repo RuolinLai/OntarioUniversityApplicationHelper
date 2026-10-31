@@ -68,7 +68,7 @@ export default function Grade12Picker({ existing, onSave, saveLabel = 'Save', sa
         ))}
       </div>
 
-      <div className="sticky bottom-0 mt-6 flex items-center justify-between gap-4 border-t border-slate-200 bg-slate-50/95 py-4">
+      <div className="sticky bottom-0 mt-6 flex items-center justify-between gap-4 border-t border-slate-200 bg-cream/95 py-4">
         <span className="text-sm text-slate-600">
           {count} {count === 1 ? 'course' : 'courses'} selected
           {count > 0 && count < 6 && ' · universities use your top 6'}

@@ -7,7 +7,7 @@ describe('backLink', () => {
     expect(backLink({ from: '/calendar' })).toEqual({ to: '/calendar', label: 'calendar' })
     expect(backLink({ from: '/' })).toEqual({ to: '/', label: 'dashboard' })
     expect(backLink({ from: '/programs?q=math' })).toEqual({ to: '/programs?q=math', label: 'programs' })
-    expect(backLink({ from: '/profile?tab=favourites' })).toEqual({ to: '/profile?tab=favourites', label: 'favourites' })
+    expect(backLink({ from: '/profile?tab=interested' })).toEqual({ to: '/profile?tab=interested', label: 'interested programs' })
   })
 
   it('falls back to the program list when opened directly', () => {

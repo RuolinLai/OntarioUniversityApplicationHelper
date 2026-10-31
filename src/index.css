@@ -1,13 +1,32 @@
 @import "tailwindcss";
 
+/* Palette: deep teal #03708d, sage #80b0b4, mint #a6c2c2 (used lightly, at 40%), cream #fbfcf8.
+   brand-* is the teal scale (700 is the main colour); the other steps are tints and
+   shades of it, plus the palette's own sage and mint. */
 @theme {
-  --color-brand-50: #fef2f2;
-  --color-brand-100: #fee2e2;
-  --color-brand-600: #dc2626;
-  --color-brand-700: #b91c1c;
-  --color-brand-800: #991b1b;
+  --color-brand-50: #e3eff0; /* light teal tint: icon tiles, active nav (teal text 4.8:1) */
+  --color-brand-100: #c9e0e2;
+  --color-brand-200: #80b0b4;
+  --color-brand-600: #1a83a0;
+  --color-brand-700: #03708d;
+  --color-brand-800: #025a72;
+  --color-mint: #a6c2c2;
+  --color-sage: #80b0b4;
+  --color-cream: #fbfcf8;
 }
 
 body {
-  @apply bg-slate-50 text-slate-800 antialiased;
+  @apply bg-cream text-slate-800 antialiased;
+}
+
+/* FullCalendar's classic theme reads these variables; tone it down to match the site. */
+.calendar {
+  --fc-classic-border: #eceee8;
+  --fc-classic-strong-border: #d6d9d0;
+  --fc-classic-today: #e3eff066;
+  --fc-classic-highlight: #03708d14;
+  --fc-classic-primary: #03708d;
+  --fc-classic-muted-foreground: #64748b;
+  --fc-classic-faint: #f8faf6;
+  --fc-classic-muted: #eef2ec;
 }

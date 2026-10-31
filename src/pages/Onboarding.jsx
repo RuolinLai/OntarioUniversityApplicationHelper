@@ -53,7 +53,7 @@ export default function Onboarding() {
         ))}
       </ol>
 
-      {error && <p className="mt-4 rounded-lg bg-brand-50 px-4 py-3 text-sm text-brand-700">{error}</p>}
+      {error && <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{error}</p>}
 
       <div className="mt-8">
         {step === 0 && (
@@ -76,13 +76,14 @@ export default function Onboarding() {
             <Grade11Editor
               grade12Codes={grade12.items.map((c) => c.code)}
               existing={grade11.items}
+              hidden={profile?.hiddenGrade11}
               saving={saving}
               saveLabel="Next"
               onBack={() => setStep(0)}
-              onSave={(marks) =>
+              onSave={(marks, hidden) =>
                 save(async () => {
                   await saveGrade11Marks(user.uid, grade11.items, marks)
-                  await updateUserProfile(user.uid, { onboardingDone: true })
+                  await updateUserProfile(user.uid, { onboardingDone: true, hiddenGrade11: hidden })
                 }, 2)
               }
             />

@@ -1,5 +1,6 @@
 import { useDeferredValue, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router'
+import { GraduationCap, SearchX } from 'lucide-react'
 import ProgramCard from '../components/ProgramCard.jsx'
 import { allPrograms, allUniversities, allFields } from '../lib/data.js'
 import { searchPrograms, SORT_OPTIONS } from '../lib/search.js'
@@ -10,8 +11,8 @@ import { usePageTitle } from '../hooks/usePageTitle.js'
 
 // Eligibility filter for signed-in students (design.md 7.3: not-eligible programs hidden by default).
 const ELIGIBILITY_FILTERS = {
-  hide: 'Hide not eligible',
-  eligible: 'Eligible only',
+  hide: 'Missing at most 1 course',
+  eligible: 'Fully eligible only',
   all: 'All programs',
 }
 
@@ -82,12 +83,19 @@ export default function Programs() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-slate-900">Programs</h1>
-      <p className="mt-1 text-slate-600">
-        Search {allPrograms.length} programs across {allUniversities.length} Ontario universities.
-      </p>
+      <div className="flex items-start gap-3">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-700">
+          <GraduationCap className="h-6 w-6" aria-hidden="true" />
+        </span>
+        <div>
+          <h1 className="text-2xl font-bold text-slate-900">Programs</h1>
+          <p className="mt-1 text-sm text-slate-600">
+            {allPrograms.length} programs across {allUniversities.length} Ontario universities
+          </p>
+        </div>
+      </div>
 
-      <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
         <div className="relative">
           <svg
             className="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
@@ -211,7 +219,8 @@ export default function Programs() {
           )}
         </>
       ) : (
-        <div className="mt-3 rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
+        <div className="mt-3 flex flex-col items-center gap-3 rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
+          <SearchX className="h-8 w-8 text-slate-300" aria-hidden="true" />
           No programs match your search. Try fewer words or clear the filters.
         </div>
       )}

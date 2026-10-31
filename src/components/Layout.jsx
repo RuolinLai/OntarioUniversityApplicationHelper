@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link, Outlet, useLocation, useNavigationType } from 'react-router'
 import Navbar from './Navbar.jsx'
+import WelcomeTour from './WelcomeTour.jsx'
 
 // Opening a new page starts at the top, like a normal website. Back/forward (POP) is left
 // alone so the browser can return you to where you were in a long list.
@@ -14,6 +15,7 @@ function ScrollToTop() {
 }
 
 const footerLinks = [
+  { to: '/guide', label: 'How to use' },
   { to: '/programs', label: 'Programs' },
   { to: '/tips', label: 'Tips' },
   { to: '/calendar', label: 'Calendar' },
@@ -23,6 +25,7 @@ export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
+      <WelcomeTour />
       <Navbar />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
         <Outlet />

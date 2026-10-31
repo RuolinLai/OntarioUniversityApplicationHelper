@@ -1,18 +1,25 @@
 import grade11Courses from '../data/grade11.json'
 
+// The weight is optional: an assessment with no weight counts as much as the average weight of
+// the marked ones that have one, so with no weights at all it is a plain mean.
+const hasWeight = (a) => a.weight != null && a.weight !== ''
+
 // Weighted course average (design.md 7.1). Only assessments with a usable mark count.
 // Returns a percentage, or null if nothing has been entered yet.
 export function courseAverage(assessments = []) {
+  const marked = assessments.filter((a) => {
+    // Number(null) and Number('') are 0, so an unmarked assessment must be skipped explicitly.
+    if (a.mark == null || a.mark === '') return false
+    return Number.isFinite(Number(a.mark)) && Number(a.outOf) > 0 && (!hasWeight(a) || Number(a.weight) > 0)
+  })
+  const weights = marked.filter(hasWeight).map((a) => Number(a.weight))
+  const defaultWeight = weights.length ? weights.reduce((sum, w) => sum + w, 0) / weights.length : 1
+
   let earned = 0
   let totalWeight = 0
-  for (const a of assessments) {
-    // Number(null) and Number('') are 0, so an unmarked assessment must be skipped explicitly.
-    if (a.mark == null || a.mark === '') continue
-    const mark = Number(a.mark)
-    const outOf = Number(a.outOf)
-    const weight = Number(a.weight)
-    if (!Number.isFinite(mark) || !(outOf > 0) || !(weight > 0)) continue
-    earned += (mark / outOf) * weight
+  for (const a of marked) {
+    const weight = hasWeight(a) ? Number(a.weight) : defaultWeight
+    earned += (Number(a.mark) / Number(a.outOf)) * weight
     totalWeight += weight
   }
   return totalWeight > 0 ? (earned / totalWeight) * 100 : null
@@ -35,9 +42,25 @@ export function grade11PrerequisitesOf(code12) {
   return grade11Courses.filter((c) => c.leadsTo.includes(code12)).map((c) => c.code)
 }
 
+// How Grade 12 courses without a mark yet are counted. Chosen by the student on the profile page
+// and saved as users/{uid}.estimateMode.
+export const ESTIMATE_MODES = {
+  grade11: 'Use the Grade 11 prerequisite mark',
+  grade11Minus2: 'Use the Grade 11 prerequisite mark − 2',
+  none: 'Leave them out',
+}
+export const DEFAULT_ESTIMATE_MODE = 'grade11'
+// Grade 12 courses are harder, so the cautious estimate takes this much off.
+export const GRADE12_PENALTY = 2
+
+export function estimateMode(value) {
+  return ESTIMATE_MODES[value] ? value : DEFAULT_ESTIMATE_MODE
+}
+
 // Estimate a Grade 12 mark from the matching Grade 11 course (design.md 7.2 step 4).
-// grade11Marks: [{ code, mark }]. Returns { mark, from } or null.
-export function estimateFromGrade11(code12, grade11Marks) {
+// grade11Marks: [{ code, mark }]. Returns { mark, from } or null (always null in 'none' mode).
+export function estimateFromGrade11(code12, grade11Marks, mode = DEFAULT_ESTIMATE_MODE) {
+  if (mode === 'none') return null
   const sources = new Set(grade11PrerequisitesOf(code12))
   let best = null
   for (const g of grade11Marks) {
@@ -47,7 +70,13 @@ export function estimateFromGrade11(code12, grade11Marks) {
       best = { mark, from: g.code }
     }
   }
+  if (best && mode === 'grade11Minus2') best.mark = Math.max(0, best.mark - GRADE12_PENALTY)
   return best
+}
+
+// "Estimated from MCR3U" / "Estimated from MCR3U − 2"
+export function estimateSource(estimate, mode) {
+  return mode === 'grade11Minus2' ? `${estimate.from} − ${GRADE12_PENALTY}` : estimate.from
 }
 
 export function formatMark(mark) {
@@ -56,7 +85,7 @@ export function formatMark(mark) {
 
 // One entry per Grade 12 course: code → { mark, estimated, from }. Courses with no mark and no
 // Grade 11 estimate are left out, since they can't count towards an average yet.
-export function buildMarkTable(grade12, grade11Marks) {
+export function buildMarkTable(grade12, grade11Marks, mode = DEFAULT_ESTIMATE_MODE) {
   const table = new Map()
   for (const c of grade12) {
     const mark = courseMark(c)
@@ -64,7 +93,7 @@ export function buildMarkTable(grade12, grade11Marks) {
       table.set(c.code, { mark, estimated: false, from: null })
       continue
     }
-    const estimate = estimateFromGrade11(c.code, grade11Marks)
+    const estimate = estimateFromGrade11(c.code, grade11Marks, mode)
     if (estimate) table.set(c.code, { mark: estimate.mark, estimated: true, from: estimate.from })
   }
   return table

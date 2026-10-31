@@ -4,16 +4,23 @@ export const TIP_CATEGORIES = ['Interview', 'AIF / Supplementary', 'General Appl
 
 const words = (text) => text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
 
+export const TIP_KINDS = [
+  { id: 'general', label: 'General advice' },
+  { id: 'reddit', label: 'Reddit discussions' },
+]
+
 /**
  * @param tips      tips.json entries
  * @param category  '' for all
+ * @param kind      '' for all; otherwise 'general' or 'reddit'
  * @param university  '' for all; otherwise tips for that university plus general tips
  * @param query     words that must all appear (as word starts) in the title or summary
  */
-export function filterTips(tips, { category = '', university = '', query = '' } = {}) {
+export function filterTips(tips, { category = '', kind = '', university = '', query = '' } = {}) {
   const queryWords = words(query)
   return tips.filter((tip) => {
     if (category && tip.category !== category) return false
+    if (kind && tip.kind !== kind) return false
     if (university && tip.universities.length > 0 && !tip.universities.includes(university)) return false
     if (queryWords.length) {
       const tipWords = words(`${tip.title} ${tip.summary}`)

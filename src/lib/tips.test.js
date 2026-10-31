@@ -13,6 +13,15 @@ describe('filterTips', () => {
     expect(filterTips(sample, { category: 'Interview' }).map((t) => t.id)).toEqual(['b'])
   })
 
+  it('filters by source', () => {
+    const mixed = [
+      { ...sample[0], kind: 'reddit' },
+      { ...sample[1], kind: 'general' },
+    ]
+    expect(filterTips(mixed, { kind: 'reddit' }).map((t) => t.id)).toEqual(['a'])
+    expect(filterTips(mixed, { kind: 'general' }).map((t) => t.id)).toEqual(['b'])
+  })
+
   it('keeps general tips when a university is selected', () => {
     expect(filterTips(sample, { university: 'waterloo' }).map((t) => t.id)).toEqual(['a', 'b'])
   })
@@ -38,6 +47,10 @@ describe('tips.json', () => {
       expect(TIP_CATEGORIES).toContain(tip.category)
       expect(tip.title && tip.summary).toBeTruthy()
       expect(Array.isArray(tip.universities)).toBe(true)
+      expect(['general', 'reddit']).toContain(tip.kind)
+      // Reddit tips must link to the post itself, not a subreddit's front page.
+      if (tip.kind === 'reddit') expect(tip.sourceUrl).toMatch(/^https:\/\/www\.reddit\.com\/r\/\w+\/comments\/\w+\//)
+      else expect(tip.sourceUrl).toBeUndefined()
       expect(ids.has(tip.id)).toBe(false)
       ids.add(tip.id)
     }

@@ -1,18 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router'
+import { CalendarDays, GraduationCap, LayoutDashboard, Lightbulb, Sparkles, UserRound } from 'lucide-react'
 import { logOut, useAuth } from '../hooks/useAuth.jsx'
 
 const links = [
-  { to: '/', label: 'Dashboard', end: true },
-  { to: '/programs', label: 'Programs' },
-  { to: '/for-you', label: 'For You' },
-  { to: '/calendar', label: 'Calendar' },
-  { to: '/tips', label: 'Tips' },
-  { to: '/profile', label: 'Profile' },
+  { to: '/', label: 'Dashboard', end: true, icon: LayoutDashboard },
+  { to: '/programs', label: 'Programs', icon: GraduationCap },
+  { to: '/for-you', label: 'For You', icon: Sparkles },
+  { to: '/calendar', label: 'Calendar', icon: CalendarDays },
+  { to: '/tips', label: 'Tips', icon: Lightbulb },
+  { to: '/profile', label: 'Profile', icon: UserRound },
 ]
 
+function NavItem({ link, onClick }) {
+  const Icon = link.icon
+  return (
+    <NavLink to={link.to} end={link.end} className={linkClass} onClick={onClick}>
+      <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+      {link.label}
+    </NavLink>
+  )
+}
+
 function linkClass({ isActive }) {
-  return `rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+  return `flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
     isActive ? 'bg-brand-50 text-brand-700' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
   }`
 }
@@ -59,6 +70,9 @@ function UserMenu({ name, email }) {
           <Link to="/profile?tab=account" onClick={() => setOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
             Account settings
           </Link>
+          <Link to="/guide" onClick={() => setOpen(false)} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+            How to use
+          </Link>
           <button
             type="button"
             onClick={() => {
@@ -88,11 +102,9 @@ export default function Navbar() {
           <span>OntarioU Helper</span>
         </Link>
 
-        <div className="ml-6 hidden flex-1 items-center gap-1 lg:flex">
+        <div className="ml-4 hidden flex-1 items-center gap-0.5 lg:flex">
           {links.map((l) => (
-            <NavLink key={l.to} to={l.to} end={l.end} className={linkClass}>
-              {l.label}
-            </NavLink>
+            <NavItem key={l.to} link={l} />
           ))}
         </div>
 
@@ -123,9 +135,7 @@ export default function Navbar() {
       {open && (
         <div className="flex flex-col gap-1 border-t border-slate-200 px-4 py-3 lg:hidden">
           {links.map((l) => (
-            <NavLink key={l.to} to={l.to} end={l.end} className={linkClass} onClick={() => setOpen(false)}>
-              {l.label}
-            </NavLink>
+            <NavItem key={l.to} link={l} onClick={() => setOpen(false)} />
           ))}
           {user ? (
             <button

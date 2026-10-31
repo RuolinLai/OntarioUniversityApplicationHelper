@@ -5,8 +5,8 @@ import { buildCalendarEvents } from '../lib/calendar.js'
 import { useFavorites } from './useFavorites.jsx'
 import { useEvents } from './useUserData.js'
 
-// OUAC dates + key dates of favourite programs + the student's own events, sorted by date.
-// Unhearting a program removes its dates, since they come straight from the favourites list.
+// OUAC dates + key dates of interested programs + the student's own events, sorted by date.
+// Unhearting a program removes its dates, since they come straight from the interested list.
 export function useCalendarEvents() {
   const favorites = useFavorites()
   const userEvents = useEvents()

@@ -75,14 +75,23 @@ describe('signed-in pages', () => {
     expect(html).toContain('Calculus and Vectors')
     expect(html).toContain('90%') // 45/50 from the only assessment
     expect(html).toContain('91%') // ENG4U final mark
-    expect(html).toContain('~87% est.') // SPH4U estimated from SPH3U
+    expect(html).toContain('~87%') // SPH4U estimated from SPH3U
+    expect(html).toContain('est. from SPH3U')
+    expect(html).toContain('Top 6 average')
     expect(html).toContain('Account menu') // navbar shows the user menu
   })
 
   it('course page shows assessments and the average', () => {
     const html = render('/profile/courses/MCV4U')
     expect(html).toContain('Unit 1 Test')
-    expect(html).toContain('Current average')
+    expect(html).toContain('Your current average')
+    expect(html).toContain('Marked so far')
+  })
+
+  it('grade 11 tab groups prerequisites', () => {
+    const html = render('/profile?tab=grade11')
+    expect(html).toContain('Prerequisites for your Grade 12 courses')
+    expect(html).toContain('Prerequisites missing a mark')
   })
 
   it('course page handles a course the user does not take', () => {
@@ -124,10 +133,10 @@ describe('signed-in pages', () => {
     expect(render('/programs?elig=all')).not.toContain('hidden based on your courses')
   })
 
-  it('profile favourites tab lists hearted programs', () => {
-    expect(render('/profile?tab=favourites')).toContain('Computer Science')
+  it('profile interested tab lists hearted programs', () => {
+    expect(render('/profile?tab=interested')).toContain('Computer Science')
     state.favorites = []
-    expect(render('/profile?tab=favourites')).toContain('No favourites yet')
+    expect(render('/profile?tab=interested')).toContain('No interested programs yet')
     state.favorites = [{ id: 'waterloo-computer-science', addedAt: null }]
   })
 
@@ -199,13 +208,13 @@ describe('signed-in pages', () => {
     const html = render('/calendar')
     state.favorites = saved
     expect(html).toContain('Add event')
-    expect(html).toContain('Favourite programs')
-    expect(html).not.toContain('None of your favourite programs list specific deadlines')
+    expect(html).toContain('Interested programs')
+    expect(html).not.toContain('None of your interested programs list specific deadlines')
   })
 
   it('calendar explains when favourites have no dates', () => {
     // Waterloo CS has no scraped key dates.
-    expect(render('/calendar')).toContain('None of your favourite programs list specific deadlines')
+    expect(render('/calendar')).toContain('None of your interested programs list specific deadlines')
   })
 
   it('extracurriculars tab groups activities by category', () => {

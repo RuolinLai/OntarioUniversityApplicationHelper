@@ -3,7 +3,7 @@
 
 export const KIND = {
   ouac: { label: 'OUAC dates', color: '#64748b' },
-  program: { label: 'Favourite programs', color: '#dc2626' },
+  program: { label: 'Interested programs', color: '#dc2626' },
   custom: { label: 'My events', color: '#2563eb' },
 }
 
@@ -48,7 +48,7 @@ export function daysBetween(from, to) {
   return Math.round((parseDate(to) - parseDate(from)) / 86_400_000)
 }
 
-// programs: the favourite programs (objects from programs.json). userEvents: [{ id, title, date,
+// programs: the interested programs (objects from programs.json). userEvents: [{ id, title, date,
 // endDate?, notes?, color? }]. Returns one list sorted by date; entries with bad dates are dropped.
 export function buildCalendarEvents({ ouacDates = [], programs = [], userEvents = [] }) {
   const events = []

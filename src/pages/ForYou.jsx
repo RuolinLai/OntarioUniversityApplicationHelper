@@ -1,6 +1,9 @@
 import { useMemo, useState } from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router'
+import { BookOpenCheck, Briefcase, Calculator, FileText, FlaskConical, HeartPulse, Landmark, Leaf, Palette, Wrench } from 'lucide-react'
 import Badge from '../components/Badge.jsx'
+import RangeBar from '../components/charts/RangeBar.jsx'
+import { CATEGORY_ICON } from '../components/MatchBadges.jsx'
 import HeartButton from '../components/HeartButton.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { allPrograms, allUniversities, courseName } from '../lib/data.js'
@@ -20,8 +23,16 @@ const COLUMNS = [
     hint: `Your average is more than ${MATCH_MARGIN}% above the top of the range.`,
     header: 'border-emerald-200 bg-emerald-50 text-emerald-800',
   },
-  { key: 'match', hint: `Your average is within ${MATCH_MARGIN}% of the top of the range (or above it, with a supplementary application).`, header: 'border-sky-200 bg-sky-50 text-sky-800' },
-  { key: 'reach', hint: `Your average is below the top of the range, but no more than ${REACH_GAP}% under the bottom.`, header: 'border-amber-200 bg-amber-50 text-amber-800' },
+  {
+    key: 'match',
+    hint: `Your average is within ${MATCH_MARGIN}% of the top of the range (or above it, with a supplementary application).`,
+    header: 'border-sky-200 bg-sky-50 text-sky-800',
+  },
+  {
+    key: 'reach',
+    hint: `Your average is below the top of the range, but no more than ${REACH_GAP}% under the bottom.`,
+    header: 'border-amber-200 bg-amber-50 text-amber-800',
+  },
 ]
 
 // Within a column: safeties and matches with the most competitive programs first,
@@ -33,6 +44,16 @@ const SORT = {
 }
 
 const PAGE = 8
+
+const FIELD_ICON = {
+  Engineering: Wrench,
+  'Computer Science / Math': Calculator,
+  'Life Sciences / Health': HeartPulse,
+  'Physical Sciences / Environment': FlaskConical,
+  'Business / Commerce': Briefcase,
+  'Social Sciences / Humanities': Landmark,
+  'Arts / Design': Palette,
+}
 
 export default function ForYou() {
   usePageTitle('For You')
@@ -95,10 +116,10 @@ export default function ForYou() {
       <p className="mt-1 text-slate-600">Programs you qualify for, sorted by how your average compares with their admission range.</p>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-4">
-        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="text-sm text-slate-500">Your top 6 average</div>
-          <div className="mt-1 text-3xl font-bold text-slate-900">{formatMark(overall?.average)}</div>
-          <div className="mt-1 text-xs text-slate-500">
+        <div className="rounded-2xl bg-slate-900 p-4 text-white shadow-sm">
+          <div className="text-sm text-slate-300">Your top 6 average</div>
+          <div className="mt-1 text-4xl font-bold">{formatMark(overall?.average)}</div>
+          <div className="mt-1 text-xs text-slate-300">
             {!overall
               ? 'No marks yet'
               : `${overall.estimated ? 'Estimated · ' : ''}${overall.courses.length} course${overall.courses.length === 1 ? '' : 's'}. Each program below uses its own required courses.`}
@@ -110,20 +131,35 @@ export default function ForYou() {
             key={d.field}
             type="button"
             onClick={() => update('field', fieldParam === d.field ? '' : d.field)}
-            className={`rounded-xl border p-4 text-left shadow-sm transition ${
+            className={`rounded-2xl border p-4 text-left shadow-sm transition ${
               fieldParam === d.field ? 'border-brand-600 bg-brand-50' : 'border-slate-200 bg-white hover:border-brand-600/40'
             }`}
           >
-            <div className="text-xs font-medium uppercase tracking-wide text-slate-500">Direction #{i + 1}</div>
-            <div className="mt-1 font-semibold text-slate-900">{d.field}</div>
-            <div className="mt-2 text-xs text-slate-600">
-              You take {d.matched.length} of {FIELD_KEY_COURSES[d.field].length} key courses
+            <div className="flex items-center justify-between">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                {(() => {
+                  const Icon = FIELD_ICON[d.field] ?? Leaf
+                  return <Icon className="h-4 w-4" aria-hidden="true" />
+                })()}
+              </span>
+              <span className="text-xs font-medium text-slate-400">#{i + 1}</span>
             </div>
-            {d.missing.length > 0 && (
-              <div className="mt-1 text-xs text-slate-500" title={d.missing.map(courseName).join(', ')}>
-                Not taking: {d.missing.join(', ')}
+            <div className="mt-2 font-semibold text-slate-900">{d.field}</div>
+            {/* Meter: key courses taken out of the field's key courses */}
+            <div
+              className="mt-3 flex items-center gap-2"
+              title={d.missing.length ? `Not taking: ${d.missing.map(courseName).join(', ')}` : 'All key courses'}
+            >
+              <div className="h-1.5 flex-1 rounded-full bg-brand-100">
+                <div
+                  className="h-full rounded-full bg-[#007596]"
+                  style={{ width: `${(d.matched.length / FIELD_KEY_COURSES[d.field].length) * 100}%` }}
+                />
               </div>
-            )}
+              <span className="text-xs tabular-nums text-slate-600">
+                {d.matched.length}/{FIELD_KEY_COURSES[d.field].length} key courses
+              </span>
+            </div>
           </button>
         ))}
       </div>
@@ -174,7 +210,10 @@ export default function ForYou() {
         {missingOne > 0 && (
           <p>
             You&apos;re one course away from {missingOne} more program{missingOne === 1 ? '' : 's'} —{' '}
-            <Link to={fields?.length === 1 ? `/programs?field=${encodeURIComponent(fields[0])}` : '/programs'} className="font-medium text-brand-700 hover:underline">
+            <Link
+              to={fields?.length === 1 ? `/programs?field=${encodeURIComponent(fields[0])}` : '/programs'}
+              className="font-medium text-brand-700 hover:underline"
+            >
               see them on the Programs page
             </Link>
             .
@@ -182,10 +221,10 @@ export default function ForYou() {
         )}
       </div>
 
-      <p className="mt-6 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-500">
-        Recommendations are a rough guide only. Admission ranges are from past years and change every year, universities calculate
-        averages in different ways (we use your top 6 Grade 12 U/M courses, including each program&apos;s required courses), and
-        supplementary applications or interviews can matter as much as grades. Always check the official website.
+      <p className="mt-6 rounded-lg border border-slate-200 bg-white/60 px-4 py-3 text-xs text-slate-500">
+        Recommendations are a rough guide only. Admission ranges are from past years and change every year, universities calculate averages
+        in different ways (we use your top 6 Grade 12 U/M courses, including each program&apos;s required courses), and supplementary
+        applications or interviews can matter as much as grades. Always check the official website.
       </p>
     </div>
   )
@@ -196,11 +235,17 @@ function Column({ column, items }) {
   const visible = showAll ? items : items.slice(0, PAGE)
 
   return (
-    <section className="flex flex-col rounded-xl border border-slate-200 bg-white shadow-sm">
-      <header className={`rounded-t-xl border-b px-4 py-3 ${column.header}`}>
-        <div className="flex items-baseline justify-between">
-          <h2 className="font-semibold">{CATEGORY_LABEL[column.key]}</h2>
-          <span className="text-sm">{items.length}</span>
+    <section className="flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <header className={`rounded-t-2xl border-b px-4 py-3 ${column.header}`}>
+        <div className="flex items-center justify-between">
+          <h2 className="flex items-center gap-2 font-semibold">
+            {(() => {
+              const Icon = CATEGORY_ICON[column.key]
+              return <Icon className="h-5 w-5" aria-hidden="true" />
+            })()}
+            {CATEGORY_LABEL[column.key]}
+          </h2>
+          <span className="rounded-full bg-white/70 px-2 py-0.5 text-sm font-semibold tabular-nums">{items.length}</span>
         </div>
         <p className="mt-0.5 text-xs opacity-80">{column.hint}</p>
       </header>
@@ -214,7 +259,11 @@ function Column({ column, items }) {
         </ul>
       )}
       {items.length > PAGE && (
-        <button type="button" onClick={() => setShowAll((s) => !s)} className="mt-auto border-t border-slate-100 py-2.5 text-sm font-medium text-brand-700 hover:bg-slate-50">
+        <button
+          type="button"
+          onClick={() => setShowAll((s) => !s)}
+          className="mt-auto border-t border-slate-100 py-2.5 text-sm font-medium text-brand-700 hover:bg-slate-50"
+        >
           {showAll ? 'Show fewer' : `Show all ${items.length}`}
         </button>
       )}
@@ -232,7 +281,12 @@ function Row({ assessment }) {
           {program.name}
         </Link>
         <div className="truncate text-xs text-slate-500">{formatUniversity(program)}</div>
-        <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-slate-600">
+        <RangeBar
+          range={program.admissionRange}
+          you={admission.average}
+          domain={[Math.min(70, Math.floor((program.admissionRange.low - 5) / 5) * 5), 100]}
+        />
+        <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-600">
           <span>
             Range <span className="font-medium text-slate-900">{formatRange(program.admissionRange)}</span>
           </span>
@@ -241,7 +295,11 @@ function Row({ assessment }) {
             You <span className="font-medium text-slate-900">{formatMark(admission.average)}</span>
             {admission.estimated && ' est.'}
           </span>
-          {program.supplementary?.required && <Badge tone="amber">Supplementary</Badge>}
+          {program.supplementary?.required && (
+            <Badge tone="amber" icon={FileText}>
+              Supplementary
+            </Badge>
+          )}
           {eligibility.belowMinimum.length > 0 && (
             <Badge tone="amber">Below {eligibility.belowMinimum.map((b) => `${b.code} min`).join(', ')}</Badge>
           )}
@@ -254,8 +312,9 @@ function Row({ assessment }) {
 
 function Empty({ children }) {
   return (
-    <div className="mx-auto mt-8 max-w-lg rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center text-sm text-slate-600">
-      {children}
+    <div className="mx-auto mt-8 flex max-w-lg flex-col items-center gap-3 rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-sm text-slate-600">
+      <BookOpenCheck className="h-8 w-8 text-slate-300" aria-hidden="true" />
+      <p>{children}</p>
     </div>
   )
 }

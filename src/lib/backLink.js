@@ -18,6 +18,6 @@ export function backLink(state) {
   const from = typeof state?.from === 'string' && state.from.startsWith('/') ? state.from : '/programs'
   const path = from.split('?')[0]
   const tab = new URLSearchParams(from.split('?')[1] ?? '').get('tab')
-  const label = path === '/profile' && tab === 'favourites' ? 'favourites' : (LABELS[path] ?? null)
+  const label = path === '/profile' && tab === 'interested' ? 'interested programs' : (LABELS[path] ?? null)
   return { to: from, label }
 }

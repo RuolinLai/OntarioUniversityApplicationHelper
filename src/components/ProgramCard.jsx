@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router'
+import { Briefcase, FileText, MapPin } from 'lucide-react'
 import Badge from './Badge.jsx'
+import RangeBar from './charts/RangeBar.jsx'
 import HeartButton from './HeartButton.jsx'
 import { CategoryBadge, EligibilityBadge } from './MatchBadges.jsx'
 import { formatRange, formatPrerequisites, formatUniversity } from '../lib/format.js'
@@ -14,17 +16,20 @@ export default function ProgramCard({ program, assessment }) {
   return (
     // The title link stretches over the whole card (after:inset-0), so the heart can be a
     // separate button instead of a button nested inside a link.
-    <div className="group relative flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-brand-600/40 hover:shadow-md">
+    <div className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-brand-600/40 hover:shadow-md">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-semibold text-slate-900 group-hover:text-brand-700">
-            <Link to={`/programs/${id}`} state={fromHere(location)} className="after:absolute after:inset-0 after:rounded-xl">
+            <Link to={`/programs/${id}`} state={fromHere(location)} className="after:absolute after:inset-0 after:rounded-2xl">
               {name}
             </Link>
           </h3>
-          <p className="text-sm text-slate-500">
-            {formatUniversity(program)}
-            {degree && ` · ${degree}`}
+          <p className="mt-0.5 flex items-start gap-1 text-sm text-slate-500">
+            <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            <span>
+              {formatUniversity(program)}
+              {degree && ` · ${degree}`}
+            </span>
           </p>
         </div>
         <div className="flex shrink-0 items-start gap-1">
@@ -42,9 +47,23 @@ export default function ProgramCard({ program, assessment }) {
         {field.map((f) => (
           <Badge key={f}>{f}</Badge>
         ))}
-        {coop && <Badge tone="green">Co-op</Badge>}
-        {supplementary?.required && <Badge tone="amber">Supplementary required</Badge>}
+        {coop && (
+          <Badge tone="green" icon={Briefcase}>
+            Co-op
+          </Badge>
+        )}
+        {supplementary?.required && (
+          <Badge tone="amber" icon={FileText}>
+            Supplementary
+          </Badge>
+        )}
       </div>
+
+      {admissionRange?.low != null && (
+        <div className="mt-3">
+          <RangeBar range={admissionRange} you={assessment?.admission?.average ?? null} />
+        </div>
+      )}
 
       <div className="mt-4 text-xs text-slate-500">
         Requires: <span className="font-mono text-slate-700 [overflow-wrap:anywhere]">{formatPrerequisites(prerequisites)}</span>

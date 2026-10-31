@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router'
+import { CalendarCheck } from 'lucide-react'
 import { countdownLabel, formatDate } from '../lib/calendar.js'
 import { fromHere } from '../lib/backLink.js'
 
@@ -7,7 +8,12 @@ import { fromHere } from '../lib/backLink.js'
 export default function UpcomingList({ events, onSelect }) {
   const location = useLocation()
   if (events.length === 0) {
-    return <p className="mt-3 rounded-xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-500">Nothing coming up.</p>
+    return (
+      <div className="mt-3 flex flex-col items-center gap-2 rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-sm text-slate-500">
+        <CalendarCheck className="h-6 w-6 text-slate-300" aria-hidden="true" />
+        Nothing coming up.
+      </div>
+    )
   }
   return (
     <ul className="mt-3 space-y-2">
@@ -22,10 +28,10 @@ export default function UpcomingList({ events, onSelect }) {
                 {e.endDate && ` – ${formatDate(e.endDate)}`}
               </span>
             </span>
-            <span className={`shrink-0 text-xs font-semibold ${e.daysLeft <= 7 ? 'text-brand-700' : 'text-slate-500'}`}>{countdownLabel(e.daysLeft)}</span>
+            <span className={`shrink-0 text-xs font-semibold ${e.daysLeft <= 7 ? 'text-red-600' : 'text-slate-500'}`}>{countdownLabel(e.daysLeft)}</span>
           </>
         )
-        const className = 'flex w-full items-start gap-3 rounded-lg border border-slate-200 bg-white px-3 py-2 text-left hover:bg-slate-50'
+        const className = 'flex w-full items-start gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left hover:bg-slate-50'
         return (
           <li key={e.id}>
             {e.kind === 'program' ? (

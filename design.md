@@ -139,14 +139,17 @@
   "category": "AIF / Supplementary",
   "universities": ["waterloo"],
   "summary": "Written in my own words...",
-  "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/...",
-  "source": "r/OntarioGrade12s"
+  "kind": "reddit",
+  "source": "r/OntarioGrade12s",
+  "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/...",
+  "posted": "2026-05"
 }
 ```
+- `kind`：`reddit`（来自具体帖子，必须有原帖 `sourceUrl` 和发帖月份 `posted`，卡片显示 "From r/… · May 2026"）或 `general`（网站自己写的通用建议，`source` 为 "General advice"，没有链接）
 分类：`Interview` · `AIF / Supplementary` · `General Application` · `Grades & Averages` · `Offers & Decisions`
 来源：r/OntarioGrade12s、r/uwaterloo、r/UofT、r/McMaster 等。写自己的摘要并附原帖链接，不整段复制。
 
-> 目前的 35 条 tips 是根据常见的申请问题写的通用建议，`sourceUrl` 指向相关 subreddit（页面上显示为 "Discuss on r/…"），不是某个具体帖子。以后整理到具体的好帖子时，把 `sourceUrl` 换成原帖链接即可。
+> 目前有 35 条 `general` tips 和 14 条 `reddit` tips（来自 r/OntarioGrade12s 的具体帖子，主要是 Waterloo / UofT 的录取案例）。Reddit 上的经验只是个案，摘要里会说明哪些说法没有官方证实。
 
 ### 4.4 `courses.json`
 安省 12 年级 U/M 课程代码表，并附带常见名称别名（供爬虫把课程名转换成代码）：
@@ -266,7 +269,7 @@ users/{uid}
 
 ### 7.1 单门课平均分（加权）
 ```
-courseAverage = Σ (mark/outOf × weight) / Σ weight × 100
+courseAverage = Σ (mark/outOf × weight) / Σ weight × 100   (weight is optional: a missing weight counts as the mean of the given ones, so no weights = plain average)
 ```
 只计算已录入的 assessment；有 `finalMark` 时优先使用。
 

@@ -63,13 +63,21 @@ export function searchPrograms(programs, options = {}) {
 }
 
 // "Honours BSc Computer Science (Co-op)" -> "computer science", so the same subject matches across universities.
+// Cached because every program page compares against all ~1000 programs.
+const baseNames = new Map()
 function baseName(name) {
-  return name
-    .toLowerCase()
-    .replace(/\(.*?\)/g, ' ')
-    .replace(/\b(honours|joint|specialization|major|bachelor of \w+|b[a-z]{1,4})\b/g, ' ')
-    .replace(/[^a-z]+/g, ' ')
-    .trim()
+  if (!baseNames.has(name)) {
+    baseNames.set(
+      name,
+      name
+        .toLowerCase()
+        .replace(/\(.*?\)/g, ' ')
+        .replace(/\b(honours|joint|specialization|major|bachelor of \w+|b[a-z]{1,4})\b/g, ' ')
+        .replace(/[^a-z]+/g, ' ')
+        .trim(),
+    )
+  }
+  return baseNames.get(name)
 }
 
 /**

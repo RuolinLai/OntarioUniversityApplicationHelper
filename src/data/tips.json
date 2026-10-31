@@ -5,8 +5,8 @@
     "category": "Interview",
     "universities": [],
     "summary": "Several programs use one-way video interviews where you see a question, get a short time to think, then record a timed answer with no retakes. Practise with a phone timer: 30 seconds to plan, 60–90 seconds to answer. Watching yourself back is awkward but it's the fastest way to stop rambling.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-002",
@@ -14,8 +14,8 @@
     "category": "Interview",
     "universities": [],
     "summary": "For behavioural questions, describe the Situation, the Task you had, the Action you took and the Result (STAR). Spend most of the time on what you personally did, and finish with what you learned or would do differently.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-003",
@@ -23,8 +23,8 @@
     "category": "Interview",
     "universities": [],
     "summary": "Generic answers like \"it's a great school\" don't stand out. Mention one or two concrete things — a first-year course, the co-op structure, a lab or club — and connect them to something you've already done.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-004",
@@ -32,8 +32,8 @@
     "category": "Interview",
     "universities": [],
     "summary": "Health and professional programs sometimes ask ethical or \"what would you do\" scenarios. There's rarely one right answer — interviewers want to hear you consider different people's perspectives, ask what information is missing, and explain your reasoning before deciding.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-005",
@@ -41,35 +41,39 @@
     "category": "Interview",
     "universities": [],
     "summary": "Check your camera, microphone and internet the day before, in the room you'll actually use. Sit facing a window or lamp, close other apps, and keep a glass of water nearby. Most platforms have a practice question — use it.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-006",
     "title": "Waterloo AIF: show, don't list",
     "category": "AIF / Supplementary",
-    "universities": ["waterloo"],
+    "universities": [
+      "waterloo"
+    ],
     "summary": "The Admission Information Form is where you stand out from people with the same average. Instead of \"I was president of the coding club\", explain what you built or changed, how many people it affected, and what you learned. One detailed example beats five one-liners.",
-    "source": "r/uwaterloo",
-    "sourceUrl": "https://www.reddit.com/r/uwaterloo/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-007",
     "title": "Waterloo AIF: use different examples in each answer",
     "category": "AIF / Supplementary",
-    "universities": ["waterloo"],
+    "universities": [
+      "waterloo"
+    ],
     "summary": "If every short answer talks about the same robotics team, readers learn less about you. Map your activities, jobs and projects to the questions before writing so each answer shows a different side of you.",
-    "source": "r/uwaterloo",
-    "sourceUrl": "https://www.reddit.com/r/uwaterloo/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-008",
     "title": "Supplementary deadlines are not January 15",
     "category": "AIF / Supplementary",
     "universities": [],
-    "summary": "The OUAC equal consideration date is January 15, but many supplementary forms, portfolios and video interviews have their own deadlines, often in February — and some are earlier. Favourite a program on this site to add its known dates to your calendar, and double-check on the official page.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "summary": "The OUAC equal consideration date is January 15, but many supplementary forms, portfolios and video interviews have their own deadlines, often in February — and some are earlier. Heart a program on this site (Interested programs) to add its known dates to your calendar, and double-check on the official page.",
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-009",
@@ -77,8 +81,8 @@
     "category": "AIF / Supplementary",
     "universities": [],
     "summary": "\"Volunteered at the library\" is vague; \"tutored 12 Grade 9 students in math, 3 hours a week for two years\" is memorable. Hours, people helped, money raised or results achieved make your activities easy to compare.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-010",
@@ -86,17 +90,20 @@
     "category": "AIF / Supplementary",
     "universities": [],
     "summary": "If illness, a family situation or a heavy work schedule affected a semester, many supplementary forms have a space for extenuating circumstances. Keep it short and factual, and say what changed afterwards.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-011",
     "title": "Portfolios and auditions: follow the format exactly",
     "category": "AIF / Supplementary",
-    "universities": ["tmu", "york"],
+    "universities": [
+      "tmu",
+      "york"
+    ],
     "summary": "Arts, design and performance programs (TMU's Grades-Plus programs, York's BFA programs and others) list exact requirements — number of pieces, file types, time limits, written statements. Missing a format rule is an easy way to lose marks, so make a checklist from the program page.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-012",
@@ -104,26 +111,30 @@
     "category": "AIF / Supplementary",
     "universities": [],
     "summary": "Admissions readers see thousands of polished, generic essays. Write your first draft in your own words, then ask a teacher or counsellor to check clarity and grammar — not to rewrite it. Your real voice and specific details are what make it believable.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-013",
     "title": "UofT Engineering: aim for the early consideration date",
     "category": "AIF / Supplementary",
-    "universities": ["toronto"],
-    "summary": "UofT Engineering's supplementary application has an early consideration date (December 1) before the January 15 deadline. Submitting early means your file can be reviewed for earlier offers — favourite a St. George Engineering program to see both dates on your calendar.",
-    "source": "r/UofT",
-    "sourceUrl": "https://www.reddit.com/r/UofT/"
+    "universities": [
+      "toronto"
+    ],
+    "summary": "UofT Engineering's supplementary application has an early consideration date (December 1) before the January 15 deadline. Submitting early means your file can be reviewed for earlier offers — heart a St. George Engineering program to see both dates on your calendar.",
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-014",
     "title": "Queen's Commerce and Health Sciences need a supplementary",
     "category": "AIF / Supplementary",
-    "universities": ["queens"],
+    "universities": [
+      "queens"
+    ],
     "summary": "Queen's lists a mandatory supplementary application for Commerce and Health Sciences, and Commerce also has minimum grades in its prerequisite courses. Grades alone won't get you in, so leave time for the written part.",
-    "source": "r/queensuniversity",
-    "sourceUrl": "https://www.reddit.com/r/queensuniversity/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-015",
@@ -131,8 +142,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "Current Ontario high school students apply through OUAC (the \"101\" application). Applications received by the equal consideration date in mid-January are all reviewed together; after that, popular programs may already be full.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-016",
@@ -140,8 +151,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "Pick a few programs you're very likely to get into, some where your average is right around the usual range, and one or two reaches. The For You page sorts programs this way from your marks — use it as a starting point, not a guarantee.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-017",
@@ -149,8 +160,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "Your school sends your courses and marks to OUAC — you don't type them in. Look at the courses on your OUAC application and tell guidance right away if something is missing, especially a summer or online course you need as a prerequisite.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-018",
@@ -158,8 +169,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "A few days after you apply, each university emails you login details for its own portal. That's where they ask for supplementary forms and missing documents, and where offers often appear first. Check them regularly and don't ignore the emails.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-019",
@@ -167,8 +178,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "Automatic entrance scholarships are based on your average, but major national and university-wide awards usually need a separate application — some due as early as October or November of Grade 12. Look them up before you start your OUAC application.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-020",
@@ -176,8 +187,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "Open houses, campus tours and student chats help you write better \"why this program\" answers and decide between offers later. Many schools record their info sessions if you can't travel.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-021",
@@ -185,8 +196,8 @@
     "category": "General Application",
     "universities": [],
     "summary": "The OUAC base fee covers a few choices and each extra choice costs more. Applying to two similar programs at the same university is sometimes useful (for example a competitive program and a related one with a lower range), but check whether the university lets you be considered for an alternate program automatically.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-022",
@@ -194,8 +205,8 @@
     "category": "Grades & Averages",
     "universities": [],
     "summary": "Most programs average your six best Grade 12 U/M courses, and the required prerequisites must be among them. That means a high mark in an elective can't replace a low prerequisite. Once you've entered your marks, each program page shows your Top 6 average for that program.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-023",
@@ -203,8 +214,8 @@
     "category": "Grades & Averages",
     "universities": [],
     "summary": "Universities start making offers in the winter using your Grade 11 finals and whatever Grade 12 marks are available (midterms or first-semester finals). If you're in a semestered school, strong first-semester prerequisites can help you get an earlier offer.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-024",
@@ -212,8 +223,8 @@
     "category": "Grades & Averages",
     "universities": [],
     "summary": "Some programs set a minimum mark in specific courses — for example 70% in Calculus, or 80% in each prerequisite for Queen's Commerce. You can have a high overall average and still miss a minimum, so check the course list on each program page.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-025",
@@ -221,8 +232,8 @@
     "category": "Grades & Averages",
     "universities": [],
     "summary": "Universities don't all treat repeated courses, summer school or online courses the same way, and a few competitive programs look closely at them. Before you plan to retake a prerequisite to raise your average, read the program's admissions FAQ or email the admissions office.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-026",
@@ -230,26 +241,31 @@
     "category": "Grades & Averages",
     "universities": [],
     "summary": "\"Low 80s\" or \"80–85%\" describes who was admitted in past years. Competitive programs shift with the number of applicants, so treat a range as a guide — being at the bottom of it is a reach, not a match.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-027",
     "title": "Offers are conditional — keep your marks up",
     "category": "Grades & Averages",
-    "universities": ["york"],
+    "universities": [
+      "york"
+    ],
     "summary": "An early offer usually requires you to finish Grade 12 with a minimum final average (York, for example, lists the average needed to keep each program's offer). Senioritis after an offer is a real way to lose one.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-028",
     "title": "Co-op credits usually don't count toward your six",
     "category": "Grades & Averages",
-    "universities": ["carleton", "ottawa"],
+    "universities": [
+      "carleton",
+      "ottawa"
+    ],
     "summary": "Grade 12 co-op, career and work-experience credits generally can't be one of your six U/M courses — Carleton and uOttawa say so explicitly. Plan your timetable so you still have six academic 4U/4M courses.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-029",
@@ -257,8 +273,8 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "Ontario universities can't require Grade 12 applicants to respond to an offer before June 1 (check OUAC for the exact date each year). You can hold several offers while you wait for others — just watch separate deadlines for residence and scholarships.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-030",
@@ -266,8 +282,8 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "Many universities guarantee first-year residence only if you apply for residence (and sometimes accept your offer) by a certain date, which can be before June 1. Read each offer letter carefully for residence instructions.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-031",
@@ -275,17 +291,19 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "You might get an offer for a related program instead of the one you applied to. Look up whether you could transfer later (and what average that needs) before accepting it as a back door — internal transfers are often competitive.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-032",
     "title": "Deferred or waitlisted? Update and wait",
     "category": "Offers & Decisions",
-    "universities": ["queens"],
+    "universities": [
+      "queens"
+    ],
     "summary": "A deferral or waitlist means the university wants to see more marks or how many offers are accepted. Keep your grades up, make sure new marks reach the portal, and read the university's waitlist FAQ (Queen's has one) instead of emailing repeatedly.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-033",
@@ -293,8 +311,8 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "Tuition is similar across Ontario, but residence, meal plans, transit and living at home vs. away can differ by thousands of dollars a year. Add up costs and subtract scholarships before choosing — and remember co-op terms can help pay for later years.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-034",
@@ -302,8 +320,8 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "Most universities give automatic entrance scholarships based on your admission average, usually in tiers (for example 85%, 90%, 95%). Check each school's table — a slightly higher average can mean a bigger award.",
-    "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "source": "General advice",
+    "kind": "general"
   },
   {
     "id": "tip-035",
@@ -311,7 +329,193 @@
     "category": "Offers & Decisions",
     "universities": [],
     "summary": "University subreddits, student ambassador chats and offer-holder events are good places to ask about first-year workload, residence and co-op. Remember that online posts are a few people's experiences, not official information.",
+    "source": "General advice",
+    "kind": "general"
+  },
+  {
+    "id": "tip-036",
+    "title": "Waterloo CS: grades alone no longer decide it",
+    "category": "Grades & Averages",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "A Grade 12 student shared what they had seen from admitted classmates and current CS students: offers going to applicants with 95–96 averages (and one at 94 with outstanding extracurriculars), while high averages with plenty of activities still got rejected. Their advice was to be well-rounded — breadth across different kinds of activities as well as depth in one, and to take the AIF seriously. This is one student's observation, not Waterloo's policy.",
+    "kind": "reddit",
     "source": "r/OntarioGrade12s",
-    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/"
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1t88xnu/waterloo_cs_snap_back_to_reality/",
+    "posted": "2026-05"
+  },
+  {
+    "id": "tip-037",
+    "title": "A 94% average that got into Waterloo CS",
+    "category": "Offers & Decisions",
+    "universities": [
+      "waterloo",
+      "toronto",
+      "mcmaster",
+      "western",
+      "tmu"
+    ],
+    "summary": "One applicant with about a 94% average (normal adjustment factor) posted their results: offers from Waterloo CS (with a $5,000 scholarship), TMU, Western and McMaster CS, McMaster Engineering and UTM; UTSC and UTSG deferred them to Math; Waterloo Computer Engineering rejected them. Asked how they got in, they said they didn't know. Takeaway: programs at the same university can give different results, and a single case can't tell you the cutoff.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1tt3fow/cs_acceptances_94_avg/",
+    "posted": "2026-05"
+  },
+  {
+    "id": "tip-038",
+    "title": "Waterloo CS results vary a lot at the same average",
+    "category": "Grades & Averages",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "Someone who applied only to Waterloo CS asked how competitive it is. Replies show how mixed the outcomes are: a 97.7% applicant with a CSMC score of 45 got in; a 92.7% applicant with good extracurriculars but no contest distinctions was offered Math/BBA instead of CFM; another commenter knew applicants with 98% and contest distinctions who got neither CS nor CFM. Don't apply to only one highly competitive program.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1t7ftkm/is_waterloo_cs_competitive/",
+    "posted": "2026-05"
+  },
+  {
+    "id": "tip-039",
+    "title": "Waterloo Engineering: a weak interview is not the end",
+    "category": "Interview",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "A Mechanical Engineering applicant (95.8% Grade 11 average, project manager of a STEM racing team) felt their interview went badly and asked if a good AIF could make up for it. Commenters said plenty of people with rough interviews still get offers. One claimed the interview is worth 3 points and the AIF 5 — Waterloo has not confirmed this, so don't rely on it.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1xed03g/waterloo_interview/",
+    "posted": "2026-10"
+  },
+  {
+    "id": "tip-040",
+    "title": "Waterloo Engineering's 'admission formula' isn't official",
+    "category": "AIF / Supplementary",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "A formula often shared online is: Top 6 average − adjustment factor + AIF (out of 5) + interview (out of 3). The poster emailed Waterloo, who replied that the adjustment factor, AIF and online interview are all considered but the weights are not published. Commenters added that the formula may be outdated. Treat any exact formula as a rumour.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1vtalv8/for_uw_engineering_is_this_admissions_formula/",
+    "posted": "2026-08"
+  },
+  {
+    "id": "tip-041",
+    "title": "Waterloo Engineering AIF: explain why you did it",
+    "category": "AIF / Supplementary",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "In a thread about the March offer wave, an applicant with 96% and an adjustment factor around 11% said their extracurricular probably helped: they ran a non-profit that built phones with accessibility features and donated them to seniors. In the AIF they described how they built them and what motivated them. Writing about the process and the reason, not just the title, is what made it memorable.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1rm3ose/waterloo_engineering_wave/",
+    "posted": "2026-03"
+  },
+  {
+    "id": "tip-042",
+    "title": "Very high marks can carry an average AIF",
+    "category": "Grades & Averages",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "A Mechatronics Engineering admit with a 99.0% top six, an average adjustment factor and \"mid-level\" extracurriculars said their AIF and interview were also \"kinda mid\", so their average probably carried them. They had only four Grade 12 courses finished at the time (three were prerequisites). At a 99 this works; most applicants can't skip effort on the supplementary.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1rglbb3/waterloo_mech_eng_offer/",
+    "posted": "2026-02"
+  },
+  {
+    "id": "tip-043",
+    "title": "Do math contests help for Waterloo Engineering?",
+    "category": "AIF / Supplementary",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "An applicant asked admits about their averages, activities and whether contests like Euclid, CSMC or CCC mattered. An Electrical Engineering admit with 96.6%, CSMC honour roll and a strong Euclid score said they weren't sure the contests made a difference. Contests can't hurt, but nobody in the thread could show they were decisive.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1t9jrqt/for_those_of_you_who_got_accepted_into_waterloo/",
+    "posted": "2026-05"
+  },
+  {
+    "id": "tip-044",
+    "title": "Waterloo Engineering: what you did matters more than your title",
+    "category": "AIF / Supplementary",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "In a thread comparing averages, a Mechanical Engineering applicant with 94.5% listed founding a robotics club in Grade 10, two years in the CANSAT Challenge, and organising an outreach challenge where 30+ students built small engineering projects. Others posted averages from about 89 to 92. What stands out is years of commitment and real activities, not the words \"founder\" or \"president\".",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1xb6dtk/people_who_got_into_waterloo_engineering_or_are/",
+    "posted": "2026-10"
+  },
+  {
+    "id": "tip-045",
+    "title": "Summer school English and Waterloo Engineering",
+    "category": "Grades & Averages",
+    "universities": [
+      "waterloo"
+    ],
+    "summary": "Someone asked if taking English in summer school would hurt a Waterloo Engineering application. Two admits replied: one with 99 in summer English (97–98 average, years of piano and teaching younger students) got Mechatronics in the first round; another with summer English and 96% also got in. These are individual cases — check Waterloo's own policy on summer and repeated courses.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1tlglyf/anyone_get_into_waterloo_eng_w_a_summer_school/",
+    "posted": "2026-05"
+  },
+  {
+    "id": "tip-046",
+    "title": "UofT CS supplementary: reflect, don't list",
+    "category": "AIF / Supplementary",
+    "universities": [
+      "toronto"
+    ],
+    "summary": "A UTSG Computer Science admit with marks of 97–98 in their Grade 12 courses got a first-round offer. Their activities were chess and building a web app. They said the UofT supplementary is \"less about numbers/ec quality and more about introspection\" — what you learned about yourself. Explain how an experience changed the way you think, not just what you built.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1wq0xdy/for_those_who_got_admitted_to_utsg_cs_last_year/",
+    "posted": "2026-09"
+  },
+  {
+    "id": "tip-047",
+    "title": "Crowd-sourced results spreadsheets show real offers",
+    "category": "Grades & Averages",
+    "universities": [],
+    "summary": "Each year r/OntarioGrade12s collects applicants' averages and results into a public spreadsheet. The organiser reminds people to enter their top 5–6 marks including prerequisites, which often means Grade 11 marks for early rounds. Keep in mind the sample leans high: one commenter with an 80s average felt like a failure, and others replied that 80s applicants do get offers, often later in the cycle.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1ocx3b8/20252026_university_applications_offers/",
+    "posted": "2025-10"
+  },
+  {
+    "id": "tip-048",
+    "title": "Follow the 2026–27 results tracker",
+    "category": "Offers & Decisions",
+    "universities": [],
+    "summary": "This year's results form is open: one entry per program you apply to, with no personal information, and the answers are published as a read-only spreadsheet. It's thin early in the year but most useful from February to May, when offers come out.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1x6008p/ontario_20262027_university_applications_results/",
+    "posted": "2026-10"
+  },
+  {
+    "id": "tip-049",
+    "title": "No offer by April? May rounds are normal",
+    "category": "Offers & Decisions",
+    "universities": [
+      "mcmaster",
+      "waterloo",
+      "queens",
+      "toronto",
+      "western"
+    ],
+    "summary": "Using the previous year's results spreadsheet, one student estimated May offer dates: McMaster around May 5–8, Waterloo May 7–8, Queen's and UofT St. George around May 15, Western May 10–20. They said to take it \"with a side of salt\" — these aren't official dates — but it shows many offers arrive in May.",
+    "kind": "reddit",
+    "source": "r/OntarioGrade12s",
+    "sourceUrl": "https://www.reddit.com/r/OntarioGrade12s/comments/1szuxzs/may_rounds_based_on_last_years_spreadsheet/",
+    "posted": "2026-04"
   }
 ]

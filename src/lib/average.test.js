@@ -26,6 +26,24 @@ describe('courseAverage', () => {
     expect(courseAverage(assessments)).toBeCloseTo(90)
   })
 
+  it('averages plainly when no weights are given', () => {
+    const assessments = [
+      { name: 'Test', mark: 80, outOf: 100, weight: null },
+      { name: 'Quiz', mark: 9, outOf: 10, weight: '' },
+      { name: 'Lab', mark: 35, outOf: 50 },
+    ]
+    expect(courseAverage(assessments)).toBeCloseTo(80)
+  })
+
+  it('counts an unweighted assessment as the average weight of the others', () => {
+    const assessments = [
+      { name: 'Test', mark: 80, outOf: 100, weight: 30 },
+      { name: 'Quiz', mark: 100, outOf: 100, weight: 10 },
+      { name: 'Lab', mark: 60, outOf: 100, weight: null }, // counts as weight 20
+    ]
+    expect(courseAverage(assessments)).toBeCloseTo((80 * 30 + 100 * 10 + 60 * 20) / 60)
+  })
+
   it('accepts numbers typed as strings', () => {
     expect(courseAverage([{ mark: '7', outOf: '10', weight: '5' }])).toBeCloseTo(70)
   })
@@ -64,6 +82,12 @@ describe('Grade 11 estimates', () => {
     expect(estimateFromGrade11('MCV4U', marks)).toEqual({ mark: 88, from: 'MCR3U' })
     expect(estimateFromGrade11('MDM4U', marks)).toEqual({ mark: 93, from: 'MCF3M' })
     expect(estimateFromGrade11('ENG4U', marks)).toBeNull()
+  })
+
+  it('takes 2 off in grade11Minus2 mode and estimates nothing in none mode', () => {
+    const marks = [{ code: 'MCR3U', mark: 88 }]
+    expect(estimateFromGrade11('MCV4U', marks, 'grade11Minus2')).toEqual({ mark: 86, from: 'MCR3U' })
+    expect(estimateFromGrade11('MCV4U', marks, 'none')).toBeNull()
   })
 })
 

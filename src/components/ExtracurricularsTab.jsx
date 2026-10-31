@@ -167,7 +167,7 @@ function ActivityDialog({ activity, onClose }) {
           <textarea className={`${inputClass} mt-1`} rows={4} value={form.description} onChange={set('description')} />
         </label>
 
-        {(problem || error) && <p className="text-sm text-brand-700">{problem || error}</p>}
+        {(problem || error) && <p className="text-sm text-red-700">{problem || error}</p>}
 
         <div className="flex items-center gap-2 pt-2">
           <button type="submit" className={primaryButton} disabled={saving}>

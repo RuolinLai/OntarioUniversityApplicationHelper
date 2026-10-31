@@ -14,7 +14,7 @@ function render(url) {
 }
 
 describe('pages render without crashing', () => {
-  it.each(['/', '/programs', '/for-you', '/calendar', '/tips', '/profile', '/profile/courses/MCV4U', '/onboarding', '/login', '/signup'])('%s', (url) => {
+  it.each(['/', '/programs', '/for-you', '/calendar', '/tips', '/guide', '/profile', '/profile/courses/MCV4U', '/onboarding', '/login', '/signup'])('%s', (url) => {
     expect(render(url)).toContain('OntarioU Helper')
   })
 
@@ -22,6 +22,12 @@ describe('pages render without crashing', () => {
     const html = render('/programs?q=accounting')
     expect(html).toContain('Accounting and Financial Management')
     expect(html).not.toContain('Mechanical Engineering')
+  })
+
+  it('tips filter by source from the URL', () => {
+    const html = render('/tips?src=reddit')
+    expect(html).toContain('A 94% average that got into Waterloo CS')
+    expect(html).not.toContain('Practise timed video answers out loud')
   })
 
   it('tips filter by category from the URL', () => {
@@ -37,7 +43,7 @@ describe('pages render without crashing', () => {
       expect(html).toContain(p.university.name.replaceAll("'", '&#x27;'))
       expect(html).toContain(p.officialUrl.replaceAll('&', '&amp;'))
     }
-  }, 60_000) // renders every program (~860 pages)
+  }, 180_000) // renders every program (~960 pages)
 
   // Tests run without .env.local, so account pages should explain that instead of crashing.
   it.skipIf(firebaseConfigured).each(['/login', '/signup', '/profile', '/onboarding'])('%s explains missing Firebase config', (url) => {

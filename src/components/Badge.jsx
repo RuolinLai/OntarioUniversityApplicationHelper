@@ -6,9 +6,11 @@ const tones = {
   blue: 'bg-sky-50 text-sky-700',
 }
 
-export default function Badge({ tone = 'slate', children }) {
+// icon: an optional lucide-react icon component shown before the text.
+export default function Badge({ tone = 'slate', icon: Icon, children }) {
   return (
-    <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${tones[tone]}`}>
+    <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium ${tones[tone]}`}>
+      {Icon && <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
       {children}
     </span>
   )

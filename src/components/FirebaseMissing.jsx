@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { ForwardButton } from './LinkButton.jsx'
 
 // Shown when .env.local has no Firebase config, so the site can still be browsed without accounts.
 export default function FirebaseMissing() {
@@ -11,9 +11,7 @@ export default function FirebaseMissing() {
         <code className="rounded bg-slate-100 px-1">.env.local</code> and fill in your Firebase project&apos;s values.
       </p>
       <div className="mt-8">
-        <Link to="/programs" className="font-medium text-brand-700 hover:underline">
-          Browse programs →
-        </Link>
+        <ForwardButton to="/programs">Browse programs</ForwardButton>
       </div>
     </div>
   )

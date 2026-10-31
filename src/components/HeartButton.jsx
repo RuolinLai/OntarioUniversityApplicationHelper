@@ -14,7 +14,7 @@ export default function HeartButton({ programId, className = '' }) {
   if (!firebaseConfigured) return null
 
   const on = ids.has(programId)
-  const label = error ? 'Couldn’t save — try again' : on ? 'Remove from favourites' : 'Add to favourites'
+  const label = error ? 'Couldn’t save — try again' : on ? 'Remove from interested programs' : 'Add to interested programs'
 
   async function onClick(e) {
     e.preventDefault()
@@ -38,11 +38,11 @@ export default function HeartButton({ programId, className = '' }) {
       aria-pressed={on}
       aria-label={label}
       title={label}
-      className={`rounded-full p-1.5 transition hover:bg-brand-50 ${error ? 'ring-2 ring-amber-400' : ''} ${className}`}
+      className={`rounded-full p-1.5 transition hover:bg-rose-50 ${error ? 'ring-2 ring-amber-400' : ''} ${className}`}
     >
       <svg
         viewBox="0 0 24 24"
-        className={`h-6 w-6 ${on ? 'fill-brand-600 text-brand-600' : 'fill-none text-slate-400 hover:text-brand-600'}`}
+        className={`h-6 w-6 ${on ? 'fill-rose-500 text-rose-500' : 'fill-none text-slate-400 hover:text-rose-500'}`}
         stroke="currentColor"
         strokeWidth={2}
       >
