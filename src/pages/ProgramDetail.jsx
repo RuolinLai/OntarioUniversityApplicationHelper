@@ -23,7 +23,7 @@ import { formatRange, formatUniversity, countWord } from '../lib/format.js'
 import HeartButton from '../components/HeartButton.jsx'
 import RangeBar, { domainFor, MUTED_RANGE_COLOR, RANGE_COLOR, YOU_COLOR } from '../components/charts/RangeBar.jsx'
 import { CategoryBadge, EligibilityBadge } from '../components/MatchBadges.jsx'
-import { assessProgram, CATEGORY_LABEL } from '../lib/recommend.js'
+import { assessProgram, classify, CATEGORY_LABEL } from '../lib/recommend.js'
 import { formatMark } from '../lib/average.js'
 import { useAuth } from '../hooks/useAuth.jsx'
 import { useStudent } from '../hooks/useStudent.js'
@@ -375,6 +375,9 @@ function YourMatch({ program }) {
 
   const { eligibility, admission, category } = assessProgram(program, student.codes, student.markTable)
   const hasRange = program.admissionRange?.low != null
+  // A Safety-level average on a supplementary program is shown as Match; explain why.
+  const cappedSafety =
+    category === 'match' && program.supplementary?.required && classify(admission?.average, program.admissionRange) === 'safety'
 
   return (
     <section className="mt-6 rounded-2xl border border-brand-100 bg-gradient-to-br from-brand-50 to-white p-5 shadow-sm">
@@ -430,11 +433,11 @@ function YourMatch({ program }) {
               <p className="mt-2 text-sm text-slate-600">
                 {!hasRange
                   ? 'No published admission range, so this program can’t be labelled safety, match or reach.'
+                  : cappedSafety
+                    ? `${CATEGORY_LABEL.match}: ${CATEGORY_HINT.safety} Programs with a supplementary application are never marked Safety, because grades are only part of the decision.`
                   : category
-                    ? `${CATEGORY_LABEL[category]}: ${CATEGORY_HINT[category]}${
-                        program.supplementary?.required ? ' Programs with a supplementary application are never marked Safety.' : ''
-                      }`
-                    : 'Your average is more than 5% below the bottom of the usual range.'}
+                    ? `${CATEGORY_LABEL[category]}: ${CATEGORY_HINT[category]}`
+                    :'Your average is more than 5% below the bottom of the usual range.'}
               </p>
             </>
           ) : (

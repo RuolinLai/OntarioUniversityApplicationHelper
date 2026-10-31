@@ -1,5 +1,21 @@
 import { useState } from 'react'
-import { BarChart3, BookOpen, ChevronRight, Heart, History, Pencil, Settings, SlidersHorizontal, Trophy } from 'lucide-react'
+import {
+  BarChart3,
+  BookOpen,
+  Check,
+  ChevronRight,
+  Heart,
+  History,
+  KeyRound,
+  LogOut,
+  Mail,
+  Pencil,
+  Settings,
+  ShieldCheck,
+  SlidersHorizontal,
+  Trophy,
+  UserRound,
+} from 'lucide-react'
 import { Link, useSearchParams } from 'react-router'
 import { logOut, resetPassword, useAuth } from '../hooks/useAuth.jsx'
 import { saveGrade11Marks, saveGrade12Selection, updateUserProfile, useGrade11Marks, useGrade12Courses } from '../hooks/useUserData.js'
@@ -54,7 +70,7 @@ export default function Profile() {
     <div>
       <h1 className="text-3xl font-bold text-slate-900">Profile</h1>
 
-      <div className="mt-5 flex gap-1 overflow-x-auto border-b border-slate-200" role="tablist">
+      <div className="mt-5 flex gap-1 overflow-x-auto shadow-[inset_0_-1px_0_var(--color-slate-200)]" role="tablist">
         {Object.entries(TABS).map(([key, label]) => {
           const Icon = TAB_ICONS[key]
           return (
@@ -64,7 +80,7 @@ export default function Profile() {
               role="tab"
               aria-selected={tab === key}
               onClick={() => setParams(key === 'courses' ? {} : { tab: key }, { replace: true })}
-              className={`-mb-px flex items-center gap-2 whitespace-nowrap border-b-[3px] px-4 py-3 text-base font-medium ${
+              className={`flex items-center gap-2 whitespace-nowrap border-b-[3px] px-4 py-3 text-base font-medium ${
                 tab === key ? 'border-brand-700 font-semibold text-brand-700' : 'border-transparent text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -338,53 +354,144 @@ function InterestedTab() {
 
 function AccountTab() {
   const { user, profile } = useAuth()
-  const [name, setName] = useState(profile?.displayName ?? user.displayName ?? '')
+  const savedName = profile?.displayName ?? user.displayName ?? ''
+  const [name, setName] = useState(savedName)
   const [message, setMessage] = useState('')
   const { saving, error, run } = useSaver()
   const usesPassword = user.providerData.some((p) => p.providerId === 'password')
+  const usesGoogle = user.providerData.some((p) => p.providerId === 'google.com')
+  const initials = (savedName || user.email || '?')
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+  const joined = user.metadata?.creationTime
+    ? new Date(user.metadata.creationTime).toLocaleDateString('en-CA', { year: 'numeric', month: 'long' })
+    : null
 
   return (
-    <div className="max-w-md space-y-6">
-      <form
-        className="space-y-3"
-        onSubmit={async (e) => {
-          e.preventDefault()
-          setMessage('')
-          if (await run(() => updateUserProfile(user.uid, { displayName: name.trim() }))) setMessage('Name saved.')
-        }}
-      >
-        <label className="block text-sm font-medium text-slate-700">
-          Name
-          <input className={`${inputClass} mt-1`} value={name} onChange={(e) => setName(e.target.value)} required />
-        </label>
-        <div className="text-sm text-slate-700">
-          <span className="font-medium">Email</span>
-          <div className="mt-1 text-slate-600">{user.email}</div>
+    <div className="mx-auto max-w-2xl space-y-5">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 to-brand-800 p-6 text-white shadow-sm">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.08)_1px,transparent_0)] bg-[size:20px_20px]" />
+        <div className="relative flex items-center gap-4">
+          {user.photoURL ? (
+            <img src={user.photoURL} alt="" referrerPolicy="no-referrer" className="h-16 w-16 rounded-full ring-4 ring-white/20" />
+          ) : (
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/15 text-2xl font-bold ring-4 ring-white/20">
+              {initials}
+            </span>
+          )}
+          <div className="min-w-0">
+            <p className="truncate text-2xl font-bold">{savedName || 'Your account'}</p>
+            <p className="truncate text-sm text-white/80">{user.email}</p>
+            {joined && <p className="mt-1 text-xs text-white/60">Member since {joined}</p>}
+          </div>
         </div>
-        <button type="submit" className={primaryButton} disabled={saving}>
-          Save
-        </button>
-      </form>
+      </section>
 
-      {error && <p className="text-sm text-red-700">{error}</p>}
-      {message && <p className="text-sm text-emerald-700">{message}</p>}
+      {(error || message) && (
+        <p
+          className={`flex items-center gap-2 rounded-xl border px-4 py-3 text-sm ${
+            error ? 'border-red-200 bg-red-50 text-red-800' : 'border-emerald-200 bg-emerald-50 text-emerald-800'
+          }`}
+        >
+          {!error && <Check className="h-4 w-4" aria-hidden="true" />}
+          {error || message}
+        </p>
+      )}
 
-      <div className="flex flex-wrap gap-2 border-t border-slate-200 pt-6">
-        {usesPassword && (
-          <button
-            type="button"
-            className={secondaryButton}
-            onClick={async () => {
-              setMessage('')
-              if (await run(() => resetPassword(user.email))) setMessage(`Password reset email sent to ${user.email}.`)
-            }}
-          >
-            Change password
-          </button>
-        )}
-        <button type="button" className={secondaryButton} onClick={logOut}>
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <AccountHeading icon={UserRound} title="Personal info" hint="Your name appears on the dashboard and in the menu." />
+        <form
+          className="mt-4 space-y-4"
+          onSubmit={async (e) => {
+            e.preventDefault()
+            setMessage('')
+            if (await run(() => updateUserProfile(user.uid, { displayName: name.trim() }))) setMessage('Name saved.')
+          }}
+        >
+          <label className="block text-sm font-medium text-slate-700">
+            Name
+            <input className={`${inputClass} mt-1`} value={name} onChange={(e) => setName(e.target.value)} required />
+          </label>
+          <div className="text-sm font-medium text-slate-700">
+            Email
+            <div className="mt-1 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 font-normal text-slate-600">
+              <Mail className="h-4 w-4 text-slate-400" aria-hidden="true" />
+              {user.email}
+            </div>
+          </div>
+          <div className="flex justify-end">
+            <button type="submit" className={primaryButton} disabled={saving || !name.trim() || name.trim() === savedName}>
+              Save changes
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <AccountHeading icon={ShieldCheck} title="Sign-in & security" />
+        <ul className="mt-4 divide-y divide-slate-100">
+          {usesGoogle && (
+            <li className="flex items-center justify-between gap-4 py-3">
+              <div>
+                <p className="text-sm font-medium text-slate-800">Google</p>
+                <p className="text-xs text-slate-500">You sign in with your Google account.</p>
+              </div>
+              <Badge tone="green">Connected</Badge>
+            </li>
+          )}
+          {usesPassword && (
+            <li className="flex items-center justify-between gap-4 py-3">
+              <div>
+                <p className="text-sm font-medium text-slate-800">Password</p>
+                <p className="text-xs text-slate-500">We&apos;ll email you a link to set a new one.</p>
+              </div>
+              <button
+                type="button"
+                className={`${secondaryButton} flex items-center gap-2`}
+                disabled={saving}
+                onClick={async () => {
+                  setMessage('')
+                  if (await run(() => resetPassword(user.email))) setMessage(`Password reset email sent to ${user.email}.`)
+                }}
+              >
+                <KeyRound className="h-4 w-4" aria-hidden="true" />
+                Change password
+              </button>
+            </li>
+          )}
+        </ul>
+      </section>
+
+      <section className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div>
+          <p className="text-sm font-semibold text-slate-800">Log out</p>
+          <p className="text-xs text-slate-500">Your courses and marks stay saved to your account.</p>
+        </div>
+        <button
+          type="button"
+          className="flex items-center gap-2 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-50"
+          onClick={logOut}
+        >
+          <LogOut className="h-4 w-4" aria-hidden="true" />
           Log out
         </button>
+      </section>
+    </div>
+  )
+}
+
+function AccountHeading({ icon: Icon, title, hint }) {
+  return (
+    <div className="flex items-start gap-3">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+        <Icon className="h-5 w-5" aria-hidden="true" />
+      </span>
+      <div>
+        <h2 className="font-semibold text-slate-900">{title}</h2>
+        {hint && <p className="text-sm text-slate-500">{hint}</p>}
       </div>
     </div>
   )
