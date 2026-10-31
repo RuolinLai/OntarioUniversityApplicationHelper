@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight, Plus, X } from 'lucide-react'
+import { ArrowRight, Plus, Search, X } from 'lucide-react'
 import { grade11Courses, courseName } from '../lib/data.js'
 import { averageOf, formatMark, grade11PrerequisitesOf } from '../lib/average.js'
 import { fieldClass, inputClass, parseMark, primaryButton, secondaryButton } from './form.js'
@@ -15,14 +15,22 @@ export default function Grade11Editor({ grade12Codes, existing, hidden = [], onS
   const [shown, setShown] = useState(() => [
     ...new Set([...suggested.filter((code) => !hidden.includes(code)), ...existing.map((g) => g.code)]),
   ])
-  const [adding, setAdding] = useState('')
+  const [query, setQuery] = useState('')
+  const [open, setOpen] = useState(false)
 
   const invalid = shown.filter((code) => Number.isNaN(parseMark(marks[code] ?? '')))
   const addable = grade11Courses.filter((c) => !shown.includes(c.code))
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean)
+  const results = addable.filter((c) => words.every((w) => `${c.code} ${c.name}`.toLowerCase().includes(w)))
   const entered = shown.map((code) => parseMark(marks[code] ?? '')).filter((m) => m != null && !Number.isNaN(m))
   const prerequisites = shown.filter((code) => suggested.includes(code))
   const others = shown.filter((code) => !suggested.includes(code))
   const missing = prerequisites.filter((code) => parseMark(marks[code] ?? '') == null).length
+
+  function add(code) {
+    setShown((prev) => [...prev, code])
+    setQuery('')
+  }
 
   function submit(e) {
     e.preventDefault()
@@ -137,27 +145,57 @@ export default function Grade11Editor({ grade12Codes, existing, hidden = [], onS
       )}
 
       {addable.length > 0 && (
-        <div className="mt-4 flex gap-2">
-          <select value={adding} onChange={(e) => setAdding(e.target.value)} className={`${inputClass} sm:w-96`} aria-label="Add a Grade 11 course">
-            <option value="">Add another Grade 11 course…</option>
-            {addable.map((c) => (
-              <option key={c.code} value={c.code}>
-                {c.code} — {c.name}
-              </option>
-            ))}
-          </select>
-          <button
-            type="button"
-            className={`${secondaryButton} inline-flex items-center gap-1`}
-            disabled={!adding}
-            onClick={() => {
-              setShown((prev) => [...prev, adding])
-              setAdding('')
+        <div className="relative mt-4 sm:w-96">
+          <Search className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-slate-400" aria-hidden="true" />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setOpen(true)}
+            // Delay so a click on a result lands before the list closes.
+            onBlur={() => setTimeout(() => setOpen(false), 150)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault()
+                if (results[0]) add(results[0].code)
+              } else if (e.key === 'Escape') {
+                setQuery('')
+                setOpen(false)
+              }
             }}
-          >
-            <Plus className="h-4 w-4" aria-hidden="true" />
-            Add
-          </button>
+            placeholder="Add another Grade 11 course…"
+            className={`${inputClass} pl-9`}
+            aria-label="Search Grade 11 courses to add"
+            role="combobox"
+            aria-expanded={open}
+            aria-controls="grade11-results"
+          />
+          {open && (
+            <ul
+              id="grade11-results"
+              role="listbox"
+              className="absolute z-20 mt-1 max-h-72 w-full overflow-y-auto rounded-xl border border-slate-200 bg-white py-1 shadow-lg"
+            >
+              {results.length === 0 ? (
+                <li className="px-3 py-2 text-sm text-slate-500">No matching courses</li>
+              ) : (
+                results.map((c) => (
+                  <li key={c.code} role="option" aria-selected={false}>
+                    <button
+                      type="button"
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => add(c.code)}
+                      className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-brand-50"
+                    >
+                      <span className="font-mono text-xs font-semibold text-violet-700">{c.code}</span>
+                      <span className="truncate text-slate-800">{c.name}</span>
+                      <Plus className="ml-auto h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+                    </button>
+                  </li>
+                ))
+              )}
+            </ul>
+          )}
         </div>
       )}
 
