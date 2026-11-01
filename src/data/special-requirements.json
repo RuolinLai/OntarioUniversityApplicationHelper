@@ -1,0 +1,1148 @@
+{
+  "_comment": "Hand-checked extra requirements, merged into programs by src/lib/data.js (the scraper never touches this file). A program can match several entries; their items, notes and dates are combined. item.kind: form | video | interview | portfolio | audition | test | reference. Only add facts read on the official page in `sources`, and update `checked` when you re-read it. A source url of \"@program\" means the program's own official page.",
+  "entries": [
+    {
+      "key": "uoft-engineering",
+      "programs": [
+        "toronto-st-george-chemical-engineering",
+        "toronto-st-george-civil-engineering",
+        "toronto-st-george-computer-engineering",
+        "toronto-st-george-electical-engineering",
+        "toronto-st-george-engineering-science",
+        "toronto-st-george-industrial-engineering",
+        "toronto-st-george-materials-engineering",
+        "toronto-st-george-mechanical-engineering",
+        "toronto-st-george-mineral-engineering"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Engineering Supplemental Application",
+          "detail": "Mandatory: without it your application isn't considered. You list your activities since Grade 9 and your extracurriculars, and can add an optional personal statement."
+        },
+        {
+          "kind": "video",
+          "label": "Personal Profile: 3 timed video responses",
+          "detail": "Recorded answers inside the supplemental application. They look at your reasoning and communication; there is no \"right\" answer."
+        },
+        {
+          "kind": "reference",
+          "label": "A contact for each activity",
+          "detail": "No reference letters, but each extracurricular needs someone (not family) who can confirm it if asked."
+        }
+      ],
+      "notes": [
+        "There is no interview — the video responses are recorded, not live.",
+        "Finishing after January 15 means you aren't considered until the May round."
+      ],
+      "dates": [
+        {
+          "label": "Engineering: apply on OUAC for early consideration",
+          "date": "2026-11-07"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Supplemental application",
+          "url": "https://discover.engineering.utoronto.ca/how-to-apply/supplemental-application/"
+        },
+        {
+          "label": "Important deadlines",
+          "url": "https://discover.engineering.utoronto.ca/how-to-apply/important-deadlines/"
+        }
+      ],
+      "checked": "2026-10-31"
+    },
+    {
+      "key": "waterloo-engineering",
+      "programs": [
+        "waterloo-architectural-engineering",
+        "waterloo-biomedical-engineering",
+        "waterloo-chemical-engineering",
+        "waterloo-civil-engineering",
+        "waterloo-computer-engineering",
+        "waterloo-electrical-engineering",
+        "waterloo-environmental-engineering",
+        "waterloo-geological-engineering",
+        "waterloo-management-engineering",
+        "waterloo-mechanical-engineering",
+        "waterloo-mechatronics-engineering",
+        "waterloo-nanotechnology-engineering",
+        "waterloo-software-engineering",
+        "waterloo-systems-design-engineering"
+      ],
+      "supplementaryType": "Admission Information Form (AIF) + Interview",
+      "items": [
+        {
+          "kind": "form",
+          "label": "Admission Information Form (AIF)",
+          "detail": "Required for admission to every Engineering program."
+        },
+        {
+          "kind": "interview",
+          "label": "Online video interview",
+          "detail": "Required for all Engineering applicants. It's done online, not in person."
+        }
+      ],
+      "notes": [
+        "Waterloo doesn't review AIFs submitted after the deadline."
+      ],
+      "dates": [
+        {
+          "label": "Engineering AIF deadline",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Admission Information Form",
+          "url": "https://uwaterloo.ca/future-students/admissions/admission-information-form"
+        },
+        {
+          "label": "Mechanical Engineering (example)",
+          "url": "https://uwaterloo.ca/future-students/programs/mechanical-engineering"
+        }
+      ],
+      "checked": "2026-10-31"
+    },
+    {
+      "key": "waterloo-software-engineering",
+      "programs": [
+        "waterloo-software-engineering"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Supplementary Information Form",
+          "detail": "An extra form only Software Engineering applicants fill in, on top of the AIF."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Admission Information Form",
+          "url": "https://uwaterloo.ca/future-students/admissions/admission-information-form"
+        }
+      ],
+      "checked": "2026-10-31"
+    },
+    {
+      "key": "waterloo-math-aif",
+      "programs": [
+        "waterloo-applied-mathematics",
+        "waterloo-applied-mathematics-with-scientific-computing-and-scientific-machine-learning",
+        "waterloo-biostatistics",
+        "waterloo-business-administration-laurier-and-computer-science-waterloo-double",
+        "waterloo-business-administration-laurier-and-mathematics-waterloo-double",
+        "waterloo-combinatorics-and-optimization",
+        "waterloo-computational-mathematics",
+        "waterloo-computer-science",
+        "waterloo-computing-and-financial-management",
+        "waterloo-data-science",
+        "waterloo-information-technology-management",
+        "waterloo-mathematical-economics",
+        "waterloo-mathematical-finance",
+        "waterloo-mathematical-optimization",
+        "waterloo-mathematical-studies",
+        "waterloo-mathematics",
+        "waterloo-mathematics-business-administration",
+        "waterloo-mathematics-chartered-professional-accountancy",
+        "waterloo-mathematics-financial-analysis-and-risk-management",
+        "waterloo-mathematics-teaching",
+        "waterloo-pure-mathematics",
+        "waterloo-statistics",
+        "waterloo-actuarial-science"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Admission Information Form (AIF)",
+          "detail": "Required for admission. Without it you can't be considered."
+        }
+      ],
+      "notes": [
+        "Waterloo doesn't review AIFs submitted after the deadline.",
+        "The Euclid and CSMC math contests are not required for admission, but some Faculty of Mathematics scholarships need one of them."
+      ],
+      "dates": [
+        {
+          "label": "AIF deadline",
+          "date": "2027-02-15"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Admission Information Form",
+          "url": "https://uwaterloo.ca/future-students/admissions/admission-information-form"
+        },
+        {
+          "label": "Computer Science (example)",
+          "url": "https://uwaterloo.ca/future-students/programs/computer-science"
+        }
+      ],
+      "checked": "2026-10-31"
+    },
+    {
+      "key": "waterloo-architecture",
+      "programs": [
+        "waterloo-architecture"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Portfolio (if invited)",
+          "detail": "Selected applicants are invited to send a portfolio of creative work. Architecture doesn't use the AIF."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Architecture",
+          "url": "https://uwaterloo.ca/future-students/programs/architecture"
+        },
+        {
+          "label": "Admission Information Form",
+          "url": "https://uwaterloo.ca/future-students/admissions/admission-information-form"
+        }
+      ],
+      "checked": "2026-10-31"
+    },
+    {
+      "key": "western-engineering",
+      "programs": [
+        "western-engineering"
+      ],
+      "supplementaryType": "Casper test",
+      "items": [
+        {
+          "kind": "test",
+          "label": "Casper test",
+          "detail": "Required for all OUAC applicants. An online, open-response situational judgment test (90–110 minutes) run by Acuity Insights, taken on a computer with a webcam and microphone. You can only take it once per admissions cycle."
+        },
+        {
+          "kind": "form",
+          "label": "Register on takecasper.com",
+          "detail": "Pick Canada, the 2026–2027 cycle and Casper 1 (CSP-10200), select Engineering, and send results to Western (UWO), Faculty of Engineering. Your name, birth date and email must match your OUAC application exactly."
+        }
+      ],
+      "notes": [
+        "Test dates are only on takecasper.com, and Western says no extra dates are likely to be added — book early.",
+        "Results reach Western about 3 weeks after the test, and no offer is made until they arrive. Offers can start in November.",
+        "Register at least 3 days before your test date."
+      ],
+      "sources": [
+        {
+          "label": "Casper assessment",
+          "url": "https://www.eng.uwo.ca/future-students/apply-now/Casper-Assessment.html"
+        },
+        {
+          "label": "Engineering program page",
+          "url": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/engineering.html"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "carleton-portfolio",
+      "programs": [
+        "carleton-architectural-studies",
+        "carleton-industrial-design"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Portfolio",
+          "detail": "Required. Carleton’s portfolio requirements page lists what to include."
+        }
+      ],
+      "notes": [
+        "These programs have an earlier application deadline (March 1) than most Carleton programs."
+      ],
+      "dates": [
+        {
+          "label": "Carleton: OUAC application deadline",
+          "date": "2027-03-01"
+        },
+        {
+          "label": "Portfolio submission deadline",
+          "date": "2027-03-05"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Additional admission requirements",
+          "url": "https://admissions.carleton.ca/additional-admission-requirements/"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "carleton-music",
+      "programs": [
+        "carleton-music"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Creative Practice Portfolio",
+          "detail": "Required. A digital portfolio that showcases your work."
+        }
+      ],
+      "notes": [
+        "Music has an earlier application deadline (March 1) than most Carleton programs."
+      ],
+      "dates": [
+        {
+          "label": "Carleton: OUAC application deadline",
+          "date": "2027-03-01"
+        },
+        {
+          "label": "Creative Practice Portfolio deadline",
+          "date": "2027-03-05"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Additional admission requirements",
+          "url": "https://admissions.carleton.ca/additional-admission-requirements/"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "carleton-supplementary",
+      "programs": [
+        "carleton-nursing-with-rn-prescribing",
+        "carleton-social-work"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Supplementary application",
+          "detail": "Required. You can only submit it once, and it is final once submitted."
+        }
+      ],
+      "notes": [
+        "This program has an earlier application deadline (March 1) than most Carleton programs."
+      ],
+      "dates": [
+        {
+          "label": "Carleton: OUAC application deadline",
+          "date": "2027-03-01"
+        },
+        {
+          "label": "Supplementary application deadline",
+          "date": "2027-03-05"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Additional admission requirements",
+          "url": "https://admissions.carleton.ca/additional-admission-requirements/"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "carleton-humanities",
+      "programs": [
+        "carleton-humanities-great-books-includes-hums-biology"
+      ],
+      "notes": [
+        "If your admission average is below 80%, contact Carleton Admissions Services about sending extra documents to support your application."
+      ],
+      "sources": [
+        {
+          "label": "Additional admission requirements",
+          "url": "https://admissions.carleton.ca/additional-admission-requirements/"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "tmu-grades-plus",
+      "programs": [
+        "tmu-architectural-science",
+        "tmu-fashion",
+        "tmu-image-arts-film",
+        "tmu-image-arts-photography-media-arts",
+        "tmu-interior-design",
+        "tmu-performance-acting",
+        "tmu-performance-dance",
+        "tmu-professional-music"
+      ],
+      "notes": [
+        "TMU calls this a Grades-Plus program: admission is based on grades plus non-academic requirements.",
+        "The deadline is February 1, 2027 or 10 business days after you apply, whichever is later. You upload everything in the ChooseTMU Applicant Portal."
+      ],
+      "dates": [
+        {
+          "label": "TMU non-academic requirements due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Program page (Requirements section)",
+          "url": "@program"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "tmu-midwifery",
+      "programs": [
+        "tmu-midwifery"
+      ],
+      "notes": [
+        "TMU calls this a Grades-Plus program: admission is based on grades plus non-academic requirements.",
+        "Both the application and the non-academic requirements are due February 1, 2027."
+      ],
+      "dates": [
+        {
+          "label": "TMU Midwifery: application and non-academic requirements due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Midwifery",
+          "url": "@program"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "york-schulich-bba",
+      "programs": [
+        "york-business-administration-bba"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Leadership profile",
+          "detail": "Part of the Schulich supplementary application."
+        },
+        {
+          "kind": "interview",
+          "label": "Video interview",
+          "detail": "Part of the Schulich supplementary application."
+        },
+        {
+          "kind": "test",
+          "label": "Timed writing exercise",
+          "detail": "Part of the Schulich supplementary application."
+        }
+      ],
+      "notes": [
+        "Submit the supplementary application by February 1, 2027 for guaranteed consideration."
+      ],
+      "dates": [
+        {
+          "label": "Schulich supplementary application deadline",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Business Administration (BBA)",
+          "url": "https://futurestudents.yorku.ca/program/business-administration"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "york-creative-writing",
+      "programs": [
+        "york-creative-writing-ba"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Portfolio (supplementary application)",
+          "detail": "Required. The Creative Writing program website has the details."
+        }
+      ],
+      "dates": [
+        {
+          "label": "Creative Writing portfolio deadline",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Creative Writing (BA)",
+          "url": "https://futurestudents.yorku.ca/program/creative-writing"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "york-theatre-acting",
+      "programs": [
+        "york-theatre-acting-performance-bfa"
+      ],
+      "items": [
+        {
+          "kind": "audition",
+          "label": "Supplemental application + evaluation",
+          "detail": "Evaluations are usually in person in February/March. Applicants who live far away can send a video instead."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Theatre – Acting & Performance (BFA)",
+          "url": "https://futurestudents.yorku.ca/program/theatre-acting-performance"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "york-theatre-production",
+      "programs": [
+        "york-theatre-production-design-bfa"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Portfolio or sample of work",
+          "detail": "Part of the supplemental application."
+        },
+        {
+          "kind": "interview",
+          "label": "Interview with faculty",
+          "detail": "Held in the winter."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Theatre – Production & Design (BFA)",
+          "url": "https://futurestudents.yorku.ca/program/theatre-production-design"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-rotman-commerce",
+      "programs": [
+        "toronto-st-george-finance-and-economics"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Rotman Commerce Supplemental Application",
+          "detail": "Required for all applicants, done on the Kira Talent platform. $52 fee, paid with your OUAC application."
+        },
+        {
+          "kind": "form",
+          "label": "1 written response",
+          "detail": "Prepared in advance and completed within 20 minutes."
+        },
+        {
+          "kind": "video",
+          "label": "3 video responses",
+          "detail": "One prepared question and two you only see after starting. Each is 90 seconds, including 30 seconds to prepare."
+        }
+      ],
+      "notes": [
+        "Rotman recommends applying on OUAC by November 7, 2026 for early consideration.",
+        "Sending documents after the deadline may mean you aren’t considered until April or May."
+      ],
+      "dates": [
+        {
+          "label": "Rotman: apply on OUAC for early consideration",
+          "date": "2026-11-07"
+        },
+        {
+          "label": "Rotman supplemental — early consideration",
+          "date": "2026-12-01"
+        },
+        {
+          "label": "Rotman supplemental application deadline",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Rotman supplemental application",
+          "url": "https://rotmancommerce.utoronto.ca/future-students/our-supplemental-application/"
+        },
+        {
+          "label": "Rotman Ontario applicants",
+          "url": "https://rotmancommerce.utoronto.ca/future-students/ontario-applicants/"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-stg-cs",
+      "programs": [
+        "toronto-st-george-computer-science"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Computer Science Supplemental Application",
+          "detail": "Required. The Join U of T applicant portal has the questions after you apply."
+        }
+      ],
+      "dates": [
+        {
+          "label": "Computer Science supplemental application due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-utm-cs",
+      "programs": [
+        "toronto-mississauga-computer-science"
+      ],
+      "supplementaryType": "Supplementary application",
+      "items": [
+        {
+          "kind": "form",
+          "label": "Computer Science Supplementary Application",
+          "detail": "Required. One written question: list achievements and/or experiences not on your transcript that show your interest and potential in computing. $52 fee."
+        }
+      ],
+      "notes": [
+        "It opens in the Join U of T applicant portal after you apply on OUAC. If you submit more than once, only the latest response counts."
+      ],
+      "dates": [
+        {
+          "label": "UTM Computer Science supplementary application due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTM CS supplementary application",
+          "url": "https://www.utm.utoronto.ca/future-students/admissions/supplementary-application"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-utm-theatre",
+      "programs": [
+        "toronto-mississauga-theatre-and-drama-studies"
+      ],
+      "supplementaryType": "Interview + Audition",
+      "items": [
+        {
+          "kind": "audition",
+          "label": "Audition (includes an interview)",
+          "detail": "Past auditions had two contrasting monologues, one song and an interview, plus an audition questionnaire. Full 2027 details come out in November 2026. $50 fee when you book."
+        }
+      ],
+      "notes": [
+        "You first get an offer to Humanities; it changes to Theatre & Drama Studies if your audition is successful. If not, your Humanities offer stays.",
+        "From the 2026/27 intake the program is offered by UTM alone (no Sheridan diploma). Auditions are in February/March 2027."
+      ],
+      "dates": [
+        {
+          "label": "UTM Theatre audition registration opens",
+          "date": "2026-11-11"
+        },
+        {
+          "label": "UTM Theatre audition registration closes",
+          "date": "2027-01-26"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTM audition",
+          "url": "https://www.utm.utoronto.ca/future-students/admissions/audition"
+        },
+        {
+          "label": "TDS FAQs",
+          "url": "https://www.utm.utoronto.ca/english-drama/tds-faqs"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-music",
+      "programs": [
+        "toronto-st-george-music-classical",
+        "toronto-st-george-music-jazz",
+        "toronto-st-george-music-technology-and-digital-media-classical",
+        "toronto-st-george-music-technology-and-digital-media-jazz"
+      ],
+      "supplementaryType": "Interview + Audition",
+      "items": [
+        {
+          "kind": "form",
+          "label": "Music Questionnaire",
+          "detail": "Required supplementary form."
+        },
+        {
+          "kind": "audition",
+          "label": "Audition, interview and skills assessment",
+          "detail": "In person if you live within 300 km of Toronto; by recording (with an online interview) if you live further away. 2–3 faculty members on the panel; no theory test."
+        }
+      ],
+      "notes": [
+        "Jazz programs: send a pre-screening video with the Music Questionnaire; selected applicants are invited to audition.",
+        "Music Technology & Digital Media (Classical) auditions are always recorded, wherever you live.",
+        "Be ready to audition from February 1. The 2027 audition schedule is posted in the fall."
+      ],
+      "dates": [
+        {
+          "label": "U of T Music: recommended application date",
+          "date": "2026-12-01"
+        },
+        {
+          "label": "Music Questionnaire due",
+          "date": "2027-01-15"
+        },
+        {
+          "label": "Recorded auditions due",
+          "date": "2027-01-31"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Audition & interview",
+          "url": "https://music.utoronto.ca/admissions/undergraduate/audition-interview"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-kpe",
+      "programs": [
+        "toronto-st-george-kinesiology"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Statement of Interest",
+          "detail": "Required online statement, including the name and contact information of one referee. Applicants who don’t complete it are disqualified."
+        }
+      ],
+      "dates": [
+        {
+          "label": "Kinesiology Statement of Interest due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "KPE how to apply",
+          "url": "https://kpe.utoronto.ca/academics-researchfuture-studentsbachelor-kinesiology-bkin/how-apply"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-daniels-arch",
+      "programs": [
+        "toronto-st-george-architectural-studies"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "One Idea supplementary application",
+          "detail": "Make an object, document it with exactly three photographs, and write a summary (max 200 words) of the object and your key decisions. No other portfolio is accepted."
+        }
+      ],
+      "notes": [
+        "You can submit only once, and the submission is final. Missing the deadline means automatic refusal.",
+        "Generative AI for images or text isn’t allowed and leads to automatic refusal."
+      ],
+      "dates": [
+        {
+          "label": "Daniels One Idea application due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "One Idea supplementary application",
+          "url": "https://www.daniels.utoronto.ca/admissions/undergraduate/one-idea-supplementary-application"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "uoft-daniels-visual",
+      "programs": [
+        "toronto-st-george-visual-studies"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "One Idea supplementary application",
+          "detail": "Submit six to eight images of your work and a 250–650 word statement about two or three of them."
+        }
+      ],
+      "notes": [
+        "You can submit only once, and the submission is final. Missing the deadline means automatic refusal.",
+        "Generative AI for images or text isn’t allowed and leads to automatic refusal."
+      ],
+      "dates": [
+        {
+          "label": "Daniels One Idea application due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "One Idea supplementary application",
+          "url": "https://www.daniels.utoronto.ca/admissions/undergraduate/one-idea-supplementary-application"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "utsc-saf-management",
+      "programs": [
+        "toronto-scarborough-accounting",
+        "toronto-scarborough-finance",
+        "toronto-scarborough-finance-and-statistics",
+        "toronto-scarborough-human-resources",
+        "toronto-scarborough-information-technology",
+        "toronto-scarborough-international-business",
+        "toronto-scarborough-management-bba",
+        "toronto-scarborough-marketing",
+        "toronto-scarborough-strategic-management"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Supplementary Application Form (SAF)",
+          "detail": "About your life, interests and goals. The Management prompt: “Everyone has a purpose. Everyone has a story. What’s yours?”"
+        }
+      ],
+      "notes": [
+        "The SAF is in the Join U of T applicant portal. Only you may write it — generative AI tools such as ChatGPT are not allowed — and you can’t change it once submitted.",
+        "If your program requires the SAF and you don’t submit it, you aren’t eligible for the program."
+      ],
+      "dates": [
+        {
+          "label": "UTSC Supplementary Application Form due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTSC Supplementary Application Form",
+          "url": "https://www.utsc.utoronto.ca/admissions/supplementary-application-form-saf"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "utsc-mib-interview",
+      "programs": [
+        "toronto-scarborough-international-business"
+      ],
+      "notes": [
+        "Management & International Business (co-op) also requires an interview."
+      ],
+      "sources": [
+        {
+          "label": "UTSC Supplementary Application Form",
+          "url": "https://www.utsc.utoronto.ca/admissions/supplementary-application-form-saf"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "utsc-saf-ids",
+      "programs": [
+        "toronto-scarborough-international-development-studies-hba"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Supplementary Application Form (SAF)",
+          "detail": "For the co-op stream: extracurriculars showing leadership or learning, lived experiences, and why you chose International Development Studies."
+        }
+      ],
+      "notes": [
+        "The SAF is in the Join U of T applicant portal. Only you may write it — generative AI tools such as ChatGPT are not allowed — and you can’t change it once submitted.",
+        "If your program requires the SAF and you don’t submit it, you aren’t eligible for the program."
+      ],
+      "dates": [
+        {
+          "label": "UTSC Supplementary Application Form due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTSC Supplementary Application Form",
+          "url": "https://www.utsc.utoronto.ca/admissions/supplementary-application-form-saf"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "utsc-saf-mit",
+      "programs": [
+        "toronto-scarborough-music-industry-and-technology"
+      ],
+      "items": [
+        {
+          "kind": "portfolio",
+          "label": "Media portfolio",
+          "detail": "Three links to performances or work samples."
+        },
+        {
+          "kind": "form",
+          "label": "Supplementary Application Form (SAF)",
+          "detail": "Includes a brief artist statement for each sample."
+        }
+      ],
+      "notes": [
+        "The SAF is in the Join U of T applicant portal. Only you may write it — generative AI tools such as ChatGPT are not allowed — and you can’t change it once submitted.",
+        "If your program requires the SAF and you don’t submit it, you aren’t eligible for the program."
+      ],
+      "dates": [
+        {
+          "label": "UTSC Supplementary Application Form due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTSC Supplementary Application Form",
+          "url": "https://www.utsc.utoronto.ca/admissions/supplementary-application-form-saf"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "utsc-saf-paramedicine",
+      "programs": [
+        "toronto-scarborough-paramedicine"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "Supplementary Application Form (SAF)",
+          "detail": "Your interest in the program, how you’ve prepared, and lived experience from work, volunteering and extracurriculars."
+        }
+      ],
+      "notes": [
+        "The SAF is in the Join U of T applicant portal. Only you may write it — generative AI tools such as ChatGPT are not allowed — and you can’t change it once submitted.",
+        "If your program requires the SAF and you don’t submit it, you aren’t eligible for the program."
+      ],
+      "dates": [
+        {
+          "label": "UTSC Supplementary Application Form due",
+          "date": "2027-02-01"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UTSC Supplementary Application Form",
+          "url": "https://www.utsc.utoronto.ca/admissions/supplementary-application-form-saf"
+        },
+        {
+          "label": "U of T supplemental applications",
+          "url": "https://future.utoronto.ca/supplemental-applications"
+        },
+        {
+          "label": "U of T dates & deadlines",
+          "url": "https://future.utoronto.ca/deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "queens-supplementary",
+      "programs": [
+        "queens-smith-commerce",
+        "queens-health-sciences",
+        "queens-nursing"
+      ],
+      "items": [
+        {
+          "kind": "form",
+          "label": "1 written response",
+          "detail": "Part of the Supplementary Application, on the Kira Talent platform."
+        },
+        {
+          "kind": "video",
+          "label": "1 video response",
+          "detail": "Also on Kira Talent, which lets you practise first."
+        }
+      ],
+      "notes": [
+        "The OUAC application for this program is due February 1 — a month earlier than most Queen’s programs. Late supplementary applications aren’t accepted.",
+        "Queen’s reads the supplementary application if your grades are above its minimum, and uses it together with your grades to choose who gets offers."
+      ],
+      "dates": [
+        {
+          "label": "Queen’s: OUAC application deadline (Commerce, Health Sciences, Nursing)",
+          "date": "2027-02-01"
+        },
+        {
+          "label": "Queen’s Supplementary Application deadline",
+          "date": "2027-02-15"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Queen’s supplementary information",
+          "url": "https://www.queensu.ca/admission/applying/supplementary-application"
+        },
+        {
+          "label": "Queen’s dates & deadlines",
+          "url": "https://www.queensu.ca/admission/applying/dates-deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "queens-music",
+      "programs": [
+        "queens-music",
+        "queens-concurrent-education-music"
+      ],
+      "notes": [
+        "Applicants to Music and Concurrent Education Music must audition."
+      ],
+      "sources": [
+        {
+          "label": "Queen’s supplementary information",
+          "url": "https://www.queensu.ca/admission/applying/supplementary-application"
+        },
+        {
+          "label": "Queen’s dates & deadlines",
+          "url": "https://www.queensu.ca/admission/applying/dates-deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "queens-concurrent-ed",
+      "programs": [
+        "queens-concurrent-education-arts",
+        "queens-concurrent-education-french",
+        "queens-concurrent-education-kinesiology",
+        "queens-concurrent-education-science"
+      ],
+      "notes": [
+        "High school applicants to Concurrent Education don’t need a Supplementary Application."
+      ],
+      "sources": [
+        {
+          "label": "Queen’s supplementary information",
+          "url": "https://www.queensu.ca/admission/applying/supplementary-application"
+        },
+        {
+          "label": "Queen’s dates & deadlines",
+          "url": "https://www.queensu.ca/admission/applying/dates-deadlines"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "mcmaster-business",
+      "programs": [
+        "mcmaster-business"
+      ],
+      "notes": [
+        "Optional supplementary application (deadline April 30, 2027): if your average might fall below the anticipated admission average, you can strengthen your application with information about your interests and extracurricular activities."
+      ],
+      "sources": [
+        {
+          "label": "McMaster admission requirements (page saved by hand)",
+          "url": "@program"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "mcmaster-health-sciences",
+      "programs": [
+        "mcmaster-honours-health-sciences-program"
+      ],
+      "notes": [
+        "You also need one Grade 12 U/M course that isn’t math, science or technology (computer science counts as technology) — for example a language, arts or social studies course. McMaster’s BHSc Prerequisite Course Search tool checks a specific course.",
+        "The supplementary application is due in early/mid-February 2027; McMaster gives the exact date in its details."
+      ],
+      "sources": [
+        {
+          "label": "McMaster admission requirements (page saved by hand)",
+          "url": "@program"
+        }
+      ],
+      "checked": "2026-11-01"
+    },
+    {
+      "key": "mcmaster-nursing",
+      "programs": [
+        "mcmaster-nursing"
+      ],
+      "items": [
+        {
+          "kind": "test",
+          "label": "Casper test",
+          "detail": "The final decision is weighted 80% grades and 20% Casper score. Test dates are on takecasper.com."
+        }
+      ],
+      "sources": [
+        {
+          "label": "McMaster admission requirements (page saved by hand)",
+          "url": "@program"
+        }
+      ],
+      "checked": "2026-11-01"
+    }
+  ]
+}

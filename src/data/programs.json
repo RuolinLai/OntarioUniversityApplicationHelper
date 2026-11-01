@@ -5123,89 +5123,171 @@
     "needsReview": false
   },
   {
-    "id": "mcmaster-commerce",
-    "name": "Commerce",
+    "id": "mcmaster-arts-and-science",
+    "name": "Arts & Science",
     "universityId": "mcmaster",
-    "faculty": "DeGroote School of Business",
+    "campus": "",
+    "faculty": "",
     "field": [
-      "Business / Commerce"
+      "Social Sciences / Humanities"
     ],
-    "degree": "BCom",
+    "degree": "B.Arts Sc., B.Arts Sc.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "ENG4U; One of MHF4U, MCV4U (Notes: MCV4U is recommended)"
+    },
+    "admissionRange": {
+      "low": 88,
+      "high": null,
+      "rawText": "min. 88%"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "February 1, 2027, 11:59 pm (ET) Arts & Science I (Honours) supplementary application"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-02-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-bachelor-of-technology",
+    "name": "Bachelor of Technology",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Engineering"
+    ],
+    "degree": "B.Tech. Degree from McMaster University + Advanced Diploma & Business Management Certificate from Mohawk College",
     "prerequisites": {
       "required": [
         "ENG4U",
-        "MCV4U"
+        "MCV4U",
+        "SCH4U",
+        "SPH4U"
       ],
-      "rawText": "English, Calculus and Vectors, and four additional 4U/M courses.",
       "choose": [],
-      "minimums": {}
+      "minimums": {},
+      "rawText": "ENG4U; MCV4U; SCH4U; SPH4U"
     },
     "admissionRange": {
-      "low": 85,
-      "high": 89,
-      "rawText": "Mid to high 80s"
+      "low": 82,
+      "high": null,
+      "rawText": "min. 82%"
     },
     "supplementary": {
-      "required": false,
-      "type": "",
-      "rawText": ""
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "January 28, 2027 at 11:59 p.m. ET. Recommended Early Application Submission: Thursday, November 12, 2026"
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "McMaster: recommended early application",
+        "date": "2026-11-12"
+      },
+      {
+        "label": "McMaster: recommended early supplementary application",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-01-28"
+      }
+    ],
     "coop": true,
-    "officialUrl": "https://future.mcmaster.ca/",
-    "description": "Business fundamentals with specializations in finance, marketing, HR and more. Co-op available.",
-    "source": "sample",
-    "lastSynced": "2026-10-29",
-    "needsReview": false,
-    "campus": ""
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
   },
   {
-    "id": "mcmaster-computer-science",
-    "name": "Computer Science",
+    "id": "mcmaster-business",
+    "name": "Business",
     "universityId": "mcmaster",
-    "faculty": "Faculty of Engineering",
+    "campus": "",
+    "faculty": "",
     "field": [
-      "Computer Science / Math"
+      "Business / Commerce"
     ],
-    "degree": "BASc",
+    "degree": "B.Com., (Honours) B.Com.",
     "prerequisites": {
       "required": [
         "ENG4U",
         "MHF4U",
         "MCV4U"
       ],
-      "rawText": "English, Advanced Functions, Calculus and Vectors.",
       "choose": [],
-      "minimums": {}
+      "minimums": {},
+      "rawText": "ENG4U; MHF4U; MCV4U"
     },
     "admissionRange": {
-      "low": 87,
-      "high": 92,
-      "rawText": "High 80s to low 90s"
+      "low": 80,
+      "high": 89,
+      "rawText": "Mid-to-high 80s"
     },
     "supplementary": {
       "required": false,
       "type": "",
-      "rawText": ""
+      "rawText": "Optional supplemental application deadline: April 30, 2027. If your average might fall below the anticipated admission average, you may strengthen your application by submitting the optional supplementary application highlighting additional information about your interests and extracurricular activities."
     },
-    "keyDates": [],
-    "coop": true,
-    "officialUrl": "https://future.mcmaster.ca/",
-    "description": "Software design, algorithms and systems, with an optional co-op stream.",
-    "source": "sample",
-    "lastSynced": "2026-10-29",
-    "needsReview": false,
-    "campus": ""
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      },
+      {
+        "label": "McMaster optional supplementary application deadline",
+        "date": "2027-04-30"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
   },
   {
-    "id": "mcmaster-engineering",
-    "name": "Engineering I",
+    "id": "mcmaster-chemical-and-physical-sciences-gateway",
+    "name": "Chemical and Physical Sciences Gateway",
     "universityId": "mcmaster",
-    "faculty": "Faculty of Engineering",
+    "campus": "",
+    "faculty": "",
     "field": [
-      "Engineering"
+      "Physical Sciences / Environment"
     ],
-    "degree": "BEng",
+    "degree": "B.Sc., B.Sc.(Honours)",
     "prerequisites": {
       "required": [
         "ENG4U",
@@ -5214,85 +5296,365 @@
         "SCH4U",
         "SPH4U"
       ],
-      "rawText": "English, Advanced Functions, Calculus and Vectors, Chemistry, Physics.",
       "choose": [],
-      "minimums": {}
+      "minimums": {},
+      "rawText": "ENG4U; MHF4U; MCV4U; SCH4U; SPH4U"
+    },
+    "admissionRange": {
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-computer-science",
+    "name": "Computer Science",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Computer Science / Math"
+    ],
+    "degree": "B.A.Sc. (Bachelor of Applied Science)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MCV4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MCV4U"
     },
     "admissionRange": {
       "low": 90,
-      "high": 93,
-      "rawText": "Low 90s"
+      "high": null,
+      "rawText": "min. 90%"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "An online supplementary application is required."
+      "rawText": "January 28, 2027 at 11:59 p.m. ET. Recommended Early Supplementary Application Submission: Thursday, November 26, 2026 (Details available at http://eng.mcmaster.ca/supplementary-application)"
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "McMaster: recommended early application",
+        "date": "2026-11-12"
+      },
+      {
+        "label": "McMaster: recommended early supplementary application",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-01-28"
+      }
+    ],
     "coop": true,
-    "officialUrl": "https://future.mcmaster.ca/",
-    "description": "Common first year, then choose from ten engineering disciplines. Optional co-op.",
-    "source": "sample",
-    "lastSynced": "2026-10-29",
-    "needsReview": false,
-    "campus": ""
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
   },
   {
-    "id": "mcmaster-health-sciences",
-    "name": "Health Sciences (Honours)",
+    "id": "mcmaster-engineering",
+    "name": "Engineering",
     "universityId": "mcmaster",
-    "faculty": "Faculty of Health Sciences",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Engineering"
+    ],
+    "degree": "B.Eng., B.Eng.Mgt., B.Eng.Society, B.Eng.Biosci.",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MCV4U",
+        "SCH4U",
+        "SPH4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MCV4U; SCH4U; SPH4U"
+    },
+    "admissionRange": {
+      "low": 87,
+      "high": null,
+      "rawText": "min. 87%"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "January 28, 2027 at 11:59pm ET. Recommended Early Supplementary Application Submission: November 26, 2026 at 11:59pm ET Submitting your application and supplementary application by the early recommended dates may allow your application to be reviewed sooner. However, it does not guarantee an earlier offer of admission. Every application is reviewed using a holistic process. Most admission decisions will still be released between March and May. (Details available at http://eng.mcmaster.ca/supplementary-application)"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster: recommended early application",
+        "date": "2026-11-12"
+      },
+      {
+        "label": "McMaster: recommended early supplementary application",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-01-28"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-environmental-and-earth-sciences-gateway",
+    "name": "Environmental & Earth Sciences Gateway",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Physical Sciences / Environment"
+    ],
+    "degree": "B.Sc., B.Sc.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U"
+          ]
+        },
+        {
+          "count": 1,
+          "courses": [
+            "SBI4U",
+            "SCH4U"
+          ]
+        },
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "SBI4U",
+            "SCH4U",
+            "SPH4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "ENG4U; One math: MHF4U or MCV4U; One science: SBI4U or SCH4U; One additional math or science: MHF4U, MCV4U, SBI4U, SCH4U or SPH4U; One additional academic course"
+    },
+    "admissionRange": {
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-honours-economics-i",
+    "name": "Honours Economics I",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "B.A., B.A. (Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MHF4U",
+        "MCV4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English (ENG4U); Advanced Functions (MHF4U); Calculus and Vectors (MCV4U)"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 86,
+      "rawText": "Low-to-mid 80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-honours-health-and-society-i",
+    "name": "Honours Health and Society I",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
     "field": [
       "Life Sciences / Health"
     ],
-    "degree": "BHSc",
+    "degree": "B.A., B.A. (Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 86,
+      "rawText": "Low-to-mid-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-honours-health-sciences-program",
+    "name": "Honours Health Sciences Program",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.H.Sc. (Honours)",
     "prerequisites": {
       "required": [
         "ENG4U",
         "SBI4U",
         "SCH4U"
       ],
-      "rawText": "English, Biology, Chemistry, and three additional 4U/M courses.",
-      "choose": [],
-      "minimums": {}
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "MDM4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "ENG4U; One of MHF4U, MCV4U or MDM4U; SBI4U; SCH4U; One non-math; non-science; non-technology 4U/M credit (search acceptable courses)"
     },
     "admissionRange": {
       "low": 90,
-      "high": 95,
-      "rawText": "Minimum 90% to be considered; admission based on average and supplementary application"
+      "high": null,
+      "rawText": "min. 90%"
     },
     "supplementary": {
       "required": true,
       "type": "Supplementary application",
-      "rawText": "A supplementary application is required and weighs heavily in admission decisions."
+      "rawText": "Early/mid-February 2027. Please visit here for details."
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      }
+    ],
     "coop": false,
-    "officialUrl": "https://future.mcmaster.ca/",
-    "description": "Small, inquiry-based program known for its problem-based learning and strong pathway to medicine.",
-    "source": "sample",
-    "lastSynced": "2026-10-29",
-    "needsReview": false,
-    "campus": ""
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": true
   },
   {
-    "id": "mcmaster-life-sciences",
-    "name": "Life Sciences",
+    "id": "mcmaster-honours-integrated-science",
+    "name": "Honours Integrated Science",
     "universityId": "mcmaster",
-    "faculty": "Faculty of Science",
+    "campus": "",
+    "faculty": "",
     "field": [
+      "Physical Sciences / Environment",
       "Life Sciences / Health"
     ],
-    "degree": "BSc",
+    "degree": "B.Sc.(Honours)",
     "prerequisites": {
       "required": [
         "ENG4U",
+        "MHF4U",
         "MCV4U"
       ],
-      "rawText": "English, Calculus and Vectors, and one of Biology, Chemistry or Physics.",
       "choose": [
         {
-          "count": 1,
+          "count": 2,
           "courses": [
             "SBI4U",
             "SCH4U",
@@ -5300,26 +5662,601 @@
           ]
         }
       ],
-      "minimums": {}
+      "minimums": {},
+      "rawText": "ENG4U; MHF4U; MCV4U; Two of SBI4U, SCH4U or SPH4U"
     },
     "admissionRange": {
       "low": 87,
-      "high": 92,
-      "rawText": "High 80s to low 90s"
+      "high": 89,
+      "rawText": "High-80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "February 1, 2027 at 11:59 p.m. (ET) Honours Integrated Science supplementary application"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-02-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-honours-kinesiology",
+    "name": "Honours Kinesiology",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.Sc.Kin., B.Sc.Kin.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MCV4U",
+        "SBI4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MCV4U; SBI4U (Notes: PSK4U is highly recommended)"
+    },
+    "admissionRange": {
+      "low": 90,
+      "high": 93,
+      "rawText": "Low 90s"
     },
     "supplementary": {
       "required": false,
       "type": "",
       "rawText": ""
     },
-    "keyDates": [],
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-honours-medical-radiation-sciences",
+    "name": "Honours Medical Radiation Sciences",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.M.R.Sc.",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MHF4U",
+        "MCV4U",
+        "SBI4U",
+        "SCH4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MHF4U; MCV4U; SBI4U; SCH4U"
+    },
+    "admissionRange": {
+      "low": 94,
+      "high": 96,
+      "rawText": "Mid-90s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
     "coop": false,
-    "officialUrl": "https://future.mcmaster.ca/",
-    "description": "Gateway to specializations in biology, neuroscience, biochemistry and more.",
-    "source": "sample",
-    "lastSynced": "2026-10-29",
-    "needsReview": false,
-    "campus": ""
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-humanities-i",
+    "name": "Humanities I",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "B.A., B.A.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U (Notes: SBI4U is recommended for students planning to enter a Cognitive Science of Language program)"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-iarts-integrated-arts-i",
+    "name": "iArts (Integrated Arts) I",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Arts / Design"
+    ],
+    "degree": "B.F.A.",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-integrated-biomedical-engineering-and-health-sciences",
+    "name": "Integrated Biomedical Engineering & Health Sciences",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Engineering",
+      "Life Sciences / Health"
+    ],
+    "degree": "B.Eng.BME, B.H.Sc. (Hons)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MCV4U",
+        "SBI4U",
+        "SCH4U",
+        "SPH4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MCV4U; SBI4U; SCH4U; SPH4U"
+    },
+    "admissionRange": {
+      "low": 90,
+      "high": null,
+      "rawText": "min. 90%"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "January 28, 2027 at 11:59 p.m. ET. Recommended Early Supplementary Application Submission: Thursday, November 26, 2026 (more information)"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster: recommended early application",
+        "date": "2026-11-12"
+      },
+      {
+        "label": "McMaster: recommended early supplementary application",
+        "date": "2026-11-26"
+      },
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-01-28"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-integrated-business-and-humanities",
+    "name": "Integrated Business & Humanities",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Business / Commerce",
+      "Social Sciences / Humanities"
+    ],
+    "degree": "(Honours) B.Com.",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MCV4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English (ENG4U); Calculus and Vectors (MCV4U)"
+    },
+    "admissionRange": {
+      "low": 88,
+      "high": null,
+      "rawText": "Min. 88%"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "February 1, 2027"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-02-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-leadership-and-civic-studies-i-wilson-college",
+    "name": "Leadership & Civic Studies I (Wilson College)",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "Combined Honours BA in Leadership and Civic Studies and Another Subject",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U"
+    },
+    "admissionRange": {
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application",
+      "rawText": "February 1, 2027"
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster supplementary application deadline",
+        "date": "2027-02-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-life-sciences-gateway",
+    "name": "Life Sciences Gateway",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.Sc., B.Sc.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "SBI4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U"
+          ]
+        },
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "SCH4U",
+            "SPH4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "ENG4U; One math: MHF4U or MCV4U; SBI4U; One additional math or science: MHF4U, MCV4U, SCH4U or SPH4U; Two additional academic courses"
+    },
+    "admissionRange": {
+      "low": 94,
+      "high": 96,
+      "rawText": "Mid-90s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-mathematics-and-statistics-gateway",
+    "name": "Mathematics & Statistics Gateway",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Computer Science / Math"
+    ],
+    "degree": "B.Sc., B.Sc.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "MHF4U",
+        "MCV4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U; MHF4U; MCV4U"
+    },
+    "admissionRange": {
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid-80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-midwifery",
+    "name": "Midwifery",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.H.Sc. (Midwifery)",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "SBI4U",
+        "SCH4U"
+      ],
+      "choose": [],
+      "minimums": {
+        "ENG4U": 85,
+        "SBI4U": 85,
+        "SCH4U": 85
+      },
+      "rawText": "ENG4U; SBI4U; SCH4U"
+    },
+    "admissionRange": {
+      "low": 85,
+      "high": 89,
+      "rawText": "Admission is by selection and interviews are by invitation only. Min. 85% is required for consideration. Typically, an average in the mid-high 80s has been required to be competitive."
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Supplementary application + Interview",
+      "rawText": "You must complete the Identity and Admissions Survey by February 1, 2027. Admission is by selection and interviews are by invitation only. Min. 85% is required for consideration. Typically, an average in the mid-high 80s has been required to be competitive."
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      },
+      {
+        "label": "McMaster Identity and Admissions Survey due",
+        "date": "2027-02-01"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-nursing",
+    "name": "Nursing",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "B.Sc.N.",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "SBI4U",
+        "SCH4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "MDM4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "ENG4U; One of MHF4U, MCV4U or MDM4U; SBI4U; SCH4U"
+    },
+    "admissionRange": {
+      "low": 85,
+      "high": null,
+      "rawText": "Min. 85%. The weighting for final decision is based on 80% grades and 20% CASPer score."
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Casper test",
+      "rawText": "Please visit takeCasper.com for test dates."
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-01-15"
+      }
+    ],
+    "coop": false,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "mcmaster-social-sciences-i",
+    "name": "Social Sciences I",
+    "universityId": "mcmaster",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "B.A., B.A.(Honours)",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "ENG4U (Notes: Calculus and Vectors (MCV4U) and Advanced Functions (MHF4U) are strongly recommended for students planning to enter Economics.)"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 86,
+      "rawText": "Low-to-mid 80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [
+      {
+        "label": "McMaster application deadline",
+        "date": "2027-04-01"
+      }
+    ],
+    "coop": true,
+    "officialUrl": "https://future.mcmaster.ca/apply/requirements/",
+    "description": "",
+    "source": "manual",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
   },
   {
     "id": "ottawa-accounting",
@@ -21445,9 +22382,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
-            "MDM4U"
+            "MHF4U"
           ]
         },
         {
@@ -23137,9 +24073,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
-            "MDM4U"
+            "MHF4U"
           ]
         },
         {
@@ -35939,9 +36874,9 @@
       "rawText": "Applicants with averages in the mid-70s or higher may be considered for admission."
     },
     "supplementary": {
-      "required": true,
-      "type": "Portfolio",
-      "rawText": "No portfolio is required."
+      "required": false,
+      "type": "",
+      "rawText": ""
     },
     "keyDates": [],
     "coop": false,
@@ -38135,9 +39070,9 @@
       "rawText": "Applicants with averages in the mid-70s or higher may be considered for admission."
     },
     "supplementary": {
-      "required": true,
-      "type": "Audition",
-      "rawText": "Students who wish to pursue a BFA in Theatre must undergo auditions at the end of year one of the Theatre (BA) program. Upon successful evaluation, students may enter the following BFA programs beginning in second year: Acting Conservatory (BFA), Performance & Creation (BFA) and Production & Design (BFA)."
+      "required": false,
+      "type": "",
+      "rawText": ""
     },
     "keyDates": [],
     "coop": false,

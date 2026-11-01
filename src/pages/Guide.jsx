@@ -5,11 +5,16 @@ import {
   BookOpenCheck,
   CalendarDays,
   CircleHelp,
+  ClipboardCheck,
   ClipboardList,
+  FileText,
+  FolderOpen,
   GraduationCap,
   Heart,
   Info,
   Lightbulb,
+  Mic,
+  PenLine,
   PlayCircle,
   Rocket,
   ShieldCheck,
@@ -17,6 +22,7 @@ import {
   Target,
   TrendingUp,
   Trophy,
+  Video,
 } from 'lucide-react'
 import { GRADE12_PENALTY } from '../lib/average.js'
 import { MATCH_MARGIN, REACH_GAP } from '../lib/recommend.js'
@@ -81,6 +87,40 @@ function OptionRow({ label, children }) {
   )
 }
 
+// The forms a supplementary application can take, with programs we have checked by hand.
+const SUPPLEMENTARY_KINDS = [
+  {
+    icon: PenLine,
+    name: 'Written form or essays',
+    desc: 'Questions about your activities, experiences and why you chose the program.',
+    examples: 'Waterloo AIF, UTSC SAF, UTM Computer Science, U of T Kinesiology',
+  },
+  {
+    icon: Video,
+    name: 'Recorded video answers',
+    desc: 'Timed answers you record on a computer, sometimes together with a short written response.',
+    examples: 'Rotman Commerce, Queen’s Commerce, U of T Engineering, Waterloo Engineering',
+  },
+  {
+    icon: FolderOpen,
+    name: 'Portfolio',
+    desc: 'Your creative work, such as images, designs or media links, usually with a short statement.',
+    examples: 'U of T Daniels, Carleton Architecture and Industrial Design, TMU Fashion',
+  },
+  {
+    icon: Mic,
+    name: 'Audition or interview',
+    desc: 'Performing or talking with faculty, in person or by recording.',
+    examples: 'U of T Music, UTM Theatre & Drama, Queen’s Music',
+  },
+  {
+    icon: ClipboardCheck,
+    name: 'Test',
+    desc: 'An online test of personal skills, booked on a set date.',
+    examples: 'Casper for Western Engineering',
+  },
+]
+
 const sections = [
   {
     id: 'start',
@@ -132,6 +172,44 @@ const sections = [
           subject at other universities. Tap the <Heart className="inline h-4 w-4 align-[-3px] text-rose-500" aria-label="heart" />{' '}
           to add it to your interested programs.
         </p>
+      </>
+    ),
+  },
+  {
+    id: 'supplementary',
+    icon: FileText,
+    tone: 'bg-amber-50 text-amber-700',
+    title: 'What is a supplementary application?',
+    body: (
+      <>
+        <p>
+          It&apos;s anything a program asks for <strong>on top of</strong> your OUAC application and grades. There is no single format —
+          each university, and often each program, has its own. Some ask for writing, some for video, some for both:
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {SUPPLEMENTARY_KINDS.map(({ icon: Icon, name, desc, examples }) => (
+            <div key={name} className="rounded-xl border border-slate-200 p-4">
+              <p className="flex items-center gap-2 font-semibold text-slate-900">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-100 text-amber-800">
+                  <Icon className="h-4 w-4" aria-hidden="true" />
+                </span>
+                {name}
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{desc}</p>
+              <p className="mt-1.5 text-xs text-slate-500">e.g. {examples}</p>
+            </div>
+          ))}
+        </div>
+        <p>
+          The names differ too: Waterloo calls its form the AIF, UTSC the SAF, U of T Engineering the ESA, and many schools just say
+          &ldquo;supplementary application&rdquo;. Most video parts are <strong>recorded</strong> answers to questions you see on screen
+          (often on a platform called Kira Talent), not a live conversation with a person.
+        </p>
+        <Callout title="Don't guess — check each program">
+          Deadlines are often different from the OUAC deadline (January 15): for example February 1 for many U of T programs, February
+          15 for Queen&apos;s, January 28 for McMaster Engineering. On a program page, the &ldquo;Beyond your grades&rdquo; section lists
+          what that program asks for and its key dates.
+        </Callout>
       </>
     ),
   },
@@ -194,8 +272,8 @@ const sections = [
     body: (
       <>
         <p>
-          Key dates of your interested programs appear on the <A to="/calendar">Calendar</A> automatically — click one to open its
-          program. Click any day to add your own event, such as an info session or a test. Upcoming dates also show on your dashboard.
+          Key dates of your interested programs appear on the <A to="/calendar">Calendar</A> automatically — click one to see what the
+          deadline is for and what the program asks for. Click any day to add your own event, such as an info session or a test. Upcoming dates also show on your dashboard.
         </p>
         <p>Not every university publishes dates for each program, so always check the official site too.</p>
       </>
@@ -209,7 +287,8 @@ const sections = [
     body: (
       <p>
         Keep a list of clubs, jobs, volunteering and awards on <A to="/profile?tab=extracurriculars">Profile → Extracurriculars</A>.
-        It is handy when you write a supplementary application (AIF) and need to remember what you did and when.
+        It is handy when you fill in a supplementary application (such as Waterloo&apos;s AIF) and need to remember what you did and
+        when.
       </p>
     ),
   },
@@ -233,7 +312,7 @@ const sections = [
     body: (
       <ul className="space-y-2.5">
         {[
-          'Program information is collected from official university websites and refreshed every week.',
+          'Program information comes from official university websites. Most of it is collected automatically every week; supplementary application details and some programs are checked or copied by hand, and each program page says which.',
           <>
             Requirements and admission ranges can change. Always confirm on the university&apos;s website before you apply, and apply
             through{' '}

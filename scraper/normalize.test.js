@@ -39,6 +39,15 @@ describe('findCourses', () => {
 })
 
 describe('parseRequirementItem', () => {
+  it('uses the named courses for "one math" when the item lists them', () => {
+    expect(parseRequirementItem('One math: MHF4U or MCV4U')).toMatchObject({ kind: 'choose', count: 1, courses: ['MHF4U', 'MCV4U'] })
+    expect(parseRequirementItem('One Math (Calculus & Vectors / Advanced Functions)')).toMatchObject({
+      kind: 'choose',
+      courses: ['MCV4U', 'MHF4U'],
+    })
+    expect(parseRequirementItem('One 4U math')).toMatchObject({ kind: 'choose', courses: ['MHF4U', 'MCV4U', 'MDM4U'] })
+  })
+
   it('single required course with a minimum grade', () => {
     expect(parseRequirementItem('Advanced Functions (minimum final grade of 70% is required)')).toEqual({
       kind: 'required',
@@ -160,6 +169,19 @@ describe('detectSupplementary', () => {
       required: true,
       type: 'Admission Information Form (AIF)',
     })
+  })
+
+  it('finds the Casper test (Western Engineering)', () => {
+    expect(detectSupplementary(['You must take the Casper test'])).toMatchObject({ required: true, type: 'Casper test' })
+  })
+
+  it('ignores "No portfolio is required" and auditions after first year (York)', () => {
+    expect(detectSupplementary(['No portfolio is required.']).required).toBe(false)
+    expect(
+      detectSupplementary([
+        'Students who wish to pursue a BFA in Theatre must undergo auditions at the end of year one of the Theatre (BA) program.',
+      ]).required,
+    ).toBe(false)
   })
 
   it('combines AIF and interview', () => {

@@ -3,7 +3,9 @@ import {
   BarChart3,
   BookOpen,
   Briefcase,
+  CalendarClock,
   Check,
+  ClipboardList,
   ExternalLink,
   FileText,
   FolderOpen,
@@ -13,8 +15,10 @@ import {
   PenLine,
   Scale,
   Sparkles,
+  Users,
   Video,
 } from 'lucide-react'
+import { countdownLabel, daysBetween, formatDate, toDateString } from '../lib/calendar.js'
 import Badge from '../components/Badge.jsx'
 import NotFound from './NotFound.jsx'
 import { getProgram, courseName, allPrograms } from '../lib/data.js'
@@ -79,10 +83,10 @@ function CourseChip({ code, minimum, has = null }) {
 }
 
 // The text we parsed from, folded away so the page stays short.
-function OfficialText({ children }) {
+function OfficialText({ children, open = false }) {
   if (!children) return null
   return (
-    <details className="group mt-4 text-sm">
+    <details className="group mt-4 text-sm" open={open}>
       <summary className="flex cursor-pointer list-none items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-700">
         <Info className="h-3.5 w-3.5" aria-hidden="true" />
         Official wording
@@ -93,28 +97,159 @@ function OfficialText({ children }) {
   )
 }
 
-const SUPPLEMENTARY_ICONS = [
-  [/interview|audition/i, Mic],
-  [/portfolio/i, FolderOpen],
-  [/video/i, Video],
-  [/AIF|form|application|test/i, PenLine],
+const KIND_ICONS = { form: PenLine, video: Video, interview: Mic, audition: Mic, portfolio: FolderOpen, test: PenLine, reference: Users }
+
+// What each scraped supplementary type means, for programs without hand-checked details.
+const TYPE_INFO = [
+  [/AIF/i, 'form', 'Waterloo’s own online form, separate from your OUAC application.'],
+  [/interview/i, 'interview', 'The program interviews applicants. The official site has the format and dates.'],
+  [/audition/i, 'audition', 'You perform for the program, e.g. music, acting or dance.'],
+  [/portfolio/i, 'portfolio', 'A collection of your creative work.'],
+  [/video/i, 'video', 'Recorded video answers.'],
+  [/test/i, 'test', 'A test you write as part of the application.'],
+  [/./, 'form', 'The program’s own form or questions, separate from your OUAC application. The official site lists what it asks.'],
 ]
 
-function SupplementaryList({ type }) {
-  const parts = type.split(/\s*\+\s*/).filter(Boolean)
+function requirementItems(program) {
+  if (program.special?.items.length) return program.special.items
+  return program.supplementary.type
+    .split(/\s*\+\s*/)
+    .filter(Boolean)
+    .map((label) => {
+      const [, kind, detail] = TYPE_INFO.find(([re]) => re.test(label))
+      return { kind, label, detail }
+    })
+}
+
+function RequirementItem({ item }) {
+  const Icon = KIND_ICONS[item.kind] ?? FileText
   return (
-    <ul className="flex flex-wrap gap-2">
-      {parts.map((part) => {
-        const Icon = SUPPLEMENTARY_ICONS.find(([re]) => re.test(part))?.[1] ?? FileText
+    <li className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50/60 p-3">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-800">
+        <Icon className="h-4 w-4" aria-hidden="true" />
+      </span>
+      <span className="min-w-0">
+        <span className="block text-sm font-semibold text-slate-900">{item.label}</span>
+        {item.detail && <span className="mt-0.5 block text-sm text-slate-600">{item.detail}</span>}
+      </span>
+    </li>
+  )
+}
+
+// The program's own dates with a countdown, so nobody has to dig through the official wording.
+function KeyDates({ program }) {
+  const today = toDateString(new Date())
+  if (program.keyDates.length === 0) {
+    return (
+      <p className="flex gap-2 rounded-xl bg-slate-50 px-3 py-2.5 text-sm text-slate-600">
+        <CalendarClock className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+        <span>
+          The program page doesn&apos;t list a deadline we could read. Check the{' '}
+          <a href={program.officialUrl} target="_blank" rel="noreferrer" className="font-medium text-brand-700 hover:underline">
+            official website
+          </a>
+          .
+        </span>
+      </p>
+    )
+  }
+  return (
+    <ul className="space-y-2">
+      {program.keyDates.map((d) => {
+        const days = daysBetween(today, d.date)
         return (
-          <li key={part} className="flex items-center gap-2 rounded-xl bg-amber-50 px-3 py-2 text-sm font-medium text-amber-900">
-            <Icon className="h-4 w-4" aria-hidden="true" />
-            {part}
+          <li key={d.date + d.label} className="flex items-center gap-3 rounded-xl border border-slate-200 px-3 py-2.5">
+            <span className="w-28 shrink-0 text-sm font-semibold tabular-nums text-slate-900">{formatDate(d.date)}</span>
+            <span className={`min-w-0 flex-1 text-sm ${days < 0 ? 'text-slate-400 line-through' : 'text-slate-700'}`}>{d.label}</span>
+            <span className={`shrink-0 text-xs font-semibold ${days < 0 ? 'text-slate-400' : days <= 7 ? 'text-red-600' : 'text-slate-500'}`}>
+              {days < 0 ? 'Passed' : countdownLabel(days)}
+            </span>
           </li>
         )
       })}
     </ul>
   )
+}
+
+function SpecialNotes({ notes }) {
+  if (notes.length === 0) return null
+  return (
+    <ul className="mt-3 space-y-1.5">
+      {notes.map((n) => (
+        <li key={n} className="flex gap-2 text-sm text-slate-700">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" aria-hidden="true" />
+          {n}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function Sources({ special }) {
+  if (special.sources.length === 0) return null
+  return (
+    <p className="mt-3 text-xs text-slate-500">
+      Checked by hand on {formatDate(special.checked)}:{' '}
+      {special.sources.map((s, i) => (
+        <span key={s.url}>
+          {i > 0 && ' · '}
+          <a href={s.url} target="_blank" rel="noreferrer" className="underline hover:text-slate-700">
+            {s.label}
+          </a>
+        </span>
+      ))}
+    </p>
+  )
+}
+
+function BeyondGrades({ program }) {
+  const { supplementary, special } = program
+  if (!supplementary.required) {
+    return (
+      <>
+        <p className="flex items-center gap-2 text-slate-600">
+          <Check className="h-4 w-4 text-emerald-600" aria-hidden="true" />
+          Nothing extra listed — admission is based on grades.
+        </p>
+        {special && <SpecialNotes notes={special.notes} />}
+        {special && <Sources special={special} />}
+      </>
+    )
+  }
+  return (
+    <div className="grid gap-6 lg:grid-cols-2">
+      <div>
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">What you have to do</h3>
+        <ul className="mt-2 space-y-2">
+          {requirementItems(program).map((item) => (
+            <RequirementItem key={item.label} item={item} />
+          ))}
+        </ul>
+        {special && <SpecialNotes notes={special.notes} />}
+      </div>
+      <div>
+        <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Key dates</h3>
+        <div className="mt-2">
+          <KeyDates program={program} />
+        </div>
+        {program.keyDates.length > 0 && (
+          <p className="mt-2 text-xs text-slate-500">Heart this program and these dates show up in your Calendar.</p>
+        )}
+      </div>
+      <div className="lg:col-span-2">
+        {special && <Sources special={special} />}
+        {/* Programs without readable dates often say the deadline in this text, so show it open. */}
+        <OfficialText open={program.keyDates.length === 0 && !special}>{supplementary.rawText}</OfficialText>
+      </div>
+    </div>
+  )
+}
+
+// "manual" = copied by hand from the official site (e.g. McMaster, which blocks automated tools).
+const SOURCE_LABEL = {
+  scraper: 'Last synced from official site',
+  manual: 'Copied by hand from the official site',
+  sample: 'Sample data, not yet verified',
 }
 
 export default function ProgramDetail() {
@@ -229,18 +364,8 @@ export default function ProgramDetail() {
         </div>
 
         <div className="lg:col-span-3">
-          <Section title="Supplementary application" icon={FileText}>
-            {supplementary.required ? (
-              <>
-                <SupplementaryList type={supplementary.type} />
-                <OfficialText>{supplementary.rawText}</OfficialText>
-              </>
-            ) : (
-              <p className="flex items-center gap-2 text-slate-600">
-                <Check className="h-4 w-4 text-emerald-600" aria-hidden="true" />
-                None listed — admission is based on grades.
-              </p>
-            )}
+          <Section title="Beyond your grades" icon={ClipboardList}>
+            <BeyondGrades program={program} />
           </Section>
         </div>
       </div>
@@ -248,7 +373,7 @@ export default function ProgramDetail() {
       <Compare program={program} you={you} />
 
       <p className="mt-6 text-xs text-slate-500">
-        {program.source === 'scraper' ? 'Last synced from official site' : 'Sample data, not yet verified'}: {program.lastSynced}. Always
+        {SOURCE_LABEL[program.source] ?? SOURCE_LABEL.sample}: {program.lastSynced}. Always
         confirm on the{' '}
         <a href={program.officialUrl} target="_blank" rel="noreferrer" className="underline">
           official website

@@ -80,10 +80,27 @@ npm run scrape -- --limit 5          # quick test: 5 pages each, nothing written
 - To add a university, copy an adapter in `scraper/universities/`, adjust the selectors, and add it to `index.js`.
   `node scraper/tools/inspect.js page.html` prints a page's headings to help find the right selectors.
 
+### McMaster (imported by hand once a year)
+
+McMaster's robots.txt blocks AI agents, so the weekly scraper never contacts it. Instead:
+
+1. Open https://future.mcmaster.ca/apply/requirements/, choose *Attending a Canadian secondary school* → *Ontario*,
+   pick two programs and submit.
+2. When both programs' details are showing, save the page (Ctrl+S, **Webpage, Complete**) into one folder.
+   Repeat until every program is saved.
+3. `node scraper/tools/import-mcmaster.js <folder>` previews what changed; add `--write` to update
+   `src/data/programs.json`. Programs get `source: "manual"` and keep the date the page was saved.
+
+### Hand-checked extras
+
+`src/data/special-requirements.json` holds supplementary-application details, notes and deadlines that were read on
+official pages by hand (U of T, Queen's, Waterloo, Western, Carleton, TMU, York, McMaster). Each entry lists its
+sources and the date it was checked; re-check them each application cycle.
+
 ## Progress
 
 - [x] Phase 1 — Navbar, routing, Programs search, program detail pages
-- [x] Phase 2 — Scraper for Waterloo, UofT, Western (McMaster pending — see design.md)
+- [x] Phase 2 — Scraper for Waterloo, UofT, Western (McMaster is imported by hand — see above)
 - [ ] Phase 3 — Accounts, onboarding, profile & marks (code done; needs a Firebase project to test)
 - [ ] Phase 4 — Eligibility, top-6 average, safety/match/reach, favourites (code done; needs a Firebase project to test)
 - [ ] Phase 5 — Calendar, extracurriculars, dashboard (code done; needs a Firebase project to test)

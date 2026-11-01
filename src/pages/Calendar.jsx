@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/react/daygrid'
 import interactionPlugin from '@fullcalendar/react/interaction'
@@ -8,7 +8,7 @@ import classicThemePlugin from '@fullcalendar/react/themes/classic'
 import '@fullcalendar/react/skeleton.css'
 import '@fullcalendar/react/themes/classic/theme.css'
 import '@fullcalendar/react/themes/classic/palette.css'
-import { CalendarDays, ChevronLeft, ChevronRight, Flag, GraduationCap, Hourglass, LayoutGrid, List, Plus, Star } from 'lucide-react'
+import { CalendarDays, ChevronLeft, ChevronRight, ExternalLink, Flag, GraduationCap, Hourglass, LayoutGrid, List, Plus, Star } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth.jsx'
 import { useFavorites } from '../hooks/useFavorites.jsx'
 import { useCalendarEvents } from '../hooks/useCalendarEvents.js'
@@ -16,6 +16,7 @@ import { deleteUserItem, saveUserItem } from '../hooks/useUserData.js'
 import { useSaver } from '../hooks/useSaver.js'
 import {
   countdownLabel,
+  daysBetween,
   CUSTOM_COLORS,
   formatDate,
   isDateString,
@@ -76,8 +77,6 @@ export default function Calendar() {
   usePageTitle('Calendar')
   const { events, loading } = useCalendarEvents()
   const favorites = useFavorites()
-  const navigate = useNavigate()
-  const location = useLocation()
   const calendarRef = useRef(null)
   // Title and view come from FullCalendar (datesSet) so our own toolbar can show them.
   const [view, setView] = useState({ title: '', type: isSmallScreen() ? 'listMonth' : 'dayGridMonth' })
@@ -97,8 +96,12 @@ export default function Calendar() {
   function onEventClick({ event, jsEvent }) {
     jsEvent.preventDefault()
     const source = event.extendedProps.source
+    openEvent(source)
+  }
+
+  function openEvent(source) {
     if (source.kind === 'custom') setDialog({ event: source })
-    else if (source.kind === 'program') navigate(`/programs/${source.programId}`, { state: fromHere(location) })
+    else if (source.kind === 'program') setDialog({ deadline: source })
     else setDialog({ info: source })
   }
 
@@ -111,7 +114,7 @@ export default function Calendar() {
           </span>
           <div>
             <h1 className="text-2xl font-bold text-slate-900">Calendar</h1>
-            <p className="mt-1 text-sm text-slate-600">Click a day to add an event · click a deadline to open its program</p>
+            <p className="mt-1 text-sm text-slate-600">Click a day to add an event · click a deadline to see what it&apos;s for</p>
           </div>
         </div>
         <button type="button" className={`${primaryButton} flex items-center gap-1.5`} onClick={() => setDialog({ date: today })}>
@@ -227,7 +230,7 @@ export default function Calendar() {
             </div>
           )}
           <h2 className="font-semibold text-slate-900">Next {UPCOMING_DAYS} days</h2>
-          <UpcomingList events={upcoming} onSelect={(e) => (e.kind === 'custom' ? setDialog({ event: e }) : null)} />
+          <UpcomingList events={upcoming} onSelect={openEvent} />
         </aside>
       </div>
 
@@ -243,10 +246,65 @@ export default function Calendar() {
           </p>
         </Modal>
       )}
+      {dialog?.deadline && <DeadlineDialog event={dialog.deadline} today={today} onClose={() => setDialog(null)} />}
       {(dialog?.date || dialog?.event) && (
         <EventDialog key={dialog.event?.id ?? dialog.date} initial={dialog} onClose={() => setDialog(null)} />
       )}
     </div>
+  )
+}
+
+// A program deadline: what it is, when, and what the program asks for, with links to the
+// program page and the official site.
+function DeadlineDialog({ event, today, onClose }) {
+  const location = useLocation()
+  const { program, label, date } = event
+  const days = daysBetween(today, date)
+  const items = program.special?.items ?? []
+  return (
+    <Modal title={label} onClose={onClose}>
+      <p className="text-sm font-medium text-brand-700">
+        {program.university?.shortName ?? program.university?.name}
+        {program.campus && ` · ${program.campus}`}
+      </p>
+      <p className="font-semibold text-slate-900">{program.name}</p>
+      <div className="mt-3 flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2.5">
+        <span className="text-sm font-semibold text-slate-900">{formatDate(date)}</span>
+        <span className={`text-xs font-semibold ${days < 0 ? 'text-slate-400' : days <= 7 ? 'text-red-600' : 'text-slate-500'}`}>
+          {days < 0 ? 'Passed' : countdownLabel(days)}
+        </span>
+      </div>
+      {program.supplementary?.required && (
+        <div className="mt-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">What this program asks for</p>
+          {items.length > 0 ? (
+            <ul className="mt-2 space-y-2">
+              {items.map((item) => (
+                <li key={item.label} className="text-sm">
+                  <span className="font-medium text-slate-900">{item.label}</span>
+                  {item.detail && <span className="block text-slate-600">{item.detail}</span>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-sm text-slate-700">{program.supplementary.type}</p>
+          )}
+          {program.special?.notes.map((n) => (
+            <p key={n} className="mt-2 text-sm text-slate-600">
+              {n}
+            </p>
+          ))}
+        </div>
+      )}
+      <div className="mt-5 flex flex-wrap gap-2">
+        <Link to={`/programs/${program.id}`} state={fromHere(location)} className={primaryButton}>
+          Open program page
+        </Link>
+        <a href={program.officialUrl} target="_blank" rel="noreferrer" className={`${secondaryButton} inline-flex items-center gap-1.5`}>
+          Official website <ExternalLink className="h-4 w-4" aria-hidden="true" />
+        </a>
+      </div>
+    </Modal>
   )
 }
 

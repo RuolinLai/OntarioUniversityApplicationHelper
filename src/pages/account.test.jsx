@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server'
 import { MemoryRouter } from 'react-router'
 import courses from '../data/courses.json'
 import grade11 from '../data/grade11.json'
-import { allPrograms } from '../lib/data.js'
+import { allPrograms, getProgram } from '../lib/data.js'
 import { buildMarkTable } from '../lib/average.js'
 import { assessProgram } from '../lib/recommend.js'
 import { addDays, toDateString } from '../lib/calendar.js'
@@ -213,8 +213,55 @@ describe('signed-in pages', () => {
   })
 
   it('calendar explains when favourites have no dates', () => {
-    // Waterloo CS has no scraped key dates.
+    // Western CS has no key dates (Waterloo CS has its AIF deadline from special-requirements.json).
+    state.favorites = [{ id: 'western-computer-science', addedAt: null }]
     expect(render('/calendar')).toContain('None of your interested programs list specific deadlines')
+  })
+
+  it('program page shows hand-checked requirements and dates', () => {
+    const html = render('/programs/toronto-st-george-industrial-engineering').replaceAll('<!-- -->', '')
+    expect(html).toContain('Beyond your grades')
+    expect(html).toContain('Personal Profile: 3 timed video responses')
+    expect(html).toContain('There is no interview')
+    expect(html).toContain('Jan 15, 2027')
+  })
+
+  it('Waterloo Engineering gets its AIF and interview even though the scraper missed them', () => {
+    const html = render('/programs/waterloo-mechanical-engineering').replaceAll('<!-- -->', '')
+    expect(html).toContain('Online video interview')
+    expect(html).toContain('Feb 1, 2027')
+  })
+
+  it('Carleton Industrial Design shows its portfolio and March deadlines', () => {
+    const html = render('/programs/carleton-industrial-design').replaceAll('<!-- -->', '')
+    expect(html).toContain('Portfolio submission deadline')
+    expect(html).toContain('Mar 5, 2027')
+  })
+
+  it('a notes-only entry does not make a program supplementary', () => {
+    const p = getProgram('carleton-humanities-great-books-includes-hums-biology')
+    expect(p.supplementary.required).toBe(false)
+    expect(p.special.notes[0]).toContain('below 80%')
+    expect(getProgram('york-integrative-arts-bfa').supplementary.required).toBe(false)
+    // "@program" sources point at the program's own page.
+    expect(getProgram('tmu-fashion').special.sources[0].url).toBe(getProgram('tmu-fashion').officialUrl)
+  })
+
+  it('U of T and Queen’s supplementals have their contents and deadlines', () => {
+    const rotman = render('/programs/toronto-st-george-finance-and-economics').replaceAll('<!-- -->', '')
+    expect(rotman).toContain('3 video responses')
+    expect(rotman).toContain('Feb 1, 2027')
+    // The scraper missed UTM Computer Science's supplementary application.
+    expect(getProgram('toronto-mississauga-computer-science').supplementary.required).toBe(true)
+    const commerce = render('/programs/queens-smith-commerce').replaceAll('<!-- -->', '')
+    expect(commerce).toContain('1 video response')
+    expect(commerce).toContain('Feb 15, 2027')
+  })
+
+  it('Western Engineering lists the Casper test', () => {
+    const html = render('/programs/western-engineering').replaceAll('<!-- -->', '')
+    expect(html).toContain('Casper test')
+    expect(html).toContain('takecasper.com')
   })
 
   it('extracurriculars tab groups activities by category', () => {

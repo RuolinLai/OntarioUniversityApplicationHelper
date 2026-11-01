@@ -167,7 +167,7 @@ Algoma · Brock · Carleton · Guelph · Lakehead · Laurentian · McMaster · N
 
 **分批完成**：先做 Waterloo、UofT、Western，跑通整个流程，再逐所添加。还没写爬虫的大学，其 program 不显示（或用少量手动数据）。
 
-> **McMaster**：robots.txt 明确屏蔽 Anthropic / Claude 的爬虫（`ClaudeBot`、`Claude-Web`、`anthropic-ai`），所以开发时不用 Claude 访问其网站。待定：换成其它大学，或由开发者本人编写 McMaster adapter。
+> **McMaster**：robots.txt 明确屏蔽 AI 工具（`ClaudeBot`、`Claude-Web`、`anthropic-ai`、`ChatGPT-User` 等），所以 scraper 和 Claude 都不访问其网站。做法：开发者本人在浏览器里保存招生要求页面，用 `scraper/tools/import-mcmaster.js` 从本地文件导入（`source: "manual"`），每年更新一次。
 >
 > **UofT**：总览页（future.utoronto.ca）没有录取分数，爬虫会进入各校区详情页补充：
 > - Scarborough（utsc.utoronto.ca）："Approximate grade requirements"，含单科最低分 ✅

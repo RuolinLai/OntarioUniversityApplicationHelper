@@ -53,7 +53,10 @@ export function parseRequirementItem(text) {
   const minMatch = text.match(/minimum (?:final )?grade of (?:at least )?(\d{2})\s*%/i)
   const minimum = minMatch ? Number(minMatch[1]) : null
 
-  let found = /\b(?:any|one) (?:(?:additional|other) )?(?:grade 12 u |4u )?math(?:ematics)?\b/i.test(text) ? MATH_COURSES : findCourses(text)
+  // "One math" means any Grade 12 math, unless the item names the courses ("One math: MHF4U or MCV4U").
+  const named = findCourses(text)
+  const anyMath = /\b(?:any|one) (?:(?:additional|other) )?(?:grade 12 u |4u )?math(?:ematics)?\b/i.test(text)
+  let found = anyMath && named.length === 0 ? MATH_COURSES : named
   if (found.length === 0) {
     // Grade 11 requirements like "Functions (MCF3M or MCR3U)" are out of scope for a Grade 12 planner.
     const grade11 = /\b[A-Z]{3}3[UMCE]\b/.test(text)
@@ -196,6 +199,7 @@ const SUPPLEMENTARY_TYPES = [
   [/video/i, 'Video'],
   [/audition/i, 'Audition'],
   [/admission test/i, 'Admission test'],
+  [/\bcasper\b/i, 'Casper test'],
   [/supplement(?:al|ary)|profile/i, 'Supplementary application'],
 ]
 
@@ -209,6 +213,10 @@ export function detectSupplementary(sentences) {
       SUPPLEMENTARY_TYPES.some(([re]) => re.test(s)) &&
       /\b(required|requires?|mandatory|must|invited|deadline|submit)\b/i.test(s) &&
       !/\bnot required\b.*\b(form|application|interview|portfolio)/i.test(s) &&
+      // "No portfolio is required."
+      !/^no\b[^.]*\b(is|are) required\b/i.test(s.trim()) &&
+      // York Theatre: "must undergo auditions at the end of year one" is not an admission step.
+      !/\b(end of (year one|first year)|after (year one|first year))\b/i.test(s) &&
       // "For Western Integrated Science (WISc), ... supplemental application" applies to a sub-program only.
       !/^for\s/i.test(s.trim()),
   )

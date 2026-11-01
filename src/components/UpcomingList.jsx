@@ -4,7 +4,7 @@ import { countdownLabel, formatDate } from '../lib/calendar.js'
 import { fromHere } from '../lib/backLink.js'
 
 // Upcoming events with a countdown (calendar sidebar and dashboard). Program deadlines link to the
-// program; the student's own events call onSelect, if given.
+// program unless onSelect is given, which then handles every event (the calendar opens a dialog).
 export default function UpcomingList({ events, onSelect }) {
   const location = useLocation()
   if (events.length === 0) {
@@ -34,14 +34,14 @@ export default function UpcomingList({ events, onSelect }) {
         const className = 'flex w-full items-start gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-left hover:bg-slate-50'
         return (
           <li key={e.id}>
-            {e.kind === 'program' ? (
-              <Link to={`/programs/${e.programId}`} state={fromHere(location)} className={className}>
-                {body}
-              </Link>
-            ) : e.kind === 'custom' && onSelect ? (
+            {onSelect ? (
               <button type="button" className={className} onClick={() => onSelect(e)}>
                 {body}
               </button>
+            ) : e.kind === 'program' ? (
+              <Link to={`/programs/${e.programId}`} state={fromHere(location)} className={className}>
+                {body}
+              </Link>
             ) : (
               <div className={className}>{body}</div>
             )}

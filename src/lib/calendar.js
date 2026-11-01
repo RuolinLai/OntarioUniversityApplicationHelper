@@ -64,6 +64,8 @@ export function buildCalendarEvents({ ouacDates = [], programs = [], userEvents 
         date: d.date,
         color: KIND.program.color,
         programId: p.id,
+        label: d.label,
+        program: p,
       })
     }
   }
