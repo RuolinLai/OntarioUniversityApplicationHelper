@@ -575,13 +575,15 @@
     {
       "key": "uoft-stg-cs",
       "programs": [
-        "toronto-st-george-computer-science"
+        "toronto-st-george-computer-science",
+        "toronto-st-george-data-science",
+        "toronto-st-george-applied-data-science"
       ],
       "items": [
         {
           "kind": "form",
           "label": "Computer Science Supplemental Application",
-          "detail": "Required. The Join U of T applicant portal has the questions after you apply."
+          "detail": "Required for the whole Computer Science admission category (Computer Science, Data Science and Applied Data Science). The Join U of T applicant portal has the questions after you apply."
         }
       ],
       "dates": [
@@ -591,6 +593,10 @@
         }
       ],
       "sources": [
+        {
+          "label": "Arts & Science: Computer Science admission category",
+          "url": "https://www.artsci.utoronto.ca/future/ready-apply/admission-categories/computer-science"
+        },
         {
           "label": "U of T supplemental applications",
           "url": "https://future.utoronto.ca/supplemental-applications"

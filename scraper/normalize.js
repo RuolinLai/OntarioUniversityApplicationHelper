@@ -198,6 +198,7 @@ const SUPPLEMENTARY_TYPES = [
   [/portfolio/i, 'Portfolio'],
   [/video/i, 'Video'],
   [/audition/i, 'Audition'],
+  [/statement of interest|personal statement/i, 'Written statement'],
   [/admission test/i, 'Admission test'],
   [/\bcasper\b/i, 'Casper test'],
   [/supplement(?:al|ary)|profile/i, 'Supplementary application'],

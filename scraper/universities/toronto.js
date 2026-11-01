@@ -15,7 +15,12 @@
 //   - Scarborough (utsc.utoronto.ca): "Approximate grade requirements" list
 //   - Mississauga (utm.utoronto.ca):  "Competitive Average" box
 // St. George Arts & Science pages are behind a bot challenge and Engineering
-// doesn't publish averages, so those are not fetched.
+// doesn't publish averages, so those are not fetched. Arts & Science admits by
+// admission category instead: each St. George A&S block links to its category page
+// (artsci.utoronto.ca/future/ready-apply/admission-categories/<category>), and the
+// category ranges below were copied by hand from a browser-saved copy of
+// https://www.artsci.utoronto.ca/future/ready-apply/admission-requirements/ontario-high-school
+// ("Recommended Admission Range", checked 2026-11-01). Re-check every cycle.
 
 import { load } from 'cheerio'
 import { cleanText, slugify } from '../normalize.js'
@@ -96,6 +101,21 @@ function engineeringAverage(engineering, name) {
   return engineering?.ranges.find((r) => r.names.some((n) => editDistance(n.toLowerCase(), target) <= 2))?.averageText ?? ''
 }
 
+export const ARTSCI_CATEGORY_RANGES = {
+  'computer-science': 'Low 90s',
+  humanities: 'Low to mid 80s',
+  'life-sciences': 'Mid to high 80s',
+  'physical-mathematical-sciences': 'Mid to high 80s', // "Mathematical & Physical Sciences"
+  'rotman-commerce': 'Mid to high 80s',
+  'social-sciences': 'Mid to high 80s',
+}
+
+/** "https://www.artsci.utoronto.ca/future/ready-apply/admission-categories/humanities" -> "Low to mid 80s" */
+export function artsciCategoryAverage(detailUrl) {
+  const m = /^https?:\/\/(?:www\.)?artsci\.utoronto\.ca\/future\/ready-apply\/admission-categories\/([a-z-]+)\/?(?:[#?].*)?$/.exec(detailUrl ?? '')
+  return (m && ARTSCI_CATEGORY_RANGES[m[1]]) || ''
+}
+
 const SUPPLEMENTARY_ROW = /supplement|portfolio|audition|interview|profile|essay|video/i
 
 export function parseProgram(html, url, context = {}) {
@@ -132,6 +152,9 @@ export function parseProgram(html, url, context = {}) {
         supplementarySentences.push(context.engineering.supplementarySentence)
       }
 
+      const detailUrl = c.find('.o-campus__detail-link a').attr('href') ?? ''
+      const categoryAverage = campusId === 'campus-utsg' ? artsciCategoryAverage(detailUrl) : ''
+
       return {
         id: `${id}-${slugify(campus)}-${slugify(name)}`,
         name,
@@ -139,13 +162,13 @@ export function parseProgram(html, url, context = {}) {
         faculty,
         degree: degrees.join(', '),
         requirementItems,
-        averageText: isStGeorgeEngineering ? engineeringAverage(context.engineering, name) : '',
+        averageText: isStGeorgeEngineering ? engineeringAverage(context.engineering, name) : categoryAverage,
         keyDates: isStGeorgeEngineering ? context.engineering.keyDates : [],
         supplementarySentences,
         coop: /co-op/i.test(programRows.text()),
         description,
         officialUrl: campusId ? `${url}#${campusId}` : url,
-        detailUrl: c.find('.o-campus__detail-link a').attr('href') ?? '',
+        detailUrl,
       }
     })
     .get()

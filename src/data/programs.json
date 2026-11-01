@@ -15562,7 +15562,7 @@
     "officialUrl": "https://future.utoronto.ca/program/accounting#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15602,7 +15602,7 @@
     "officialUrl": "https://future.utoronto.ca/program/accounting#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15625,9 +15625,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -15639,7 +15639,7 @@
     "officialUrl": "https://future.utoronto.ca/program/accounting#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15677,7 +15677,7 @@
     "officialUrl": "https://future.utoronto.ca/program/accounting-finance#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15700,9 +15700,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -15714,7 +15714,7 @@
     "officialUrl": "https://future.utoronto.ca/program/actuarial-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15752,7 +15752,7 @@
     "officialUrl": "https://future.utoronto.ca/program/african-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15774,9 +15774,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -15788,7 +15788,7 @@
     "officialUrl": "https://future.utoronto.ca/program/african-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15826,7 +15826,7 @@
     "officialUrl": "https://future.utoronto.ca/program/aging-and-society#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15848,9 +15848,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -15862,7 +15862,7 @@
     "officialUrl": "https://future.utoronto.ca/program/american-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15887,9 +15887,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -15901,7 +15901,7 @@
     "officialUrl": "https://future.utoronto.ca/program/animal-physiology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15937,7 +15937,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-hba#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15975,7 +15975,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-hba#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -15997,9 +15997,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16011,7 +16011,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-hba#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16047,7 +16047,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-hbsc#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16085,7 +16085,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-evolutionary#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16110,9 +16110,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16124,7 +16124,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-evolutionary#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16162,7 +16162,7 @@
     "officialUrl": "https://future.utoronto.ca/program/anthropology-socio-cultural#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16203,7 +16203,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-climatology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16226,9 +16226,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 93,
+      "rawText": "Low 90s"
     },
     "supplementary": {
       "required": false,
@@ -16240,7 +16240,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-data-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16265,9 +16265,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16279,7 +16279,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-genetics-and-biotechnology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16302,9 +16302,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16316,7 +16316,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-mathematics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16354,7 +16354,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-statistics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16394,7 +16394,7 @@
     "officialUrl": "https://future.utoronto.ca/program/applied-statistics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16416,9 +16416,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16430,7 +16430,7 @@
     "officialUrl": "https://future.utoronto.ca/program/archaeology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16466,7 +16466,7 @@
     "officialUrl": "https://future.utoronto.ca/program/architectural-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16503,7 +16503,7 @@
     "officialUrl": "https://future.utoronto.ca/program/art-and-art-history#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16540,7 +16540,7 @@
     "officialUrl": "https://future.utoronto.ca/program/art-history#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16563,9 +16563,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -16577,7 +16577,7 @@
     "officialUrl": "https://future.utoronto.ca/program/art-history#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16616,7 +16616,7 @@
     "officialUrl": "https://future.utoronto.ca/program/art-history-visual-culture#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16655,7 +16655,7 @@
     "officialUrl": "https://future.utoronto.ca/program/arts-and-media-management#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16693,7 +16693,7 @@
     "officialUrl": "https://future.utoronto.ca/program/arts-management#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16715,9 +16715,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -16729,7 +16729,7 @@
     "officialUrl": "https://future.utoronto.ca/program/asian-canadian-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16767,7 +16767,7 @@
     "officialUrl": "https://future.utoronto.ca/program/astronomical-sciences#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16805,7 +16805,7 @@
     "officialUrl": "https://future.utoronto.ca/program/astronomy#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16846,7 +16846,7 @@
     "officialUrl": "https://future.utoronto.ca/program/astronomy-and-astrophysics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16869,9 +16869,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16883,7 +16883,7 @@
     "officialUrl": "https://future.utoronto.ca/program/astronomy-and-astrophysics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16907,9 +16907,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -16921,7 +16921,7 @@
     "officialUrl": "https://future.utoronto.ca/program/astronomy-and-physics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16963,7 +16963,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biochemistry#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -16989,9 +16989,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17003,7 +17003,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biochemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17041,7 +17041,7 @@
     "officialUrl": "https://future.utoronto.ca/program/bioethics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17063,9 +17063,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17077,7 +17077,7 @@
     "officialUrl": "https://future.utoronto.ca/program/bioethics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17103,9 +17103,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17117,7 +17117,7 @@
     "officialUrl": "https://future.utoronto.ca/program/bioinformatics-and-computational-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17157,7 +17157,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biological-chemistry#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17183,9 +17183,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17197,7 +17197,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biological-chemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17224,9 +17224,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17238,7 +17238,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biological-physics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17277,7 +17277,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biology#campus-utm",
     "description": "Explore Biology at U of T across three campuses, with HBSc options including majors, minors, specialists and health sciences pathways.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17299,8 +17299,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -17325,7 +17325,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biology#campus-utsc",
     "description": "Explore Biology at U of T across three campuses, with HBSc options including majors, minors, specialists and health sciences pathways.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17350,9 +17350,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17364,7 +17364,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biology#campus-utsg",
     "description": "Explore Biology at U of T across three campuses, with HBSc options including majors, minors, specialists and health sciences pathways.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17403,7 +17403,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biology-health-sciences#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17441,7 +17441,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biomedical-communications#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17466,9 +17466,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17480,7 +17480,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biomedical-toxicology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17522,7 +17522,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biophysics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17561,7 +17561,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biotechnology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17583,9 +17583,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17597,7 +17597,7 @@
     "officialUrl": "https://future.utoronto.ca/program/book-and-media-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17619,9 +17619,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17633,7 +17633,7 @@
     "officialUrl": "https://future.utoronto.ca/program/buddhist-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17670,7 +17670,7 @@
     "officialUrl": "https://future.utoronto.ca/program/business-science-and-entrepreneurship#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17706,7 +17706,7 @@
     "officialUrl": "https://future.utoronto.ca/program/canadian-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17728,9 +17728,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17742,7 +17742,7 @@
     "officialUrl": "https://future.utoronto.ca/program/canadian-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17764,9 +17764,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17778,7 +17778,7 @@
     "officialUrl": "https://future.utoronto.ca/program/caribbean-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17804,9 +17804,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17818,7 +17818,7 @@
     "officialUrl": "https://future.utoronto.ca/program/cell-and-molecular-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17840,9 +17840,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -17854,7 +17854,7 @@
     "officialUrl": "https://future.utoronto.ca/program/celtic-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17903,7 +17903,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chemical-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17927,9 +17927,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -17941,7 +17941,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chemical-physics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -17979,7 +17979,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chemistry#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18020,7 +18020,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chemistry#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18044,9 +18044,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -18058,7 +18058,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18094,7 +18094,7 @@
     "officialUrl": "https://future.utoronto.ca/program/chinese-language-and-culture#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18116,9 +18116,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18130,7 +18130,7 @@
     "officialUrl": "https://future.utoronto.ca/program/christianity-and-culture#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18152,9 +18152,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18166,7 +18166,7 @@
     "officialUrl": "https://future.utoronto.ca/program/christianity-and-education#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18202,7 +18202,7 @@
     "officialUrl": "https://future.utoronto.ca/program/cinema-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18224,9 +18224,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18238,7 +18238,7 @@
     "officialUrl": "https://future.utoronto.ca/program/cinema-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18276,7 +18276,7 @@
     "officialUrl": "https://future.utoronto.ca/program/city-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18325,7 +18325,7 @@
     "officialUrl": "https://future.utoronto.ca/program/civil-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18361,7 +18361,7 @@
     "officialUrl": "https://future.utoronto.ca/program/classical-civilization#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18383,9 +18383,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18397,7 +18397,7 @@
     "officialUrl": "https://future.utoronto.ca/program/classical-civilization#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18435,7 +18435,7 @@
     "officialUrl": "https://future.utoronto.ca/program/classical-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18457,9 +18457,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18471,7 +18471,7 @@
     "officialUrl": "https://future.utoronto.ca/program/classics-greek-and-latin#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18509,7 +18509,7 @@
     "officialUrl": "https://future.utoronto.ca/program/climate-change-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18531,9 +18531,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -18545,7 +18545,7 @@
     "officialUrl": "https://future.utoronto.ca/program/climate-change-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18567,9 +18567,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -18581,7 +18581,7 @@
     "officialUrl": "https://future.utoronto.ca/program/cognitive-science-hba#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18604,9 +18604,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -18618,7 +18618,7 @@
     "officialUrl": "https://future.utoronto.ca/program/cognitive-science-hbsc#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18656,7 +18656,7 @@
     "officialUrl": "https://future.utoronto.ca/program/commerce#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18692,7 +18692,7 @@
     "officialUrl": "https://future.utoronto.ca/program/communication-culture-information-and-technology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18731,7 +18731,7 @@
     "officialUrl": "https://future.utoronto.ca/program/comparative-physiology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18781,7 +18781,7 @@
     "officialUrl": "https://future.utoronto.ca/program/computer-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18819,7 +18819,7 @@
     "officialUrl": "https://future.utoronto.ca/program/computer-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18859,7 +18859,7 @@
     "officialUrl": "https://future.utoronto.ca/program/computer-science#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18882,9 +18882,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 93,
+      "rawText": "Low 90s"
     },
     "supplementary": {
       "required": true,
@@ -18896,7 +18896,7 @@
     "officialUrl": "https://future.utoronto.ca/program/computer-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18918,8 +18918,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -18944,7 +18944,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biodiversity-and-conservation-biology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -18968,9 +18968,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -18982,7 +18982,7 @@
     "officialUrl": "https://future.utoronto.ca/program/biodiversity-and-conservation-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19004,9 +19004,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19018,7 +19018,7 @@
     "officialUrl": "https://future.utoronto.ca/program/contemporary-asian-studies-program-dr-david-chu#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19054,7 +19054,7 @@
     "officialUrl": "https://future.utoronto.ca/program/creative-writing#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19092,7 +19092,7 @@
     "officialUrl": "https://future.utoronto.ca/program/creative-writing#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19114,9 +19114,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19128,7 +19128,7 @@
     "officialUrl": "https://future.utoronto.ca/program/creative-writing#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19150,9 +19150,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19164,7 +19164,7 @@
     "officialUrl": "https://future.utoronto.ca/program/creativity-and-society#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19200,7 +19200,7 @@
     "officialUrl": "https://future.utoronto.ca/program/criminology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19222,9 +19222,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19236,7 +19236,7 @@
     "officialUrl": "https://future.utoronto.ca/program/criminology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19274,7 +19274,7 @@
     "officialUrl": "https://future.utoronto.ca/program/critical-migration-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19296,9 +19296,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19310,7 +19310,7 @@
     "officialUrl": "https://future.utoronto.ca/program/critical-studies-equity-and-solidarity#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19348,7 +19348,7 @@
     "officialUrl": "https://future.utoronto.ca/program/culture-creativity-amd-cities#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19371,9 +19371,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 90,
+      "high": 93,
+      "rawText": "Low 90s"
     },
     "supplementary": {
       "required": false,
@@ -19385,7 +19385,7 @@
     "officialUrl": "https://future.utoronto.ca/program/data-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19421,7 +19421,7 @@
     "officialUrl": "https://future.utoronto.ca/program/diaspora-and-transnational-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19443,9 +19443,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19457,7 +19457,7 @@
     "officialUrl": "https://future.utoronto.ca/program/diaspora-and-transnational-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19493,7 +19493,7 @@
     "officialUrl": "https://future.utoronto.ca/program/digital-enterprise-management#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19515,9 +19515,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19529,7 +19529,7 @@
     "officialUrl": "https://future.utoronto.ca/program/digital-humanities#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19551,9 +19551,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19565,7 +19565,7 @@
     "officialUrl": "https://future.utoronto.ca/program/drama#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19601,7 +19601,7 @@
     "officialUrl": "https://future.utoronto.ca/program/dramaturgy-and-drama-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19625,9 +19625,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19639,7 +19639,7 @@
     "officialUrl": "https://future.utoronto.ca/program/earth-and-environmental-systems#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19678,7 +19678,7 @@
     "officialUrl": "https://future.utoronto.ca/program/earth-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19700,9 +19700,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -19714,7 +19714,7 @@
     "officialUrl": "https://future.utoronto.ca/program/east-asian-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19753,7 +19753,7 @@
     "officialUrl": "https://future.utoronto.ca/program/ecology-evolution#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19778,9 +19778,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19792,7 +19792,7 @@
     "officialUrl": "https://future.utoronto.ca/program/ecology-evolution#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19830,7 +19830,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19853,9 +19853,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19867,7 +19867,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19891,9 +19891,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -19905,7 +19905,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics-and-mathematics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19942,7 +19942,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics-and-political-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -19983,7 +19983,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics-management-studies-bba#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20024,7 +20024,7 @@
     "officialUrl": "https://future.utoronto.ca/program/economics-management-studies-ba#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20046,9 +20046,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20060,7 +20060,7 @@
     "officialUrl": "https://future.utoronto.ca/program/education-and-society#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20096,7 +20096,7 @@
     "officialUrl": "https://future.utoronto.ca/program/education-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20145,7 +20145,7 @@
     "officialUrl": "https://future.utoronto.ca/program/electical-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20194,7 +20194,7 @@
     "officialUrl": "https://future.utoronto.ca/program/engineering-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20230,7 +20230,7 @@
     "officialUrl": "https://future.utoronto.ca/program/english#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20268,7 +20268,7 @@
     "officialUrl": "https://future.utoronto.ca/program/english#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20290,9 +20290,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -20304,7 +20304,7 @@
     "officialUrl": "https://future.utoronto.ca/program/english#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20340,7 +20340,7 @@
     "officialUrl": "https://future.utoronto.ca/program/english-language-linguistics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20378,7 +20378,7 @@
     "officialUrl": "https://future.utoronto.ca/program/englishchinese-translation#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20401,9 +20401,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20415,7 +20415,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environment-and-behaviour#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20439,9 +20439,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20453,7 +20453,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environment-and-energy#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20479,9 +20479,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20493,7 +20493,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environment-and-health#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20518,9 +20518,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20532,7 +20532,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environment-and-toxicology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20555,9 +20555,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20569,7 +20569,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-anthropology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20595,9 +20595,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20609,7 +20609,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20651,7 +20651,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-chemistry#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20676,9 +20676,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20690,7 +20690,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-chemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20714,9 +20714,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20728,7 +20728,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-economics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20750,9 +20750,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20764,7 +20764,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-ethics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20787,9 +20787,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20801,7 +20801,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-geography#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20840,7 +20840,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-geosciences#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20882,7 +20882,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-geosciences#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20906,9 +20906,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -20920,7 +20920,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-geosciences#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20957,7 +20957,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-law-and-policy#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -20994,7 +20994,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-management#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21035,7 +21035,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-physics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21081,7 +21081,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21122,7 +21122,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-science#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21147,9 +21147,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21161,7 +21161,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21199,7 +21199,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21221,9 +21221,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21235,7 +21235,7 @@
     "officialUrl": "https://future.utoronto.ca/program/environmental-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21271,7 +21271,7 @@
     "officialUrl": "https://future.utoronto.ca/program/ethics-society-and-law#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21293,9 +21293,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21307,7 +21307,7 @@
     "officialUrl": "https://future.utoronto.ca/program/ethics-society-and-law#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21329,9 +21329,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -21343,7 +21343,7 @@
     "officialUrl": "https://future.utoronto.ca/program/european-affairs#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21377,7 +21377,7 @@
     "officialUrl": "https://future.utoronto.ca/program/european-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": true
   },
   {
@@ -21415,7 +21415,7 @@
     "officialUrl": "https://future.utoronto.ca/program/exceptionality-human-learning#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21453,7 +21453,7 @@
     "officialUrl": "https://future.utoronto.ca/program/film-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21491,7 +21491,7 @@
     "officialUrl": "https://future.utoronto.ca/program/finance#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21531,7 +21531,7 @@
     "officialUrl": "https://future.utoronto.ca/program/finance#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21555,9 +21555,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": true,
@@ -21569,7 +21569,7 @@
     "officialUrl": "https://future.utoronto.ca/program/finance-and-economics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21610,7 +21610,7 @@
     "officialUrl": "https://future.utoronto.ca/program/management-finance-and-statistics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21648,7 +21648,7 @@
     "officialUrl": "https://future.utoronto.ca/program/financial-economics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21672,9 +21672,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21686,7 +21686,7 @@
     "officialUrl": "https://future.utoronto.ca/program/financial-economics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21724,7 +21724,7 @@
     "officialUrl": "https://future.utoronto.ca/program/food-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21762,7 +21762,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forensic-anthropology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21801,7 +21801,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forensic-biology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21840,7 +21840,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forensic-chemistry#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21878,7 +21878,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forensic-psychology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21917,7 +21917,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forensic-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21940,9 +21940,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21954,7 +21954,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forest-conservation#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -21978,9 +21978,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -21992,7 +21992,7 @@
     "officialUrl": "https://future.utoronto.ca/program/forest-conservation-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22028,7 +22028,7 @@
     "officialUrl": "https://future.utoronto.ca/program/french#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22067,7 +22067,7 @@
     "officialUrl": "https://future.utoronto.ca/program/french#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22089,9 +22089,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -22103,7 +22103,7 @@
     "officialUrl": "https://future.utoronto.ca/program/french#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22139,7 +22139,7 @@
     "officialUrl": "https://future.utoronto.ca/program/functional-french#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22175,7 +22175,7 @@
     "officialUrl": "https://future.utoronto.ca/program/game-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22200,9 +22200,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22214,7 +22214,7 @@
     "officialUrl": "https://future.utoronto.ca/program/genome-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22237,9 +22237,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22251,7 +22251,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geographic-data-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22289,7 +22289,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geographic-information-science#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22311,9 +22311,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22325,7 +22325,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geographical-information-systems#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22361,7 +22361,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geography-hba#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22413,7 +22413,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geography-hbsc#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22437,9 +22437,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22451,7 +22451,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22476,9 +22476,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22490,7 +22490,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geophysics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22514,9 +22514,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22528,7 +22528,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geoscience#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22564,7 +22564,7 @@
     "officialUrl": "https://future.utoronto.ca/program/geospatial-data-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22586,9 +22586,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -22600,7 +22600,7 @@
     "officialUrl": "https://future.utoronto.ca/program/german#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22638,7 +22638,7 @@
     "officialUrl": "https://future.utoronto.ca/program/global-asia-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22679,7 +22679,7 @@
     "officialUrl": "https://future.utoronto.ca/program/global-environmental-change#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22704,9 +22704,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22718,7 +22718,7 @@
     "officialUrl": "https://future.utoronto.ca/program/global-health#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22754,7 +22754,7 @@
     "officialUrl": "https://future.utoronto.ca/program/global-leadership#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22792,7 +22792,7 @@
     "officialUrl": "https://future.utoronto.ca/program/global-leadership#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22814,9 +22814,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -22828,7 +22828,7 @@
     "officialUrl": "https://future.utoronto.ca/program/greek#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22853,9 +22853,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -22867,7 +22867,7 @@
     "officialUrl": "https://future.utoronto.ca/program/health-and-disease#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22906,7 +22906,7 @@
     "officialUrl": "https://future.utoronto.ca/program/health-humanities#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22944,7 +22944,7 @@
     "officialUrl": "https://future.utoronto.ca/program/health-policy#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -22981,7 +22981,7 @@
     "officialUrl": "https://future.utoronto.ca/program/health-environments-and-society#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23017,7 +23017,7 @@
     "officialUrl": "https://future.utoronto.ca/program/history#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23055,7 +23055,7 @@
     "officialUrl": "https://future.utoronto.ca/program/history#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23077,9 +23077,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -23091,7 +23091,7 @@
     "officialUrl": "https://future.utoronto.ca/program/history#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23113,9 +23113,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -23127,7 +23127,7 @@
     "officialUrl": "https://future.utoronto.ca/program/history-and-philosophy-science-and-technology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23163,7 +23163,7 @@
     "officialUrl": "https://future.utoronto.ca/program/history-religions#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23185,8 +23185,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -23211,7 +23211,7 @@
     "officialUrl": "https://future.utoronto.ca/program/human-biology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23236,9 +23236,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -23250,7 +23250,7 @@
     "officialUrl": "https://future.utoronto.ca/program/human-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23288,7 +23288,7 @@
     "officialUrl": "https://future.utoronto.ca/program/human-geography#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23310,9 +23310,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -23324,7 +23324,7 @@
     "officialUrl": "https://future.utoronto.ca/program/human-geography#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23364,7 +23364,7 @@
     "officialUrl": "https://future.utoronto.ca/program/human-resources#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23389,9 +23389,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -23403,7 +23403,7 @@
     "officialUrl": "https://future.utoronto.ca/program/immunology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23425,9 +23425,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -23439,7 +23439,7 @@
     "officialUrl": "https://future.utoronto.ca/program/indigenous-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23488,7 +23488,7 @@
     "officialUrl": "https://future.utoronto.ca/program/industrial-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23510,9 +23510,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -23524,7 +23524,7 @@
     "officialUrl": "https://future.utoronto.ca/program/industrial-relations-and-human-resources#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23561,7 +23561,7 @@
     "officialUrl": "https://future.utoronto.ca/program/information#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23599,7 +23599,7 @@
     "officialUrl": "https://future.utoronto.ca/program/information-security#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23639,7 +23639,7 @@
     "officialUrl": "https://future.utoronto.ca/program/information-technology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23679,7 +23679,7 @@
     "officialUrl": "https://future.utoronto.ca/program/integrative-biology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23716,7 +23716,7 @@
     "officialUrl": "https://future.utoronto.ca/program/international-affairs#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23756,7 +23756,7 @@
     "officialUrl": "https://future.utoronto.ca/program/international-business#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23794,7 +23794,7 @@
     "officialUrl": "https://future.utoronto.ca/program/international-development-studies-hba#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23834,7 +23834,7 @@
     "officialUrl": "https://future.utoronto.ca/program/international-development-studies-hbsc#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23856,9 +23856,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -23870,7 +23870,7 @@
     "officialUrl": "https://future.utoronto.ca/program/international-relations#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23892,9 +23892,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -23906,7 +23906,7 @@
     "officialUrl": "https://future.utoronto.ca/program/islamic-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23942,7 +23942,7 @@
     "officialUrl": "https://future.utoronto.ca/program/italian#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -23964,9 +23964,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -23978,7 +23978,7 @@
     "officialUrl": "https://future.utoronto.ca/program/italian#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24000,9 +24000,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -24014,7 +24014,7 @@
     "officialUrl": "https://future.utoronto.ca/program/jewish-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24052,7 +24052,7 @@
     "officialUrl": "https://future.utoronto.ca/program/journalism#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24104,7 +24104,7 @@
     "officialUrl": "https://future.utoronto.ca/program/kinesiology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24140,7 +24140,7 @@
     "officialUrl": "https://future.utoronto.ca/program/language-teaching-and-learning-french#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24176,7 +24176,7 @@
     "officialUrl": "https://future.utoronto.ca/program/language-teaching-and-learning-french-italian#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24212,7 +24212,7 @@
     "officialUrl": "https://future.utoronto.ca/program/language-teaching-and-learning-italian#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24234,9 +24234,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -24248,7 +24248,7 @@
     "officialUrl": "https://future.utoronto.ca/program/latin#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24284,7 +24284,7 @@
     "officialUrl": "https://future.utoronto.ca/program/latin-american-and-caribbean-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24306,9 +24306,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -24320,7 +24320,7 @@
     "officialUrl": "https://future.utoronto.ca/program/latin-american-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24356,7 +24356,7 @@
     "officialUrl": "https://future.utoronto.ca/program/linguistics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24394,7 +24394,7 @@
     "officialUrl": "https://future.utoronto.ca/program/linguistics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24416,9 +24416,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -24430,7 +24430,7 @@
     "officialUrl": "https://future.utoronto.ca/program/linguistics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24452,9 +24452,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -24466,7 +24466,7 @@
     "officialUrl": "https://future.utoronto.ca/program/literature-and-critical-theory#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24502,7 +24502,7 @@
     "officialUrl": "https://future.utoronto.ca/program/logic#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24539,7 +24539,7 @@
     "officialUrl": "https://future.utoronto.ca/program/management#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24579,7 +24579,7 @@
     "officialUrl": "https://future.utoronto.ca/program/management#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24602,9 +24602,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -24616,7 +24616,7 @@
     "officialUrl": "https://future.utoronto.ca/program/management-bcom#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24653,7 +24653,7 @@
     "officialUrl": "https://future.utoronto.ca/program/management-hba#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24691,7 +24691,7 @@
     "officialUrl": "https://future.utoronto.ca/program/marketing#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24731,7 +24731,7 @@
     "officialUrl": "https://future.utoronto.ca/program/marketing#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24753,9 +24753,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -24767,7 +24767,7 @@
     "officialUrl": "https://future.utoronto.ca/program/material-culture-and-semiotics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24817,7 +24817,7 @@
     "officialUrl": "https://future.utoronto.ca/program/materials-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24843,9 +24843,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -24857,7 +24857,7 @@
     "officialUrl": "https://future.utoronto.ca/program/materials-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24882,9 +24882,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -24896,7 +24896,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematical-applications-economics-and-finance#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24934,7 +24934,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematical-sciences#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24974,7 +24974,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -24997,9 +24997,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25011,7 +25011,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25035,9 +25035,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25049,7 +25049,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics-and-its-applications-physical-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25072,9 +25072,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25086,7 +25086,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics-and-its-applications-probabilitystatistics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25109,9 +25109,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25123,7 +25123,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics-and-its-applications-teaching#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25147,9 +25147,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25161,7 +25161,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics-and-philosophy#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25186,9 +25186,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25200,7 +25200,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mathematics-and-physics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25249,7 +25249,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mechanical-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25287,7 +25287,7 @@
     "officialUrl": "https://future.utoronto.ca/program/media-and-communication-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25325,7 +25325,7 @@
     "officialUrl": "https://future.utoronto.ca/program/media-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25368,7 +25368,7 @@
     "officialUrl": "https://future.utoronto.ca/program/medicinal-biological-chemistry#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25390,9 +25390,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -25404,7 +25404,7 @@
     "officialUrl": "https://future.utoronto.ca/program/medieval-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25442,7 +25442,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mental-health-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25491,7 +25491,7 @@
     "officialUrl": "https://future.utoronto.ca/program/mineral-engineering#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25530,7 +25530,7 @@
     "officialUrl": "https://future.utoronto.ca/program/molecular-biology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25570,7 +25570,7 @@
     "officialUrl": "https://future.utoronto.ca/program/molecular-biology-and-biotechnology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25592,8 +25592,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -25618,7 +25618,7 @@
     "officialUrl": "https://future.utoronto.ca/program/molecular-biology-immunology-disease#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25643,9 +25643,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -25657,7 +25657,7 @@
     "officialUrl": "https://future.utoronto.ca/program/molecular-genetics-and-microbiology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25695,7 +25695,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25717,9 +25717,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -25731,7 +25731,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25768,7 +25768,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music-classical#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25804,7 +25804,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music-jazz#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25842,7 +25842,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music-industry-and-technology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25879,7 +25879,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music-technology-digital-media-classical#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25916,7 +25916,7 @@
     "officialUrl": "https://future.utoronto.ca/program/music-technology-digital-media-jazz#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25955,7 +25955,7 @@
     "officialUrl": "https://future.utoronto.ca/program/natural-sciences-and-environmental-management#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -25977,9 +25977,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -25991,7 +25991,7 @@
     "officialUrl": "https://future.utoronto.ca/program/near-and-middle-eastern-civilizations#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26030,7 +26030,7 @@
     "officialUrl": "https://future.utoronto.ca/program/neuroscience#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26052,8 +26052,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -26078,7 +26078,7 @@
     "officialUrl": "https://future.utoronto.ca/program/neuroscience#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26103,9 +26103,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26117,7 +26117,7 @@
     "officialUrl": "https://future.utoronto.ca/program/neuroscience#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26142,9 +26142,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26156,7 +26156,7 @@
     "officialUrl": "https://future.utoronto.ca/program/nutritional-sciences#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26195,7 +26195,7 @@
     "officialUrl": "https://future.utoronto.ca/program/paleontology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26217,8 +26217,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -26243,7 +26243,7 @@
     "officialUrl": "https://future.utoronto.ca/program/paramedicine#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26268,9 +26268,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26282,7 +26282,7 @@
     "officialUrl": "https://future.utoronto.ca/program/pathobiology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26304,9 +26304,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26318,7 +26318,7 @@
     "officialUrl": "https://future.utoronto.ca/program/peace-conflict-and-justice#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26345,9 +26345,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26359,7 +26359,7 @@
     "officialUrl": "https://future.utoronto.ca/program/pharmaceutical-chemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26384,9 +26384,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26398,7 +26398,7 @@
     "officialUrl": "https://future.utoronto.ca/program/pharmacology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26423,9 +26423,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26437,7 +26437,7 @@
     "officialUrl": "https://future.utoronto.ca/program/pharmacology-and-biomedical-toxicology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26473,7 +26473,7 @@
     "officialUrl": "https://future.utoronto.ca/program/philosophy#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26511,7 +26511,7 @@
     "officialUrl": "https://future.utoronto.ca/program/philosophy#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26533,9 +26533,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -26547,7 +26547,7 @@
     "officialUrl": "https://future.utoronto.ca/program/philosophy#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26583,7 +26583,7 @@
     "officialUrl": "https://future.utoronto.ca/program/philosophy-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26621,7 +26621,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physical-human-geography#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26662,7 +26662,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physical-and-mathematical-sciences#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26703,7 +26703,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physical-sciences#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26742,7 +26742,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physics#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26766,9 +26766,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26780,7 +26780,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26821,7 +26821,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physics-and-astrophysics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26846,9 +26846,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26860,7 +26860,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physics-and-philosophy#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26885,9 +26885,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26899,7 +26899,7 @@
     "officialUrl": "https://future.utoronto.ca/program/physiology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26924,9 +26924,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U; Physics => SPH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -26938,7 +26938,7 @@
     "officialUrl": "https://future.utoronto.ca/program/planetary-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -26960,8 +26960,8 @@
         {
           "count": 1,
           "courses": [
-            "MHF4U",
             "MCV4U",
+            "MHF4U",
             "MDM4U"
           ]
         }
@@ -26986,7 +26986,7 @@
     "officialUrl": "https://future.utoronto.ca/program/plant-biology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27022,7 +27022,7 @@
     "officialUrl": "https://future.utoronto.ca/program/political-science#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27060,7 +27060,7 @@
     "officialUrl": "https://future.utoronto.ca/program/political-science#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27082,9 +27082,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27096,7 +27096,7 @@
     "officialUrl": "https://future.utoronto.ca/program/political-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27134,7 +27134,7 @@
     "officialUrl": "https://future.utoronto.ca/program/population-health#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27156,9 +27156,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -27170,7 +27170,7 @@
     "officialUrl": "https://future.utoronto.ca/program/portuguese#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27206,7 +27206,7 @@
     "officialUrl": "https://future.utoronto.ca/program/professional-writing-and-communication#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27244,7 +27244,7 @@
     "officialUrl": "https://future.utoronto.ca/program/psycholinguistics#campus-utsc",
     "description": "Explore Psycholinguistics at U of T Scarborough, with Health Sciences options, work-integrated learning and admission requirements.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27282,7 +27282,7 @@
     "officialUrl": "https://future.utoronto.ca/program/psychology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27320,7 +27320,7 @@
     "officialUrl": "https://future.utoronto.ca/program/psychology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27344,9 +27344,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27358,7 +27358,7 @@
     "officialUrl": "https://future.utoronto.ca/program/psychology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27382,9 +27382,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27396,7 +27396,7 @@
     "officialUrl": "https://future.utoronto.ca/program/psychology-research#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27418,9 +27418,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27432,7 +27432,7 @@
     "officialUrl": "https://future.utoronto.ca/program/public-health#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27470,7 +27470,7 @@
     "officialUrl": "https://future.utoronto.ca/program/public-law#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27508,7 +27508,7 @@
     "officialUrl": "https://future.utoronto.ca/program/public-policy#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27531,9 +27531,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27545,7 +27545,7 @@
     "officialUrl": "https://future.utoronto.ca/program/public-policy#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27569,9 +27569,9 @@
       "rawText": "English => ENG4U / EAE4U; Biology => SBI4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27583,7 +27583,7 @@
     "officialUrl": "https://future.utoronto.ca/program/quantitative-biology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27605,9 +27605,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -27619,7 +27619,7 @@
     "officialUrl": "https://future.utoronto.ca/program/religion#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27641,9 +27641,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -27655,7 +27655,7 @@
     "officialUrl": "https://future.utoronto.ca/program/renaissance-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27677,9 +27677,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27691,7 +27691,7 @@
     "officialUrl": "https://future.utoronto.ca/program/science-technology-and-society#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27713,9 +27713,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27727,7 +27727,7 @@
     "officialUrl": "https://future.utoronto.ca/program/sexual-diversity-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27749,9 +27749,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -27763,7 +27763,7 @@
     "officialUrl": "https://future.utoronto.ca/program/slavic-and-east-european-languages-and-cultures#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27800,7 +27800,7 @@
     "officialUrl": "https://future.utoronto.ca/program/social-data-science#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27836,7 +27836,7 @@
     "officialUrl": "https://future.utoronto.ca/program/sociology#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27874,7 +27874,7 @@
     "officialUrl": "https://future.utoronto.ca/program/sociology#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27896,9 +27896,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -27910,7 +27910,7 @@
     "officialUrl": "https://future.utoronto.ca/program/sociology#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27946,7 +27946,7 @@
     "officialUrl": "https://future.utoronto.ca/program/south-asian-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -27968,9 +27968,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -27982,7 +27982,7 @@
     "officialUrl": "https://future.utoronto.ca/program/south-asian-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28004,9 +28004,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -28018,7 +28018,7 @@
     "officialUrl": "https://future.utoronto.ca/program/spanish#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28041,9 +28041,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28055,7 +28055,7 @@
     "officialUrl": "https://future.utoronto.ca/program/statistical-science#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28095,7 +28095,7 @@
     "officialUrl": "https://future.utoronto.ca/program/statistics#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28118,9 +28118,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28132,7 +28132,7 @@
     "officialUrl": "https://future.utoronto.ca/program/statistics#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28172,7 +28172,7 @@
     "officialUrl": "https://future.utoronto.ca/program/strategic-management#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28210,7 +28210,7 @@
     "officialUrl": "https://future.utoronto.ca/program/studio-art#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28246,7 +28246,7 @@
     "officialUrl": "https://future.utoronto.ca/program/sustainability#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28270,9 +28270,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U; Chemistry => SCH4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28284,7 +28284,7 @@
     "officialUrl": "https://future.utoronto.ca/program/synthetic-and-catalytic-chemistry#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28320,7 +28320,7 @@
     "officialUrl": "https://future.utoronto.ca/program/technology-coding-and-society#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28356,7 +28356,7 @@
     "officialUrl": "https://future.utoronto.ca/program/theatre-and-drama-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28394,7 +28394,7 @@
     "officialUrl": "https://future.utoronto.ca/program/theatre-and-performance#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28432,7 +28432,7 @@
     "officialUrl": "https://future.utoronto.ca/program/urban-public-policy-and-governance#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28454,9 +28454,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28468,7 +28468,7 @@
     "officialUrl": "https://future.utoronto.ca/program/urban-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28504,7 +28504,7 @@
     "officialUrl": "https://future.utoronto.ca/program/visual-culture#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28540,7 +28540,7 @@
     "officialUrl": "https://future.utoronto.ca/program/visual-culture-and-communication#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28576,7 +28576,7 @@
     "officialUrl": "https://future.utoronto.ca/program/visual-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28612,7 +28612,7 @@
     "officialUrl": "https://future.utoronto.ca/program/women-and-gender-studies#campus-utm",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28650,7 +28650,7 @@
     "officialUrl": "https://future.utoronto.ca/program/women-and-gender-studies#campus-utsc",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28672,9 +28672,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -28686,7 +28686,7 @@
     "officialUrl": "https://future.utoronto.ca/program/women-and-gender-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28708,9 +28708,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28722,7 +28722,7 @@
     "officialUrl": "https://future.utoronto.ca/program/work-and-organizations-humanities-contexts#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28745,9 +28745,9 @@
       "rawText": "English => ENG4U / EAE4U; Calculus & Vectors => MCV4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28759,7 +28759,7 @@
     "officialUrl": "https://future.utoronto.ca/program/work-and-organizations-sciences-contexts#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28781,9 +28781,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 84,
+      "high": 89,
+      "rawText": "Mid to high 80s"
     },
     "supplementary": {
       "required": false,
@@ -28795,7 +28795,7 @@
     "officialUrl": "https://future.utoronto.ca/program/work-and-organizations-social-sciences-contexts#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28817,9 +28817,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -28831,7 +28831,7 @@
     "officialUrl": "https://future.utoronto.ca/program/writing-and-rhetoric#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -28853,9 +28853,9 @@
       "rawText": "English => ENG4U / EAE4U"
     },
     "admissionRange": {
-      "low": null,
-      "high": null,
-      "rawText": ""
+      "low": 80,
+      "high": 86,
+      "rawText": "Low to mid 80s"
     },
     "supplementary": {
       "required": false,
@@ -28867,7 +28867,7 @@
     "officialUrl": "https://future.utoronto.ca/program/yiddish-studies#campus-utsg",
     "description": "",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33109,6 +33109,115 @@
     "needsReview": false
   },
   {
+    "id": "western-arts-and-humanities",
+    "name": "Arts & Humanities",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English, ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/arts-humanities.html",
+    "description": "Explore Arts & Humanities programs like Philosophy, English, French and Gender Studies. Study what you love and build your career on intellectual bedrock. Explore connections. Gain another language. Build your creative fluency. The Faculty of Arts & Humanities is the academic home for thinkers, artists, scholars, and change leaders.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-arts-and-humanities-bfa-studio-art",
+    "name": "Arts & Humanities: BFA Studio Art",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Arts / Design",
+      "Social Sciences / Humanities"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English, ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Portfolio + Written statement",
+      "rawText": "Submit a personal statement and a portfolio by February 15"
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/arts-humanities.html",
+    "description": "Explore Arts & Humanities programs like Philosophy, English, French and Gender Studies. Study what you love and build your career on intellectual bedrock. Explore connections. Gain another language. Build your creative fluency. The Faculty of Arts & Humanities is the academic home for thinkers, artists, scholars, and change leaders.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-arts-and-humanities-school-for-advanced-studies-sasah",
+    "name": "Arts & Humanities: School for Advanced Studies (SASAH)",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Social Sciences / Humanities"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English, ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Written statement",
+      "rawText": "Submit a statement of interest by February 28"
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/arts-humanities.html",
+    "description": "Explore Arts & Humanities programs like Philosophy, English, French and Gender Studies. Study what you love and build your career on intellectual bedrock. Explore connections. Gain another language. Build your creative fluency. The Faculty of Arts & Humanities is the academic home for thinkers, artists, scholars, and change leaders.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
     "id": "western-computer-science",
     "name": "Computer Science",
     "universityId": "western",
@@ -33155,7 +33264,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/computer-science.html",
     "description": "Computer Science",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33200,7 +33309,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/dan-management-organizational-studies.html",
     "description": "Humans and data—that’s how our enterprises run. The DAN Management & Organizational Studies program combines a unique social science perspective to business savvy.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33231,16 +33340,16 @@
       "rawText": "High 80s to low 90s"
     },
     "supplementary": {
-      "required": false,
-      "type": "",
-      "rawText": ""
+      "required": true,
+      "type": "Casper test",
+      "rawText": "You must take the Casper test"
     },
     "keyDates": [],
     "coop": true,
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/engineering.html",
     "description": "Study engineering programs at Western to tackle the next big challenge—electrical, medical, mechanical or the kinds that defy borders. Engineering as a team sport.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33276,7 +33385,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/family-studies.html",
     "description": "In Family Studies & Human Development, you'll consider the changing structure of families and the ways family and child relations influence economic and social policies.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33314,7 +33423,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/foods-nutrition.html",
     "description": "In Foods and Nutrition, you'll study a wide range of concepts surrounding nutrition, while diving into the impact the food industry has on our global world.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33360,7 +33469,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/health-sciences.html",
     "description": "At Western, build your degree and your professional skills with health sciences programs from aging to health promotion to rehabilitation.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33397,7 +33506,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/kinesiology.html",
     "description": "At Western, you have endless possibilities to test-drive careers by working alongside kinesiology professions and varsity teams. Explore programs!",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33433,7 +33542,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/media-communication-studies.html",
     "description": "With a degree in Media & Communication Studies from Western, you learn to make media—make it better, fairer, brighter. Explore programs!",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33472,7 +33581,171 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/medical-sciences.html",
     "description": "If your goal is medical or dental school, this program a great choice after high school. Earn a Bachelor’s of Medical Science at Western and reach your goals.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-music-administrative-studies",
+    "name": "Music Administrative Studies",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Arts / Design"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "MDM4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "English, ENG4U; One of: Advanced Functions (MHF4U) Calculus and Vectors (MCV4U) Math of Data Management (MDM4U)"
+    },
+    "admissionRange": {
+      "low": 84,
+      "high": 86,
+      "rawText": "Mid 80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Interview",
+      "rawText": "Required Admission Process: Recorded submission; Interview; Questionnaire"
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/music.html",
+    "description": "At Western, you join one of the largest and friendliest music faculties in Canada. Move from our comprehensive university into the music industry with these music programs.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-music-bachelor-of-arts-ba",
+    "name": "Music: Bachelor of Arts (BA)",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Arts / Design"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English, ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Interview",
+      "rawText": "Required Admission Process: Interview; Questionnaire; Recorded submission (Popular Music Studies only)"
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/music.html",
+    "description": "At Western, you join one of the largest and friendliest music faculties in Canada. Move from our comprehensive university into the music industry with these music programs.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-music-bachelor-of-music-bmus",
+    "name": "Music: Bachelor of Music (BMus)",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Arts / Design"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U"
+      ],
+      "choose": [],
+      "minimums": {},
+      "rawText": "English, ENG4U"
+    },
+    "admissionRange": {
+      "low": 80,
+      "high": 83,
+      "rawText": "Low 80s"
+    },
+    "supplementary": {
+      "required": true,
+      "type": "Interview + Audition",
+      "rawText": "Required Admission Process: Audition and Interview; Questionnaire"
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/music.html",
+    "description": "At Western, you join one of the largest and friendliest music faculties in Canada. Move from our comprehensive university into the music industry with these music programs.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
+    "needsReview": false
+  },
+  {
+    "id": "western-nursing-direct-entry-bscn",
+    "name": "Nursing: Direct Entry BScN",
+    "universityId": "western",
+    "campus": "",
+    "faculty": "",
+    "field": [
+      "Life Sciences / Health"
+    ],
+    "degree": "",
+    "prerequisites": {
+      "required": [
+        "ENG4U",
+        "SBI4U",
+        "SCH4U"
+      ],
+      "choose": [
+        {
+          "count": 1,
+          "courses": [
+            "MHF4U",
+            "MCV4U",
+            "MDM4U"
+          ]
+        }
+      ],
+      "minimums": {},
+      "rawText": "English (ENG4U); Biology (SBI4U); Chemistry (SCH4U); One of: Functions and Applications (MCF3M), Functions (MCR3U), Advanced Functions (MHF4U), Calculus and Vectors (MCV4U), Math of Data Management (MDM4U)"
+    },
+    "admissionRange": {
+      "low": 87,
+      "high": 93,
+      "rawText": "High 80s to Low 90s"
+    },
+    "supplementary": {
+      "required": false,
+      "type": "",
+      "rawText": ""
+    },
+    "keyDates": [],
+    "coop": false,
+    "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/nursing.html",
+    "description": "Graduates of Western's nursing program become compassionate leaders in healthcare as RNs.",
+    "source": "scraper",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33522,7 +33795,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/science.html",
     "description": "Study Science at Western for the technical challenge & creative inspiration. This Canadian university offers flexible modules so your program matches your goals.",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {
@@ -33558,7 +33831,7 @@
     "officialUrl": "https://welcome.uwo.ca/what-can-i-study/undergraduate-programs/social-science.html",
     "description": "Improve lives by studying data in the social sciences at Western. From microeconomics to global justice, learn how societies change. Explore programs!",
     "source": "scraper",
-    "lastSynced": "2026-10-30",
+    "lastSynced": "2026-11-01",
     "needsReview": false
   },
   {

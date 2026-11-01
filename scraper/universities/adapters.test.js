@@ -111,6 +111,25 @@ describe('toronto', () => {
     expect(utsg.supplementary).toMatchObject({ required: true, type: 'Supplementary application' })
     expect(utsg.admissionRange.low).toBeNull()
   })
+
+  it('uses the Arts & Science admission category range for St. George programs', () => {
+    const link = (href) => `<div class="o-campus__detail-link"><a href="${href}">Learn more</a></div>`
+    const withCategory = page.replace(
+      '<div class="o-campus" id="campus-utsg">',
+      `<div class="o-campus" id="campus-utsg">${link('https://www.artsci.utoronto.ca/future/ready-apply/admission-categories/life-sciences')}`,
+    )
+    const [utsc, utsg] = build(toronto, withCategory, 'https://future.utoronto.ca/program/psychology')
+    expect(utsg.admissionRange).toMatchObject({ low: 84, high: 89, rawText: 'Mid to high 80s' })
+    expect(utsc.admissionRange.low).toBeNull()
+  })
+
+  it('maps admission category links to ranges', () => {
+    const base = 'https://www.artsci.utoronto.ca/future/ready-apply/admission-categories/'
+    expect(toronto.artsciCategoryAverage(`${base}computer-science`)).toBe('Low 90s')
+    expect(toronto.artsciCategoryAverage(`${base}physical-mathematical-sciences#x`)).toBe('Mid to high 80s')
+    expect(toronto.artsciCategoryAverage(`${base}unknown`)).toBe('')
+    expect(toronto.artsciCategoryAverage('https://music.utoronto.ca/programs/undergraduate/jazz')).toBe('')
+  })
 })
 
 describe('toronto engineering FAQ', () => {
@@ -225,6 +244,34 @@ describe('western', () => {
     expect(p.prerequisites.choose).toEqual([{ count: 2, courses: ['MHF4U', 'SBI4U', 'SCH4U'] }])
     // The WISc note only applies to a sub-program.
     expect(p.supplementary.required).toBe(false)
+  })
+
+  it('reads one program per tab on pages with several entry points', () => {
+    const pane = (ouac, extra, avg) => `<div class="tab-pane"><div class="p-5"><p><strong>OUAC Code = ${ouac}</strong></p>
+      <h4>Ontario High School (Group A) Requirements</h4>
+      <ul>
+        <li>Required Courses:<ul><li>English, ENG4U</li></ul></li>
+        ${extra}
+        <li>Admission Average Guideline: ${avg}<ul><li>Remember, these are guidelines only</li></ul></li>
+      </ul></div></div>`
+    const tabbed = `<html><body><h1>Music</h1><div><h2>Admission Requirements</h2></div>
+      <nav class="tab-container">
+        <button class="tab-button">Bachelor of Music (BMus)<br/></button>
+        <button class="tab-button">Music Administrative Studies<br/></button>
+        <button class="tab-button">Compressed Time Frame<br/></button>
+        ${pane('EM', '<li><a>Required Admission Process</a>:<ul><li>Audition and Interview</li><li>Questionnaire</li></ul></li>', 'Low 80s')}
+        ${pane('EMS', '', '<strong>Mid 80s</strong>')}
+        <div class="tab-pane"><h4>Regular Stream Compressed</h4><ul><li>60% in each of: anatomy</li></ul></div>
+      </nav></body></html>`
+    const programs = western.parseProgram(tabbed, 'u').map((raw) => buildProgram(raw, 'western', 'today'))
+    expect(programs.map((p) => p.name)).toEqual(['Music: Bachelor of Music (BMus)', 'Music Administrative Studies'])
+    expect(programs[0]).toMatchObject({
+      id: 'western-music-bachelor-of-music-bmus',
+      admissionRange: { low: 80, high: 83 },
+      supplementary: { required: true, type: 'Interview + Audition' },
+    })
+    expect(programs[1].admissionRange).toMatchObject({ low: 84, high: 86 })
+    expect(programs[1].supplementary.required).toBe(false)
   })
 
   it('skips pages without an admission requirements card (e.g. Ivey)', () => {
