@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import {
-  BarChart3,
   BookOpen,
+  CalendarClock,
   Check,
+  ChevronDown,
   ChevronRight,
   Heart,
   History,
@@ -20,9 +21,9 @@ import { Link, useSearchParams } from 'react-router'
 import { logOut, resetPassword, useAuth } from '../hooks/useAuth.jsx'
 import { saveGrade11Marks, saveGrade12Selection, updateUserProfile, useGrade11Marks, useGrade12Courses } from '../hooks/useUserData.js'
 import {
-  admissionAverage,
   averageOf,
   courseMark,
+  ENGLISH_CODE,
   ESTIMATE_MODES,
   estimateFromGrade11,
   estimateMode,
@@ -45,6 +46,8 @@ import MarkBar from '../components/charts/MarkBar.jsx'
 import { useSaver } from '../hooks/useSaver.js'
 import { inputClass, primaryButton, secondaryButton } from '../components/form.js'
 import { usePageTitle } from '../hooks/usePageTitle.js'
+import { daysBetween, formatDate, toDateString } from '../lib/calendar.js'
+import ouacDates from '../data/dates.json'
 
 const TABS = {
   courses: 'Courses',
@@ -105,11 +108,12 @@ export default function Profile() {
 function CoursesTab({ grade12, grade11 }) {
   const { user, profile } = useAuth()
   const [editing, setEditing] = useState(false)
+  const [showSettings, setShowSettings] = useState(false)
   const { saving, error, run } = useSaver()
   const student = useStudent()
   const mode = estimateMode(profile?.estimateMode)
 
-  const top6 = admissionAverage(null, student.markTable)
+  const top6 = student.topSix
   const top6Codes = new Set(top6?.courses.map((c) => c.code))
   const rows = grade12
     .map((c) => {
@@ -117,7 +121,6 @@ function CoursesTab({ grade12, grade11 }) {
       return { ...c, mark, estimate: mark == null ? estimateFromGrade11(c.code, grade11, mode) : null }
     })
     .sort((a, b) => a.code.localeCompare(b.code))
-  const withMarks = rows.filter((r) => r.mark != null)
 
   if (editing) {
     return (
@@ -137,36 +140,98 @@ function CoursesTab({ grade12, grade11 }) {
 
   return (
     <div>
-      <div className="grid gap-4 lg:grid-cols-[1.3fr_1fr_1fr]">
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white shadow-sm">
+      <div className="grid gap-4 lg:grid-cols-[2fr_1fr]">
+        <section className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white shadow-sm">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.08)_1px,transparent_0)] bg-[size:20px_20px]" />
-          <div className="relative">
-            <p className="flex items-center gap-2 text-sm font-medium text-slate-300">
-              <Trophy className="h-4 w-4" aria-hidden="true" />
-              Top 6 average
-            </p>
-            <p className="mt-1 text-5xl font-bold tabular-nums">{formatMark(top6?.average)}</p>
-            <p className="mt-2 text-sm text-slate-300">
-              {!top6
-                ? 'Add marks to see the average universities look at'
-                : `What universities look at · ${top6.courses.length} of ${TOP_N} courses${top6.estimated ? ', includes estimates' : ''}`}
-            </p>
+          <div className="relative flex flex-1 flex-col">
+            <div className="flex items-start justify-between gap-3">
+              <p className="flex items-center gap-2 text-sm font-medium text-slate-300">
+                <Trophy className="h-4 w-4" aria-hidden="true" />
+                Top 6 average
+              </p>
+              <button
+                type="button"
+                aria-expanded={showSettings}
+                aria-controls="average-settings"
+                onClick={() => setShowSettings((v) => !v)}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-2.5 py-1 text-xs font-medium text-slate-200 hover:bg-white/10"
+              >
+                <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden="true" />
+                {showSettings ? 'Hide settings' : 'How it’s calculated'}
+                <ChevronDown className={`h-3.5 w-3.5 transition ${showSettings ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </button>
+            </div>
+            {/* Collapsed: the score is the whole card, so it's bigger and centred vertically. */}
+            <div className={showSettings ? '' : 'flex flex-1 flex-col justify-center py-4'}>
+              <p className={`mt-1 font-bold tabular-nums ${showSettings ? 'text-5xl' : 'text-6xl sm:text-7xl'}`}>{formatMark(top6?.average)}</p>
+              <p className={`mt-2 text-slate-300 ${showSettings ? 'text-sm' : 'text-base'}`}>
+                {!top6
+                  ? 'Add marks to see the average universities look at'
+                  : `What universities look at · ${top6.courses.length} of ${TOP_N} courses${top6.estimated ? ', includes estimates' : ''}`}
+              </p>
+            </div>
+
+            {showSettings && (
+              <div id="average-settings" className="mt-5 space-y-4 border-t border-white/10 pt-4">
+                <fieldset disabled={saving}>
+                  <legend className="text-sm font-medium text-slate-200">Courses with no Grade 12 marks yet</legend>
+                  <p className="mt-0.5 text-xs text-slate-400">Grade 12 is usually harder, so “− 2” is the cautious choice.</p>
+                  <div className="mt-2 grid gap-2 sm:grid-cols-3">
+                    {Object.entries(ESTIMATE_MODES).map(([value, label]) => (
+                      <SettingOption
+                        key={value}
+                        name="estimateMode"
+                        checked={mode === value}
+                        onChange={() =>
+                          run(() =>
+                            updateUserProfile(user.uid, {
+                              estimateMode: value,
+                            }),
+                          )
+                        }
+                      >
+                        {label}
+                      </SettingOption>
+                    ))}
+                  </div>
+                </fieldset>
+
+                <fieldset disabled={saving}>
+                  <legend className="text-sm font-medium text-slate-200">Always count {ENGLISH_CODE} in the top 6?</legend>
+                  <p className="mt-0.5 text-xs text-slate-400">
+                    Almost every program requires Grade 12 English, so it counts even if it isn&apos;t one of your best marks.
+                  </p>
+                  <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                    {[
+                      [true, `Yes, always include ${ENGLISH_CODE}`],
+                      [false, 'No, just take my best 6'],
+                    ].map(([value, label]) => (
+                      <SettingOption
+                        key={label}
+                        name="lockEnglish"
+                        checked={student.lockEnglish === value}
+                        onChange={() => run(() => updateUserProfile(user.uid, { lockEnglish: value }))}
+                      >
+                        {label}
+                      </SettingOption>
+                    ))}
+                  </div>
+                </fieldset>
+              </div>
+            )}
+            {error && <p className="mt-2 text-sm text-red-300">{error}</p>}
           </div>
         </section>
-        <Stat
-          icon={BarChart3}
-          tone="bg-sky-50 text-sky-600"
-          label="Grade 12 average"
-          value={formatMark(averageOf(withMarks.map((r) => r.mark)))}
-          hint={`${withMarks.length} of ${rows.length} courses have marks`}
-        />
-        <Stat
-          icon={History}
-          tone="bg-violet-50 text-violet-600"
-          label="Grade 11 average"
-          value={formatMark(averageOf(grade11.map((g) => g.mark)))}
-          hint={`${grade11.length} courses`}
-        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 lg:content-start">
+          <OuacCard />
+          <Stat
+            icon={History}
+            tone="bg-violet-50 text-violet-600"
+            label="Grade 11 average"
+            value={formatMark(averageOf(grade11.map((g) => g.mark)))}
+            hint={`${grade11.length} courses`}
+          />
+        </div>
       </div>
 
       <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
@@ -235,39 +300,45 @@ function CoursesTab({ grade12, grade11 }) {
           })}
         </ul>
       )}
-
-      <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <h2 className="flex items-center gap-2 font-semibold text-slate-900">
-          <SlidersHorizontal className="h-4 w-4 text-slate-500" aria-hidden="true" />
-          Courses with no Grade 12 marks yet
-        </h2>
-        <p className="mt-1 text-sm text-slate-500">
-          How they count towards your averages and matches. Grade 12 is usually harder, so “− 2” is the cautious choice.
-        </p>
-        <div className="mt-3 grid gap-2 sm:grid-cols-3" role="radiogroup" aria-label="Courses with no Grade 12 marks yet">
-          {Object.entries(ESTIMATE_MODES).map(([value, label]) => (
-            <label
-              key={value}
-              className={`flex cursor-pointer items-start gap-2 rounded-xl border px-3 py-2.5 text-sm ${
-                mode === value ? 'border-brand-600 bg-brand-50 font-medium text-brand-800' : 'border-slate-200 text-slate-700 hover:bg-slate-50'
-              }`}
-            >
-              <input
-                type="radio"
-                name="estimateMode"
-                value={value}
-                checked={mode === value}
-                disabled={saving}
-                onChange={() => run(() => updateUserProfile(user.uid, { estimateMode: value }))}
-                className="mt-0.5 accent-brand-700"
-              />
-              {label}
-            </label>
-          ))}
-        </div>
-        {error && <p className="mt-2 text-sm text-red-700">{error}</p>}
-      </section>
     </div>
+  )
+}
+
+// Countdown to the next OUAC date. These are the same for every Ontario applicant.
+function OuacCard() {
+  const today = toDateString(new Date())
+  const next = ouacDates.filter((d) => d.date >= today).sort((x, y) => x.date.localeCompare(y.date))[0]
+  const daysLeft = next ? daysBetween(today, next.date) : null
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="flex items-center gap-2 text-sm text-slate-500">
+        <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-sky-50 text-sky-600">
+          <CalendarClock className="h-4 w-4" aria-hidden="true" />
+        </span>
+        {next ? next.label : 'OUAC dates'}
+      </div>
+      <div className="mt-2 text-2xl font-bold text-slate-900">
+        {!next ? '—' : daysLeft === 0 ? 'Today' : `${daysLeft} day${daysLeft === 1 ? '' : 's'}`}
+      </div>
+      <div className="mt-1 text-xs text-slate-500">
+        {next ? `${formatDate(next.date)} · same for every Ontario applicant` : 'No upcoming OUAC dates'}
+      </div>
+    </div>
+  )
+}
+
+// A radio styled as a pill, for the settings inside the dark Top 6 card.
+function SettingOption({ name, checked, onChange, children }) {
+  return (
+    <label
+      className={`flex cursor-pointer items-start gap-2 rounded-xl border px-3 py-2 text-sm transition ${
+        checked ? 'border-white/60 bg-white/15 font-medium text-white' : 'border-white/15 text-slate-300 hover:bg-white/5'
+      }`}
+    >
+      <input type="radio" name={name} checked={checked} onChange={onChange} className="mt-0.5 accent-white" />
+      {children}
+    </label>
   )
 }
 

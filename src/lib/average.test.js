@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { courseAverage, courseMark, averageOf, estimateFromGrade11, grade11PrerequisitesOf, formatMark } from './average.js'
+import { courseAverage, courseMark, averageOf, estimateFromGrade11, grade11PrerequisitesOf, formatMark, lockEnglish, topSixAverage } from './average.js'
 
 describe('courseAverage', () => {
   it('weights each assessment', () => {
@@ -94,4 +94,33 @@ describe('Grade 11 estimates', () => {
 it('formatMark rounds to one decimal', () => {
   expect(formatMark(82.456)).toBe('82.5%')
   expect(formatMark(null)).toBe('—')
+})
+
+describe('topSixAverage', () => {
+  const table = new Map(
+    [['MCV4U', 95], ['MHF4U', 94], ['SCH4U', 93], ['SPH4U', 92], ['ICS4U', 91], ['SBI4U', 90], ['ENG4U', 80]].map(([code, mark]) => [
+      code,
+      { mark, estimated: false, from: null },
+    ]),
+  )
+
+  it('always counts ENG4U when locked', () => {
+    const result = topSixAverage(table, true)
+    expect(result.courses.map((c) => c.code)).toContain('ENG4U')
+    expect(result.courses.map((c) => c.code)).not.toContain('SBI4U')
+    expect(result.average).toBeCloseTo((95 + 94 + 93 + 92 + 91 + 80) / 6)
+  })
+
+  it('takes the best six when not locked', () => {
+    const result = topSixAverage(table, false)
+    expect(result.courses.map((c) => c.code)).not.toContain('ENG4U')
+    expect(result.average).toBeCloseTo((95 + 94 + 93 + 92 + 91 + 90) / 6)
+  })
+
+  it('defaults to locked and ignores a missing English mark', () => {
+    expect(lockEnglish(undefined)).toBe(true)
+    expect(lockEnglish(false)).toBe(false)
+    table.delete('ENG4U')
+    expect(topSixAverage(table).courses).toHaveLength(6)
+  })
 })

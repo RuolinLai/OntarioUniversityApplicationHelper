@@ -7,7 +7,7 @@ import { CATEGORY_ICON } from '../components/MatchBadges.jsx'
 import HeartButton from '../components/HeartButton.jsx'
 import Spinner from '../components/Spinner.jsx'
 import { allPrograms, allUniversities, courseName } from '../lib/data.js'
-import { admissionAverage, formatMark } from '../lib/average.js'
+import { formatMark } from '../lib/average.js'
 import { assessProgram, CATEGORY_LABEL, FIELD_KEY_COURSES, MATCH_MARGIN, recommendFields, REACH_GAP } from '../lib/recommend.js'
 import { formatRange, formatUniversity } from '../lib/format.js'
 import { useStudent } from '../hooks/useStudent.js'
@@ -63,7 +63,7 @@ export default function ForYou() {
   const university = params.get('uni') ?? ''
 
   const directions = useMemo(() => recommendFields(student.codes, student.markTable), [student.codes, student.markTable])
-  const overall = useMemo(() => admissionAverage(null, student.markTable), [student.markTable])
+  const overall = student.topSix
 
   const { fields, columns, noRange, missingOne } = useMemo(() => {
     // '' = the recommended fields, 'all' = every field, otherwise one field.

@@ -101,6 +101,20 @@ export function buildMarkTable(grade12, grade11Marks, mode = DEFAULT_ESTIMATE_MO
 
 export const TOP_N = 6
 
+// Almost every program requires Grade 12 English, so by default the general top-6 average always
+// includes it (if the student has a mark or estimate for it). Saved as users/{uid}.lockEnglish.
+export const ENGLISH_CODE = 'ENG4U'
+export const DEFAULT_LOCK_ENGLISH = true
+
+export function lockEnglish(value) {
+  return typeof value === 'boolean' ? value : DEFAULT_LOCK_ENGLISH
+}
+
+// The general top-6 average (no specific program). With lock on, ENG4U is counted first.
+export function topSixAverage(markTable, lock = DEFAULT_LOCK_ENGLISH) {
+  return admissionAverage(lock ? { prerequisites: { required: [ENGLISH_CODE] } } : null, markTable)
+}
+
 // Admission average for one program (design.md 7.2): required courses first, then the best
 // `count` courses of each "choose" group, then the highest remaining courses up to 6.
 // Pass program = null for a general top-6 average. Returns null if no course has a mark.

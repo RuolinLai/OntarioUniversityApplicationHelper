@@ -5,7 +5,7 @@ import { useFavorites } from '../hooks/useFavorites.jsx'
 import { useStudent } from '../hooks/useStudent.js'
 import { useExtracurriculars } from '../hooks/useUserData.js'
 import { useCalendarEvents } from '../hooks/useCalendarEvents.js'
-import { admissionAverage, formatMark, TOP_N } from '../lib/average.js'
+import { formatMark, TOP_N } from '../lib/average.js'
 import { countdownLabel, daysBetween, toDateString, upcomingEvents, UPCOMING_DAYS } from '../lib/calendar.js'
 import { courseName } from '../lib/data.js'
 import Stat from '../components/Stat.jsx'
@@ -70,7 +70,7 @@ export default function Dashboard() {
   if (student.loading || favorites.loading || activities.loading || calendar.loading) return <Spinner />
 
   const firstName = (profile?.displayName || user.displayName || '').split(/\s+/)[0]
-  const top6 = admissionAverage(null, student.markTable)
+  const top6 = student.topSix
   const today = toDateString(new Date())
   const upcoming = upcomingEvents(calendar.events, today)
   // The next deadline can be further away than the 30-day list.
