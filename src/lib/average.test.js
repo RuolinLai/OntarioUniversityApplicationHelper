@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { courseAverage, courseMark, averageOf, estimateFromGrade11, grade11PrerequisitesOf, formatMark, lockEnglish, topSixAverage } from './average.js'
+import { courseAverage, courseMark, averageOf, estimateFromGrade11, grade11PrerequisitesOf, formatMark, pinnedCourses, topSixAverage } from './average.js'
 
 describe('courseAverage', () => {
   it('weights each assessment', () => {
@@ -104,22 +104,32 @@ describe('topSixAverage', () => {
     ]),
   )
 
-  it('always counts ENG4U when locked', () => {
-    const result = topSixAverage(table, true)
+  it('always counts pinned courses', () => {
+    const result = topSixAverage(table, ['ENG4U'])
     expect(result.courses.map((c) => c.code)).toContain('ENG4U')
     expect(result.courses.map((c) => c.code)).not.toContain('SBI4U')
     expect(result.average).toBeCloseTo((95 + 94 + 93 + 92 + 91 + 80) / 6)
   })
 
-  it('takes the best six when not locked', () => {
-    const result = topSixAverage(table, false)
+  it('takes the best six when nothing is pinned', () => {
+    const result = topSixAverage(table, [])
     expect(result.courses.map((c) => c.code)).not.toContain('ENG4U')
     expect(result.average).toBeCloseTo((95 + 94 + 93 + 92 + 91 + 90) / 6)
   })
 
-  it('defaults to locked and ignores a missing English mark', () => {
-    expect(lockEnglish(undefined)).toBe(true)
-    expect(lockEnglish(false)).toBe(false)
+  it('fills the other spots with the best marks', () => {
+    const result = topSixAverage(table, ['ENG4U', 'SBI4U'])
+    expect(result.courses.map((c) => c.code).sort()).toEqual(['ENG4U', 'MCV4U', 'MHF4U', 'SBI4U', 'SCH4U', 'SPH4U'])
+  })
+
+  it('reads the saved setting, falling back to ENG4U', () => {
+    expect(pinnedCourses(undefined)).toEqual(['ENG4U'])
+    expect(pinnedCourses({ lockEnglish: false })).toEqual([])
+    expect(pinnedCourses({ lockEnglish: true, top6Pinned: [] })).toEqual([])
+    expect(pinnedCourses({ top6Pinned: ['A', 'B', 'C', 'D', 'E', 'F', 'G'] })).toHaveLength(6)
+  })
+
+  it('ignores a pinned course with no mark', () => {
     table.delete('ENG4U')
     expect(topSixAverage(table).courses).toHaveLength(6)
   })

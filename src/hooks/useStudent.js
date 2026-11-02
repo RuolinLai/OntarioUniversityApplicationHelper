@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { buildMarkTable, estimateMode, lockEnglish, topSixAverage } from '../lib/average.js'
+import { buildMarkTable, estimateMode, pinnedCourses, topSixAverage } from '../lib/average.js'
 import { useAuth } from './useAuth.jsx'
 import { useGrade11Marks, useGrade12Courses } from './useUserData.js'
 
@@ -12,8 +12,9 @@ export function useStudent() {
   const mode = estimateMode(profile?.estimateMode)
   const codes = useMemo(() => grade12.items.map((c) => c.code), [grade12.items])
   const markTable = useMemo(() => buildMarkTable(grade12.items, grade11.items, mode), [grade12.items, grade11.items, mode])
-  const lock = lockEnglish(profile?.lockEnglish)
+  const pinnedKey = pinnedCourses(profile).join(',')
+  const pinned = useMemo(() => (pinnedKey ? pinnedKey.split(',') : []), [pinnedKey])
   // General top-6 average; program-specific averages use each program's own required courses.
-  const topSix = useMemo(() => topSixAverage(markTable, lock), [markTable, lock])
-  return { loading: grade12.loading || grade11.loading, codes, markTable, estimateMode: mode, lockEnglish: lock, topSix }
+  const topSix = useMemo(() => topSixAverage(markTable, pinned), [markTable, pinned])
+  return { loading: grade12.loading || grade11.loading, codes, markTable, estimateMode: mode, pinned, topSix }
 }

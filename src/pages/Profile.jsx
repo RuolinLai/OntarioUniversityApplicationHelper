@@ -121,6 +121,9 @@ function CoursesTab({ grade12, grade11 }) {
       return { ...c, mark, estimate: mark == null ? estimateFromGrade11(c.code, grade11, mode) : null }
     })
     .sort((a, b) => a.code.localeCompare(b.code))
+  // Only courses the student actually takes count toward the pick limit (the ENG4U default may not apply).
+  const pinned = student.pinned.filter((code) => rows.some((r) => r.code === code))
+  const pinnedFull = pinned.length >= TOP_N
 
   if (editing) {
     return (
@@ -197,25 +200,52 @@ function CoursesTab({ grade12, grade11 }) {
                 </fieldset>
 
                 <fieldset disabled={saving}>
-                  <legend className="text-sm font-medium text-slate-200">Always count {ENGLISH_CODE} in the top 6?</legend>
+                  <legend className="text-sm font-medium text-slate-200">Courses that must be in your top 6</legend>
                   <p className="mt-0.5 text-xs text-slate-400">
-                    Almost every program requires Grade 12 English, so it counts even if it isn&apos;t one of your best marks.
+                    Pick up to {TOP_N}. They always count, even if they aren&apos;t your best marks; the other spots go to your highest
+                    marks. Almost every program requires {ENGLISH_CODE}, so it&apos;s picked by default.
                   </p>
-                  <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                    {[
-                      [true, `Yes, always include ${ENGLISH_CODE}`],
-                      [false, 'No, just take my best 6'],
-                    ].map(([value, label]) => (
-                      <SettingOption
-                        key={label}
-                        name="lockEnglish"
-                        checked={student.lockEnglish === value}
-                        onChange={() => run(() => updateUserProfile(user.uid, { lockEnglish: value }))}
-                      >
-                        {label}
-                      </SettingOption>
-                    ))}
-                  </div>
+                  {rows.length === 0 ? (
+                    <p className="mt-2 text-xs text-slate-400">Add your Grade 12 courses first.</p>
+                  ) : (
+                    <>
+                      <div className="mt-2 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+                        {rows.map((r) => {
+                          const checked = pinned.includes(r.code)
+                          const mark = student.markTable.get(r.code)
+                          return (
+                            <label
+                              key={r.code}
+                              className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-sm transition ${
+                                checked ? 'border-white/60 bg-white/15 font-medium text-white' : 'border-white/15 text-slate-300'
+                              } ${!checked && pinnedFull ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white/5'}`}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={checked}
+                                disabled={!checked && pinnedFull}
+                                onChange={() => {
+                                  const next = checked ? pinned.filter((c) => c !== r.code) : [...pinned, r.code]
+                                  run(() => updateUserProfile(user.uid, { top6Pinned: next }))
+                                }}
+                                className="accent-white"
+                              />
+                              <span className="font-mono">{r.code}</span>
+                              <span className="ml-auto tabular-nums text-xs text-slate-400">
+                                {mark ? `${mark.estimated ? '~' : ''}${formatMark(mark.mark)}` : 'no mark'}
+                              </span>
+                            </label>
+                          )
+                        })}
+                      </div>
+                      <p className="mt-2 text-xs text-slate-400">
+                        {pinned.length === 0
+                          ? `None picked: your best ${TOP_N} marks are used.`
+                          : `${pinned.length} of ${TOP_N} picked${pinned.length < TOP_N ? `; the other ${TOP_N - pinned.length} are your best marks` : ''}.`}{' '}
+                        Program averages still use each program&apos;s own required courses.
+                      </p>
+                    </>
+                  )}
                 </fieldset>
               </div>
             )}

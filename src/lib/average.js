@@ -101,18 +101,21 @@ export function buildMarkTable(grade12, grade11Marks, mode = DEFAULT_ESTIMATE_MO
 
 export const TOP_N = 6
 
-// Almost every program requires Grade 12 English, so by default the general top-6 average always
-// includes it (if the student has a mark or estimate for it). Saved as users/{uid}.lockEnglish.
+// The student picks which courses must be in their general top 6 (saved as users/{uid}.top6Pinned);
+// the rest of the slots go to their highest marks. Almost every program requires Grade 12 English,
+// so ENG4U is pinned by default. Older profiles saved lockEnglish: false to mean "pin nothing".
 export const ENGLISH_CODE = 'ENG4U'
-export const DEFAULT_LOCK_ENGLISH = true
+export const DEFAULT_PINNED = [ENGLISH_CODE]
 
-export function lockEnglish(value) {
-  return typeof value === 'boolean' ? value : DEFAULT_LOCK_ENGLISH
+export function pinnedCourses(profile) {
+  if (Array.isArray(profile?.top6Pinned)) return profile.top6Pinned.filter((c) => typeof c === 'string').slice(0, TOP_N)
+  if (profile?.lockEnglish === false) return []
+  return DEFAULT_PINNED
 }
 
-// The general top-6 average (no specific program). With lock on, ENG4U is counted first.
-export function topSixAverage(markTable, lock = DEFAULT_LOCK_ENGLISH) {
-  return admissionAverage(lock ? { prerequisites: { required: [ENGLISH_CODE] } } : null, markTable)
+// The general top-6 average (no specific program): pinned courses first, then the best of the rest.
+export function topSixAverage(markTable, pinned = DEFAULT_PINNED) {
+  return admissionAverage(pinned.length ? { prerequisites: { required: pinned } } : null, markTable)
 }
 
 // Admission average for one program (design.md 7.2): required courses first, then the best
