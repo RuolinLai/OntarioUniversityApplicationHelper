@@ -1,12 +1,14 @@
-# Scraper report — 2026-11-01
+# Scraper report — 2026-11-08
 
 ## waterloo
 
-- ❌ Kept previous data: robots.txt disallows https://uwaterloo.ca/future-students/programs
+- Pages checked: 113, programs found: 98
+- ✅ Updated
 
 ## toronto
 
 - Pages checked: 279, programs found: 349
+- ⚠️ Detail page failed (program kept without it): https://www.utm.utoronto.ca/future-students/programs/criminology-law-society — The operation was aborted due to timeout
 - Needs review: 1
   - toronto-st-george-european-studies: No required courses found
 - ✅ Updated
@@ -56,4 +58,5 @@
 
 - Added: 0
 - Removed: 0
-- Changed requirements: 0
+- Changed requirements: 1
+  - toronto-mississauga-criminology: admissionRange
